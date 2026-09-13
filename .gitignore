@@ -1,0 +1,117 @@
+# Operating-system files
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Editors and local workspace state
+.vscode/
+.idea/
+*.code-workspace
+*.swp
+*.swo
+*~
+
+# Python environments, caches and test output
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Node, frontend tooling and package caches
+node_modules/
+.npm/
+.pnpm-store/
+.yarn/
+.yarn-cache/
+*.tsbuildinfo
+
+# Secrets, machine-specific configuration and databases
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.sqlite3
+*.sqlite3-journal
+*.db
+*.db-journal
+local_backups/
+backups/
+
+# Logs, temporary files and runtime state
+*.log
+logs/
+tmp/
+temp/
+.cache/
+*.tmp
+*.temp
+*.bak
+*.old
+
+# Office temporary files and workbook locks
+~$*.docx
+~$*.xlsx
+~$*.xlsm
+~$*.pptx
+
+# Generated research editions and packaging artifacts
+outputs/
+dist/
+build/
+release/
+releases/
+artifacts/
+.generated/
+.publishing-build-*/
+.build-*/
+.revision-*/
+*.zip
+
+# Generated document previews and conversion working files
+*.aux
+*.toc
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.pdf.tmp
+*.docx.tmp
+*.xlsx.tmp
+*.pptx.tmp
+
+# Data downloads and reproducible-cache outputs
+.data-cache/
+data-cache/
+downloads/
+market-data-cache/
+*.parquet
+*.feather
+*.pickle
+*.pkl
+
+# Python tooling and distribution output
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+site/
+
+# Application-specific local media generated during editorial work
+media/generated/
+media/uploads/
+private_media/
+
+# Keep source research documents, Markdown, approved workbooks, charts and images trackable.
