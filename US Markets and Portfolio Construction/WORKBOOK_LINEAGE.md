@@ -2,7 +2,7 @@
 
 ## Canonical workbook
 
-`US_Markets_Portfolio_Construction_Final_Workbook.xlsx` is the sole reader-facing workbook for the unified nine-part series. It is derived from the final Claude handoff workbook, reconciled on 15 September 2026 so that the ten-year case study applies the 0.095% blended expense ratio to the 8.00% gross return before calculating monthly balances.
+`US_Markets_Portfolio_Construction_Final_Workbook.xlsx` is the sole reader-facing workbook for the unified nine-part series. It is derived from the final Claude handoff workbook, reconciled on 15 September 2026 so that the ten-year case study applies the 0.095% blended expense ratio to the 8.00% gross return before calculating monthly balances. On 16 September 2026, its presentation was refactored so every worksheet is visibly mapped to Parts 01 through 09 while preserving the underlying calculation scope.
 
 ## Retired local workbook identities
 
@@ -15,14 +15,15 @@
 
 ## Traceability controls
 
-The final Claude articles, appendices, `build_workbook.py`, this ledger and the Git history retain the source trace. The canonical workbook uses the same sheet-level calculation scope as the final handoff.
+The final Claude articles, appendices, `build_workbook.py`, this ledger and the Git history retain the source trace. The canonical workbook uses the same sheet-level calculation scope as the final handoff. The presentation refactor renamed and regrouped the worksheets, added the nine-part guide and retained the reconciled formulas and outputs.
 
 ## Canonical release record
 
 Reconciled release date: 16 September 2026.
 
-- Canonical workbook SHA-256: `2684f8a7c6c5cd93bdce93a6bc956668778663679eaaa789a6c29e766aa8eb4e`
+- Reconciled pre-refactor SHA-256: `2684f8a7c6c5cd93bdce93a6bc956668778663679eaaa789a6c29e766aa8eb4e`
+- Nine-part presentation release SHA-256: `5a040bdadf9c5682f5370a882c44aec18bb6359ea96bcd8121b634d35620ab38`
 - Replaced historic export: `outputs/us-markets-final-20260913/US_Markets_Portfolio_Construction_Final_Workbook.xlsx`
 - Deployed Sokointel asset: `content/assets/us-markets-portfolio-construction-final.xlsx` in the Sokointel repository
 
-The canonical file, historic export replacement and deployed asset share this hash. The release formula applies the linked 0.095% blended expense ratio before calculating the 120 monthly case-study balances.
+The canonical file, historic export replacement and deployed asset share the nine-part presentation release hash. The release formula applies the linked 0.095% blended expense ratio before calculating the 120 monthly case-study balances. At the base assumptions, month 120 remains `$196,510.08`.
