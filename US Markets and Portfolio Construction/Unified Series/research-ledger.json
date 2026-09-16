@@ -1,0 +1,368 @@
+{
+  "edition_date": "2026-09-15",
+  "input_policy": "Observed issuer snapshots are separated from educational assumptions. Missing prices remain null.",
+  "funds": [
+    {
+      "ticker": "SPYM",
+      "benchmark": "S&P 500",
+      "expense_ratio": 0.0002,
+      "price": 89.21,
+      "price_type": "closing",
+      "as_of": "2026-09-10",
+      "url": "https://www.ssga.com/us/en/individual/etfs/state-street-spdr-portfolio-sp-500-etf-spym"
+    },
+    {
+      "ticker": "QQQM",
+      "benchmark": "Nasdaq-100",
+      "expense_ratio": 0.0015,
+      "price": null,
+      "url": "https://www.invesco.com/us/en/solutions/innovation-suite.html"
+    },
+    {
+      "ticker": "QQQ",
+      "benchmark": "Nasdaq-100",
+      "expense_ratio": 0.0018,
+      "price": null,
+      "url": "https://www.invesco.com/qqq-etf/en/market-outlook/whats-new-about-qqq.html"
+    },
+    {
+      "ticker": "AGG",
+      "benchmark": "Bloomberg US Aggregate Bond Index",
+      "expense_ratio": 0.0003,
+      "price": 95.98,
+      "price_type": "closing",
+      "as_of": "2026-09-11",
+      "duration": 5.74,
+      "duration_as_of": "2026-09-10",
+      "url": "https://www.ishares.com/us/products/239458/ishares-core-total-us-bond-market-etf"
+    },
+    {
+      "ticker": "SCHD",
+      "benchmark": "Dow Jones U.S. Dividend 100",
+      "expense_ratio": 0.0006,
+      "price": 34.12,
+      "price_type": "NAV, not executable",
+      "as_of": "2026-09-11",
+      "url": "https://www.schwabassetmanagement.com/products/schd"
+    },
+    {
+      "ticker": "SOXQ",
+      "benchmark": "PHLX Semiconductor Sector Index",
+      "expense_ratio": 0.0019,
+      "price": null,
+      "url": "https://www.sec.gov/Archives/edgar/data/1378872/000119312525325650/d54028d497k.htm"
+    },
+    {
+      "ticker": "SOXX",
+      "benchmark": "NYSE Semiconductor Index",
+      "expense_ratio": 0.0033,
+      "price": 527.07,
+      "price_type": "closing",
+      "as_of": "2026-09-11",
+      "url": "https://www.ishares.com/us/products/239705/SOX"
+    },
+    {
+      "ticker": "SMH",
+      "benchmark": "MVIS US Listed Semiconductor 25",
+      "expense_ratio": 0.0035,
+      "price": 568.57,
+      "price_type": "NAV, not executable",
+      "as_of": "2026-09-11",
+      "url": "https://www.vaneck.com/us/en/investments/semiconductor-etf-smh/"
+    },
+    {
+      "ticker": "XSD",
+      "benchmark": "S&P Semiconductor Select Industry Index",
+      "expense_ratio": 0.0035,
+      "price": 490.47,
+      "price_type": "closing",
+      "as_of": "2026-09-10",
+      "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-semiconductor-etf-xsd"
+    }
+  ],
+  "actual_holdings_subset": {
+    "as_of": "2026-09-10",
+    "complete": false,
+    "warning": "Do not calculate full-fund HHI from a subset or aggregate all other holdings as one issuer.",
+    "SPYM": {
+      "NVIDIA": 0.0806,
+      "APPLE": 0.0731,
+      "MICROSOFT": 0.0558,
+      "ALPHABET_A": 0.0297,
+      "ALPHABET_C": 0.0238,
+      "BROADCOM": 0.0261
+    },
+    "XSD": {
+      "NVIDIA": 0.0297,
+      "BROADCOM": 0.0264,
+      "MICRON": 0.0298,
+      "AMD": 0.0303
+    }
+  },
+  "policies": {
+    "multiasset_teaching": {
+      "capital": 50000,
+      "order": [
+        "SPYM",
+        "AGG",
+        "QQQM",
+        "SCHD",
+        "SOXQ"
+      ],
+      "weights": [
+        0.55,
+        0.15,
+        0.15,
+        0.075,
+        0.075
+      ]
+    },
+    "equity_tactical_teaching": {
+      "capital": 100000,
+      "order": [
+        "SPYM",
+        "QQQM",
+        "SOXQ",
+        "WheelReserve"
+      ],
+      "weights": [
+        0.6,
+        0.15,
+        0.1,
+        0.15
+      ],
+      "warning": "Scoped US equity sleeve, not complete household policy; wheel collateral is not risk-free."
+    }
+  },
+  "model_assumptions": {
+    "fee_growth": {
+      "principal": 10000,
+      "annual_gross_return": 0.08,
+      "years": [
+        10,
+        20,
+        30
+      ],
+      "monthly_contribution": 500,
+      "contribution_months": 240,
+      "timing": "end of month",
+      "convention": "annual effective gross return minus fee, simplified"
+    },
+    "two_asset_risk": {
+      "volatilities": [
+        0.16,
+        0.06
+      ],
+      "correlation": 0.1,
+      "equity_weights": [
+        1,
+        0.85,
+        0.7,
+        0.55,
+        0.4,
+        0
+      ],
+      "correlation_sensitivity": [
+        -0.3,
+        -0.1,
+        0,
+        0.1,
+        0.3,
+        0.5,
+        1
+      ]
+    },
+    "four_asset_risk": {
+      "order": [
+        "SPYM",
+        "AGG",
+        "QQQM",
+        "SatelliteBlend"
+      ],
+      "weights": [
+        0.55,
+        0.15,
+        0.15,
+        0.15
+      ],
+      "volatilities": [
+        0.16,
+        0.06,
+        0.22,
+        0.28
+      ],
+      "correlations": [
+        [
+          1,
+          0.1,
+          0.85,
+          0.75
+        ],
+        [
+          0.1,
+          1,
+          0.05,
+          0.05
+        ],
+        [
+          0.85,
+          0.05,
+          1,
+          0.65
+        ],
+        [
+          0.75,
+          0.05,
+          0.65,
+          1
+        ]
+      ]
+    },
+    "options": {
+      "underlying": "Unspecified educational security; no observed option chain",
+      "spot": 102,
+      "put_strike": 95,
+      "put_premium": 2.4,
+      "days": 30,
+      "contracts": 1,
+      "multiplier": 100,
+      "call_strike": 100,
+      "call_premium": 2,
+      "scenarios": [
+        0,
+        50,
+        70,
+        80,
+        90,
+        95,
+        100,
+        110,
+        130
+      ],
+      "fees": 0,
+      "taxes": 0,
+      "collateral_interest": 0,
+      "warning": "Excluded cost layers are not claimed brokerage rates."
+    },
+    "equity_stresses": {
+      "order": [
+        "SPYM",
+        "QQQM",
+        "SOXQ",
+        "WheelReserve"
+      ],
+      "weights": [
+        0.6,
+        0.15,
+        0.1,
+        0.15
+      ],
+      "scenarios": {
+        "broad_bull": [
+          0.15,
+          0.2,
+          0.28,
+          0.08
+        ],
+        "growth_rally": [
+          0.1,
+          0.28,
+          0.35,
+          0.06
+        ],
+        "sideways": [
+          0.02,
+          0,
+          -0.05,
+          0.07
+        ],
+        "rates_shock": [
+          -0.15,
+          -0.25,
+          -0.3,
+          -0.08
+        ],
+        "deep_risk_off": [
+          -0.3,
+          -0.4,
+          -0.5,
+          -0.25
+        ]
+      }
+    },
+    "rebalancing": {
+      "order": [
+        "SPYM",
+        "QQQM",
+        "SOXQ",
+        "WheelReserve"
+      ],
+      "weights": [
+        0.6,
+        0.15,
+        0.1,
+        0.15
+      ],
+      "current_values": [
+        73000,
+        19000,
+        14000,
+        12000
+      ],
+      "new_contribution": 5000
+    },
+    "accumulation": {
+      "starting_value": 50000,
+      "monthly_contribution": 500,
+      "years": 20,
+      "annual_net_returns": [
+        0.03,
+        0.05,
+        0.07
+      ],
+      "inflation": 0.025
+    },
+    "sequence": {
+      "starting_value": 1000000,
+      "withdrawal": 45000,
+      "withdrawal_timing": "start of year",
+      "early_returns": [
+        -0.2,
+        -0.15,
+        0.085,
+        0.085,
+        0.085,
+        0.085,
+        0.085,
+        0.085,
+        0.085,
+        0.085
+      ],
+      "late_returns": [
+        0.085,
+        0.085,
+        0.085,
+        0.085,
+        0.085,
+        0.085,
+        0.085,
+        0.085,
+        -0.2,
+        -0.15
+      ],
+      "inflation": 0
+    },
+    "tax": {
+      "year": 2026,
+      "single_zero_cap": 49450,
+      "single_fifteen_cap": 545500,
+      "ordinary_taxable_income": 40000,
+      "long_term_gain": 20000,
+      "illustrative_dividend": 1000,
+      "ordinary_rate_assumption": 0.24,
+      "qualified_rate_assumption": 0.15,
+      "nra_statutory_rate": 0.3,
+      "treaty_rate_assumption": 0.15
+    }
+  }
+}
