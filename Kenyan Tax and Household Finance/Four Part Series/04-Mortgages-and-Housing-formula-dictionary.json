@@ -1,0 +1,205 @@
+[
+  [
+    "Amortization",
+    "E7",
+    "'=IF(D7=0,0,IF(C7=0,B7/D7,B7*C7/(1-(1+C7)^(-D7))))",
+    "M = Lr / [1 − (1+r)^(−n)]; if r=0, M=L/n",
+    "L opening loan; r nominal annual rate/12; n months remaining. Payment recast monthly at current rate, including after prepayment."
+  ],
+  [
+    "Amortization",
+    "F7",
+    "'=B7*C7",
+    "Interestₘ = opening balanceₘ × monthly rateₘ",
+    "Equal monthly periods, not actual/365 daily lender accrual."
+  ],
+  [
+    "Amortization",
+    "H7",
+    "'=MIN(B7,MAX(0,E7-F7)+G7)",
+    "Principal = min(opening balance, scheduled payment − interest + extra principal)",
+    "No penalty model; add actual fees to cost inputs where applicable."
+  ],
+  [
+    "Amortization",
+    "J7",
+    "'=MIN(F7,'Policy'!$B$15)",
+    "D = min(eligible mortgage interest, 30,000)",
+    "Assumes qualifying owner-occupied borrowing and lender; S02."
+  ],
+  [
+    "Amortization",
+    "K7",
+    "'=MAX(0,'Policy'!$F$7*MIN(MAX(0,('Inputs'!$B$15)-'Policy'!$D$7),'Policy'!$E$7)+'Policy'!$F$8*MIN(MAX(0,('Inputs'!$B$15)-'Policy'!$D$8),'Policy'!$E$8)+'Policy'!$F$9*MIN(MAX(0,('Inputs'!$B$15)-'Policy'!$D$9),'Policy'!$E$9)+'Policy'!$F$10*MIN(MAX(0,('Inputs'!$B$15)-'Policy'!$D$10),'Policy'!$E$10)+'Policy'!$F$11*MIN(MAX(0,('Inputs'!$B$15)-'Policy'!$D$11),'Policy'!$E$11)-'Inputs'!$B$16)-MAX(0,'Policy'!$F$7*MIN(MAX(0,(MAX(0,'Inputs'!$B$15-J7))-'Policy'!$D$7),'Policy'!$E$7)+'Policy'!$F$8*MIN(MAX(0,(MAX(0,'Inputs'!$B$15-J7))-'Policy'!$D$8),'Policy'!$E$8)+'Policy'!$F$9*MIN(MAX(0,(MAX(0,'Inputs'!$B$15-J7))-'Policy'!$D$9),'Policy'!$E$9)+'Policy'!$F$10*MIN(MAX(0,(MAX(0,'Inputs'!$B$15-J7))-'Policy'!$D$10),'Policy'!$E$10)+'Policy'!$F$11*MIN(MAX(0,(MAX(0,'Inputs'!$B$15-J7))-'Policy'!$D$11),'Policy'!$E$11)-'Inputs'!$B$16)",
+    "Tax saving = PAYE(T) − PAYE(max(0,T−D))",
+    "Uses full progressive tax function; no blanket marginal-rate shortcut. Current law held constant."
+  ],
+  [
+    "Amortization",
+    "L7",
+    "'=B7-H7-I7",
+    "Check = opening balance − principal − closing balance = 0",
+    "All amounts KES; see Inputs and sheet headers for timing."
+  ],
+  [
+    "Rent versus buy",
+    "H7",
+    "'=IF(A7<='Inputs'!$B$13,D7-E7-F7+G7,0)",
+    "ΔCFₜ = rent avoided − principal − interest − ownership costs + tax saving",
+    "Annual end-year aggregation of monthly flows. Positive favours buying. Principal enters cash flow; remaining debt deducted only at sale."
+  ],
+  [
+    "Rent versus buy",
+    "I7",
+    "'=IF(A7='Inputs'!$B$13,C7*(1-'Inputs'!$B$11)-'Amortization'!I18-'Inputs'!$B$12,0)",
+    "Exit equity = house value × (1 − sale-cost rate) − debt balance − exit tax",
+    "Sale only at chosen horizon; no infinite terminal growth formula."
+  ],
+  [
+    "Rent versus buy",
+    "L7",
+    "'=J7*K7",
+    "PVₜ = ΔCFₜ / (1+d)^t",
+    "Nominal annual discount rate and nominal flows. Time-zero costs excluded here."
+  ],
+  [
+    "Rent versus buy",
+    "M7",
+    "'=IF(A7<='Inputs'!$B$13,('Inputs'!B7*('Inputs'!B8+'Inputs'!B10))*(1+'Inputs'!$B$14)-J7,0)",
+    "Rₜ = Rₜ₋₁(1+d) − ΔCFₜ; R₀ = deposit + buying costs",
+    "Terminal renter-minus-buyer wealth comparison. Negative interim balances imply funding at same discount rate; no borrowing constraint in valuation."
+  ],
+  [
+    "Results",
+    "B7",
+    "'='Inputs'!B7*(1-'Inputs'!B8)",
+    "Results.B7 = 'Inputs'!B7×(1-'Inputs'!B8)",
+    "Deposit excludes buying costs."
+  ],
+  [
+    "Results",
+    "B8",
+    "'='Inputs'!B7*('Inputs'!B8+'Inputs'!B10)",
+    "Results.B8 = 'Inputs'!B7×('Inputs'!B8+'Inputs'!B10)",
+    "Deposit plus purchase costs; emergency reserve additional."
+  ],
+  [
+    "Results",
+    "B9",
+    "'='Amortization'!E7",
+    "Results.B9 = 'Amortization'!E7",
+    "Constant-rate base case; later resets recalculate."
+  ],
+  [
+    "Results",
+    "B10",
+    "'='Amortization'!K7",
+    "Results.B10 = 'Amortization'!K7",
+    "Cash benefit assumes timely claim through payroll."
+  ],
+  [
+    "Results",
+    "B11",
+    "'='Inputs'!B7*'Annual assumptions'!E7/12",
+    "Results.B11 = 'Inputs'!B7×'Annual assumptions'!E7÷12",
+    "Maintenance and other ownership allowance."
+  ],
+  [
+    "Results",
+    "B12",
+    "'='Inputs'!B17-'Inputs'!B18-B9-B11+B10",
+    "Results.B12 = 'Inputs'!B17-'Inputs'!B18-B9-B11+B10",
+    "After housing, tax saving and other essentials."
+  ],
+  [
+    "Results",
+    "B13",
+    "'=SUM('Rent versus buy'!L7:L36)-B8",
+    "Results.B13 = sum('Rent versus buy'!L7:L36)-B8",
+    "Positive favours buying under specified assumptions."
+  ],
+  [
+    "Results",
+    "B14",
+    "'=INDEX('Rent versus buy'!M7:M36,'Inputs'!B13)",
+    "Results.B14 = INDEX('Rent versus buy'!M7:M36,'Inputs'!B13)",
+    "Negative favours buying."
+  ],
+  [
+    "Results",
+    "B15",
+    "'=B13+B14/(1+'Inputs'!B14)^'Inputs'!B13",
+    "Results.B15 = B13+B14÷(1+'Inputs'!B14)^'Inputs'!B13",
+    "Must equal zero within floating point tolerance."
+  ],
+  [
+    "Results",
+    "B16",
+    "'=SUM('Amortization'!F7:F366)",
+    "Results.B16 = sum('Amortization'!F7:F366)",
+    "Whole contractual term, may exceed comparison horizon."
+  ],
+  [
+    "Results",
+    "B17",
+    "'='Amortization'!I366",
+    "Results.B17 = 'Amortization'!I366",
+    "Zero for valid term up to 360 months."
+  ],
+  [
+    "Results",
+    "B18",
+    "'=MAX('Amortization'!L7:L366)",
+    "Results.B18 = MAX('Amortization'!L7:L366)",
+    "Must equal zero."
+  ],
+  [
+    "Rate and income stress",
+    "C7",
+    "'=IF(A7=0,'Results'!$B$7/'Inputs'!$B$9,'Results'!$B$7*(A7/12)/(1-(1+A7/12)^(-'Inputs'!$B$9)))",
+    "M(r) = L(r/12) / [1 − (1+r/12)^(−n)]",
+    "Immediate repricing of initial loan, not a later-year reset scenario."
+  ],
+  [
+    "Rate and income stress",
+    "D7",
+    "'=IF(B7=0,MAX(0,'Policy'!$F$7*MIN(MAX(0,('Inputs'!$B$15)-'Policy'!$D$7),'Policy'!$E$7)+'Policy'!$F$8*MIN(MAX(0,('Inputs'!$B$15)-'Policy'!$D$8),'Policy'!$E$8)+'Policy'!$F$9*MIN(MAX(0,('Inputs'!$B$15)-'Policy'!$D$9),'Policy'!$E$9)+'Policy'!$F$10*MIN(MAX(0,('Inputs'!$B$15)-'Policy'!$D$10),'Policy'!$E$10)+'Policy'!$F$11*MIN(MAX(0,('Inputs'!$B$15)-'Policy'!$D$11),'Policy'!$E$11)-'Inputs'!$B$16)-MAX(0,'Policy'!$F$7*MIN(MAX(0,(MAX(0,'Inputs'!$B$15-MIN('Results'!$B$7*A7/12,'Policy'!$B$15)))-'Policy'!$D$7),'Policy'!$E$7)+'Policy'!$F$8*MIN(MAX(0,(MAX(0,'Inputs'!$B$15-MIN('Results'!$B$7*A7/12,'Policy'!$B$15)))-'Policy'!$D$8),'Policy'!$E$8)+'Policy'!$F$9*MIN(MAX(0,(MAX(0,'Inputs'!$B$15-MIN('Results'!$B$7*A7/12,'Policy'!$B$15)))-'Policy'!$D$9),'Policy'!$E$9)+'Policy'!$F$10*MIN(MAX(0,(MAX(0,'Inputs'!$B$15-MIN('Results'!$B$7*A7/12,'Policy'!$B$15)))-'Policy'!$D$10),'Policy'!$E$10)+'Policy'!$F$11*MIN(MAX(0,(MAX(0,'Inputs'!$B$15-MIN('Results'!$B$7*A7/12,'Policy'!$B$15)))-'Policy'!$D$11),'Policy'!$E$11)-'Inputs'!$B$16),0)",
+    "Tax saving = exact PAYE difference at unchanged income; zero in income-loss stresses",
+    "Conservative stress: cash income falls by chosen fraction and tax relief is not assumed usable during disruption. Not a recalculated gross-pay payslip."
+  ],
+  [
+    "Rate and income stress",
+    "G7",
+    "'='Inputs'!$B$17*(1-B7)-C7+D7-E7-F7",
+    "Surplus = available cash × (1−loss) − debt payment + tax saving − ownership − essentials",
+    "All amounts KES; see Inputs and sheet headers for timing."
+  ],
+  [
+    "Rate and income stress",
+    "H7",
+    "'=IF(G7<0,'Inputs'!$B$19/(-G7),\"No deficit\")",
+    "Runway = reserve / monthly deficit, only when deficit > 0",
+    "All amounts KES; see Inputs and sheet headers for timing."
+  ],
+  [
+    "Discount sensitivity",
+    "B7",
+    "'=NPV(A7,'Rent versus buy'!J7:J36)-'Results'!$B$8",
+    "NPV(d) = −initial cash + Σ ΔCFₜ/(1+d)^t",
+    "Only discount rate changes. Annual cash flows already include sale at chosen horizon and zero thereafter."
+  ],
+  [
+    "Discount sensitivity",
+    "C7",
+    "'=TEXT(A7,\"0%\")",
+    "Chart label = percentage representation of the discount rate",
+    "All amounts KES; see Inputs and sheet headers for timing."
+  ],
+  [
+    "Policy",
+    "D8:E11",
+    "'=D7+E7",
+    "Monthly lower bound bⱼ = bⱼ₋₁ + widthⱼ₋₁; widths link to B7:B10",
+    "Tax rates and annual schedule are versioned policy values. Keep annual and monthly schedules coherent when updating legislation."
+  ]
+]

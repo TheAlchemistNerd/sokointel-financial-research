@@ -1,0 +1,214 @@
+{
+  "version": 1,
+  "retrieved_date": "2026-09-12",
+  "price_date": "2026-09-11",
+  "price_convention": "NSE daily VWAP, not closing bid/ask or guaranteed fill",
+  "currency": "KES",
+  "financial_units": "KES million except per-share and ratios",
+  "prices": {
+    "EQTY": 102.0,
+    "KCB": 94.0,
+    "COOP": 37.15,
+    "SCOM": 35.2,
+    "BAT": 560.0,
+    "JUB": 412.75,
+    "KEGN": 11.0,
+    "EABL": 290.5
+  },
+  "daily_share_volume": {
+    "EQTY": 4974486,
+    "KCB": 375298,
+    "COOP": 326778,
+    "SCOM": 13847651,
+    "BAT": 2426,
+    "JUB": 669,
+    "KEGN": 2135435,
+    "EABL": 36686
+  },
+  "sources": {
+    "nse": "https://www.nse.co.ke/wp-content/uploads/11-SEP-26.pdf",
+    "bat": "https://www.batkenya.com/content/dam/endmarkets/ke/en/download/investors-and-reporting/annual-reports/BATK_Combined_Annual_and_Sustainability_Report_2025.pdf",
+    "bat_results": "https://www.batkenya.com/content/dam/endmarkets/ke/en/download/investors-and-reporting/financial-statements/bat_kenya-2025_full_year_results.pdf",
+    "equity": "https://equitygroupholdings.com/wp-content/uploads/2026/06/Equity-Group-Holdings-PLC-2025-Integrated-Report-and-Financial-Statements.pdf",
+    "jubilee": "https://jubileeinsurance.com/group/wp-content/uploads/2026/06/Jubilee-Holdings-2025-Annual-Integrated-Report.pdf"
+  },
+  "BAT": {
+    "2024": {
+      "revenue": 25715.903,
+      "cogs": 15218.693,
+      "ebit": 7313.038,
+      "profit": 4483.37,
+      "cfo": 7877.953,
+      "capex": 322.015,
+      "depreciation": 703.74,
+      "trade_receivables": 2541.648,
+      "inventory": 3324.09,
+      "trade_payables": 1088.613,
+      "plant": 9811.984,
+      "cash": 5390.275,
+      "debt": 97.667,
+      "equity": 15733.13,
+      "total_assets": 23654.226,
+      "current_assets": 13593.457,
+      "current_liabilities": 6025.355,
+      "dps_fiscal": 50.0,
+      "dps_cash_paid": 50.0,
+      "eps": 44.83
+    },
+    "2025": {
+      "revenue": 23191.945,
+      "cogs": 12372.298,
+      "ebit": 7474.835,
+      "profit": 5245.617,
+      "cfo": 6633.154,
+      "capex": 301.833,
+      "depreciation": 733.777,
+      "trade_receivables": 2466.921,
+      "inventory": 3321.003,
+      "trade_payables": 2035.289,
+      "plant": 9457.704,
+      "cash": 6218.264,
+      "debt": 72.667,
+      "equity": 15485.431,
+      "total_assets": 23585.228,
+      "current_assets": 13898.13,
+      "current_liabilities": 6197.535,
+      "other_assets": 2121.336,
+      "other_liabilities": 5991.841,
+      "dps_fiscal": 70.0,
+      "dps_cash_paid": 55.0,
+      "eps": 52.46,
+      "cash_generated_operations": 8581.908,
+      "interest_received": 209.099,
+      "interest_paid": 22.043,
+      "tax_paid": 2135.81,
+      "disposal_proceeds": 12.936,
+      "lease_principal_paid": 25.0,
+      "fx_cash": 8.732
+    },
+    "shares_million": 100.0
+  },
+  "EQTY": {
+    "2024": {
+      "attributable_profit": 46549,
+      "attributable_equity": 234041,
+      "group_profit": 48824,
+      "eps": 12.34,
+      "dps": 4.25,
+      "gross_amortised_loans": 890657,
+      "stage3_loans": 109732,
+      "stage3_allowance": 60674,
+      "total_allowance": 74788
+    },
+    "2025": {
+      "attributable_profit": 71964,
+      "attributable_equity": 309505,
+      "group_profit": 75548,
+      "eps": 19.07,
+      "dps": 5.75,
+      "gross_amortised_loans": 943453,
+      "stage3_loans": 99561,
+      "stage3_allowance": 54597,
+      "total_allowance": 64544
+    },
+    "shares_million": 3773.674802,
+    "kenya_bank_capital": {
+      "report_date": "2025-12-31",
+      "rwa": 850487,
+      "core_capital": 122174,
+      "total_capital": 139970,
+      "core_minimum": 0.105,
+      "total_minimum": 0.145
+    }
+  },
+  "JUB": {
+    "2025": {
+      "insurance_revenue": 29920.887,
+      "insurance_service_expense": 26884.724,
+      "reinsurance_net_expense": 1189.922,
+      "service_result": 1846.241,
+      "net_investment_income": 28990.055,
+      "insurance_finance_expense": 24480.709,
+      "other_income": 444.25,
+      "other_operating_expense": 2377.981,
+      "associates_profit": 2915.896,
+      "other_finance_cost": 153.332,
+      "pbt": 7184.42,
+      "tax": 1633.772,
+      "group_profit": 5550.648,
+      "nci_profit": -231.314,
+      "attributable_profit": 5781.962,
+      "attributable_equity": 53768.889,
+      "dps": 15.0
+    },
+    "2024": {
+      "attributable_equity": 49113.565,
+      "attributable_profit": 4792.62
+    },
+    "shares_million": 72.473
+  },
+  "scenario_assumptions": {
+    "bat_dcf": {
+      "annual_revenue_growth": [
+        0.02,
+        0.03,
+        0.03,
+        0.03,
+        0.03
+      ],
+      "ebit_margin": [
+        0.3,
+        0.3,
+        0.31,
+        0.31,
+        0.31
+      ],
+      "depreciation_pct_opening_plant": 0.08,
+      "capex_pct_revenue": 0.035,
+      "tax": 0.3,
+      "cogs_pct_revenue": 0.54,
+      "dso": 40,
+      "dio": 95,
+      "dpo": 55,
+      "wacc": 0.16,
+      "terminal_growth": 0.03,
+      "terminal_roic": 0.18,
+      "excess_cash": 0.0,
+      "debt_claim": 72.667,
+      "forecast_labels": [
+        "Year 1",
+        "Year 2",
+        "Year 3",
+        "Year 4",
+        "Year 5"
+      ],
+      "basis": "Normalised forward annual operating scenario using FY2025 operating scale. No FY2026-2030 reported results are implied. No historical cash is added to current equity value; debt carry-forward is an explicit scenario assumption. This is an operating-value sensitivity study, not a fully updated September 2026 target."
+    },
+    "equity_ddm": {
+      "short_growth": 0.08,
+      "terminal_growth": 0.05,
+      "cost_equity": 0.18,
+      "years": 5,
+      "next_dividend_timing_years": 1.0
+    },
+    "equity_pb": {
+      "sustainable_roe": 0.2,
+      "growth": 0.05,
+      "cost_equity": 0.18
+    },
+    "capital_scenarios": [
+      {
+        "name": "Moderate RWA growth",
+        "rwa_growth": 0.1,
+        "profit": 30000,
+        "target_total_ratio": 0.165
+      },
+      {
+        "name": "Faster growth and loss stress",
+        "rwa_growth": 0.2,
+        "profit": 20000,
+        "target_total_ratio": 0.165
+      }
+    ]
+  }
+}

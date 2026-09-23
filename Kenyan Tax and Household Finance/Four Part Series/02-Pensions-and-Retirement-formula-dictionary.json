@@ -1,0 +1,149 @@
+[
+  [
+    "Accumulation",
+    "C7",
+    "'=SUM('Annual assumptions'!B7:C7)*'Inputs'!$B$9",
+    "Cₜ = (employeeₜ + employerₜ) × contribution multiplier",
+    "Annual end-year contributions; employer match assumed, not statutory private-plan entitlement."
+  ],
+  [
+    "Accumulation",
+    "E7",
+    "'=(B7+D7)*('Annual assumptions'!F7+'Inputs'!$B$10)",
+    "Feeₜ = opening wealth × (1 + gross returnₜ) × feeₜ",
+    "Fee after investment return, before end-year contribution."
+  ],
+  [
+    "Accumulation",
+    "F7",
+    "'=B7+C7+D7-E7",
+    "Wₜ = Wₜ₋₁(1 + μₜ)(1 − fₜ) + Cₜ",
+    "Deterministic expected-wealth path under independent returns. Excludes benefit withdrawal tax and NSSF account."
+  ],
+  [
+    "Accumulation",
+    "H7",
+    "'=F7/G7",
+    "Real Wₜ = Wₜ / Π(1 + inflationⱼ)",
+    "Base purchasing power at start of first projection year."
+  ],
+  [
+    "Accumulation",
+    "I7",
+    "'=YEAR(A7)",
+    "Chart year = calendar year of projection date",
+    "All amounts KES; see Inputs and sheet headers for timing."
+  ],
+  [
+    "Monte Carlo",
+    "B7:AE1006",
+    "'='Inputs'!$B$7*EXP(LN(1+'Annual assumptions'!D7+'Inputs'!$B$11)-'Annual assumptions'!E7^2/2+'Annual assumptions'!E7*'Random draws'!B7)*(1-'Annual assumptions'!F7-'Inputs'!$B$10)+'Accumulation'!C7",
+    "Wₜ = Wₜ₋₁ exp[ln(1+μₜ) − σₜ²/2 + σₜZₜ] (1−fₜ) + Cₜ",
+    "Z independent standard normal; μ arithmetic expected gross return; σ log-return standard deviation; seed 20260907."
+  ],
+  [
+    "Monte Carlo",
+    "AF7:AG1006",
+    "'=AE7/'Accumulation'!$G$36",
+    "Real terminal = W₃₀ / price index; success = 1{real terminal ≥ target}",
+    "Fixed inflation path; no salary-return correlation, serial dependence, regime changes or withdrawal sequence model."
+  ],
+  [
+    "Results",
+    "B7",
+    "'='Accumulation'!F36",
+    "Results.B7 = 'Accumulation'!F36",
+    "Expected wealth under model assumptions."
+  ],
+  [
+    "Results",
+    "B8",
+    "'='Accumulation'!H36",
+    "Results.B8 = 'Accumulation'!H36",
+    "Inflation-adjusted; not the simulated median."
+  ],
+  [
+    "Results",
+    "B9",
+    "'=MEDIAN('Monte Carlo'!AF7:AF1006)",
+    "Results.B9 = median('Monte Carlo'!AF7:AF1006)",
+    "Central result among 1,000 hypothetical paths."
+  ],
+  [
+    "Results",
+    "B10",
+    "'=PERCENTILE('Monte Carlo'!AF7:AF1006,0.1)",
+    "Results.B10 = quantile('Monte Carlo'!AF7:AF1006,0.1)",
+    "Lower-tail marker, not a guarantee."
+  ],
+  [
+    "Results",
+    "B11",
+    "'=PERCENTILE('Monte Carlo'!AF7:AF1006,0.9)",
+    "Results.B11 = quantile('Monte Carlo'!AF7:AF1006,0.9)",
+    "Upper-tail marker."
+  ],
+  [
+    "Results",
+    "B12",
+    "'=AVERAGE('Monte Carlo'!AG7:AG1006)",
+    "Results.B12 = mean('Monte Carlo'!AG7:AG1006)",
+    "Conditional on chosen model and assumptions."
+  ],
+  [
+    "Results",
+    "B13",
+    "'=SQRT(B12*(1-B12)/1000)",
+    "Results.B13 = sqrt(B12×(1-B12)÷1000)",
+    "Sampling error only; excludes model uncertainty."
+  ],
+  [
+    "Results",
+    "B14",
+    "'=AVERAGE('Monte Carlo'!AG7:AG506)",
+    "Results.B14 = mean('Monte Carlo'!AG7:AG506)",
+    "Batch diagnostic; comparison with full run."
+  ],
+  [
+    "Results",
+    "B15",
+    "'=AVERAGE('Monte Carlo'!AG507:AG1006)",
+    "Results.B15 = mean('Monte Carlo'!AG507:AG1006)",
+    "Independent stream segment; no calibration claim."
+  ],
+  [
+    "Results",
+    "B16",
+    "'=MAX(0,B12-1.96*B13)",
+    "Results.B16 = MAX(0,B12-1.96×B13)",
+    "Normal approximation for simulation sampling uncertainty."
+  ],
+  [
+    "Results",
+    "B17",
+    "'=MIN(1,B12+1.96*B13)",
+    "Results.B17 = MIN(1,B12+1.96×B13)",
+    "Not a forecast confidence interval."
+  ],
+  [
+    "Fee sensitivity",
+    "B7",
+    "'='Inputs'!$B$7*(1+'Annual assumptions'!D7+'Inputs'!$B$11)*(1-'Annual assumptions'!F7-'Inputs'!$B$10-$A7)+'Accumulation'!C7",
+    "Wₜ(δf) = Wₜ₋₁(1+μₜ)(1−fₜ−δf)+Cₜ",
+    "Only additional fee differs; all dated contribution and return inputs preserved."
+  ],
+  [
+    "Fee sensitivity",
+    "AF7",
+    "'=AE7/'Accumulation'!$G$36",
+    "Real final = scenario wealth / cumulative price index",
+    "All amounts KES; see Inputs and sheet headers for timing."
+  ],
+  [
+    "Policy",
+    "D8:E11",
+    "'=D7+E7",
+    "Monthly lower bound bⱼ = bⱼ₋₁ + widthⱼ₋₁; widths link to B7:B10",
+    "Tax rates and annual schedule are versioned policy values. Keep annual and monthly schedules coherent when updating legislation."
+  ]
+]

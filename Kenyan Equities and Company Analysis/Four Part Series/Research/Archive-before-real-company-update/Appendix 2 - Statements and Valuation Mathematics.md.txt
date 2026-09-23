@@ -1,0 +1,1142 @@
+# Appendix 2 — Statement models, financial quality, and valuation
+
+The manufacturer, bank, and insurance scenarios are fictional teaching cases. Their figures are not valuations of the named NSE issuers in the income screen. All currency amounts below are KES million unless identified as per-share values. Excel formulas and mathematical equivalents appear in the generated dictionary at the end.
+
+## A2.1 The integrated manufacturer
+
+Opening balances at31December2026 are revenue10,000; receivables1,200; inventory1,000; payables900; net plant6,000; cash1,200; debt2,500; and equity6,000. Assets = 1,200 + 1,000 + 6,000 + 1,200 = 9,400. Liabilities plus equity = 900 + 2,500 + 6,000 = 9,400. Shares outstanding are1,000million.
+
+The forecast assumptions have a separate input for every year2027–2031. Annual growth, EBITDA margin, depreciation, capex, tax, collection days, inventory days, supplier days, cost of sales, interest, principal repayment, and payout all feed the statements. Interest uses opening debt, payments occur at year-end, and the case has no new borrowing, share issuance, acquisitions, leases, tax-loss carryforwards, or other comprehensive income. Those features can be added as separate schedules when modelling an actual company.
+
+For2027:
+
+> Revenue = 10,000 × 1.06 = **10,600**
+> COGS = 10,600 × 0.60 = **6,360**
+> EBITDA = 10,600 × 0.22 = **2,332**
+> Depreciation = 6,000 × 0.10 = **600**
+> EBIT = 2,332 − 600 = **1,732**
+> Interest = 2,500 × 0.12 = **300**
+> Profit before tax = 1,732 − 300 = **1,432**
+> Tax = 1,432 × 0.30 = **429.60**
+> Net profit = 1,432 − 429.60 = **1,002.40**
+
+EBITDA is earnings before interest, tax, depreciation, and amortisation; EBIT is operating profit after depreciation in this case. The model forecasts EBITDA from a margin; COGS is used to determine the working-capital balances. Remaining operating costs are implicit in the EBITDA margin rather than separately forecast.
+
+## A2.2 Working capital and cash conversion
+
+Article equation (2.1):
+
+> NWC = trade receivables + inventory − trade payables
+> AR = revenue × collection days /365
+> Inventory = COGS × inventory days /365
+> AP = COGS × supplier days /365
+> ΔNWC = closing NWC − opening NWC
+
+The forecast uses closing operating balances, whereas the historical sector screen uses averages to calculate observed days. COGS is explicitly used as a purchases proxy for supplier days. Exclude cash, interest-bearing debt, and nontrade balances from operating NWC unless their economic role justifies a separately documented adjustment.
+
+> AR2027 = 10,600 ×44/365 = **1,277.80822**
+> Inventory2027 = 6,360 ×60/365 = **1,045.47945**
+> AP2027 = 6,360 ×50/365 = **871.23288**
+> NWC2027 = 1,277.80822 +1,045.47945 −871.23288 = **1,452.05479**
+> NWC2026 = 1,200 +1,000 −900 = **1,300**
+> ΔNWC = **152.05479**
+
+Historical cash-conversion-cycle formulas are DIO = average inventory/COGS ×365; DSO = average trade receivables/revenue ×365; DPO = average trade payables/COGS ×365; and CCC = DIO +DSO −DPO. For the efficient-cycle example, DIO = 500/6,000×365 =30.4167days; DSO =300/10,000×365 =10.95days; DPO =1,200/6,000×365 =73days. Thus CCC = **−31.6333days**. Investigate whether the supplier terms, collections, and stock levels can persist.
+
+## A2.3 Cash, plant, debt, and equity roll-forwards
+
+> CFO = net profit +depreciation −ΔNWC
+> CFO2027 = 1,002.40 +600 −152.05479 = **1,450.34521**
+> Capex2027 = 10,600×0.09 = **954**
+> Cash after capex = 1,450.34521 −954 = **496.34521**
+> Dividend = 1,002.40×0.40 = **400.96**
+> Closing cash = 1,200 +1,450.34521 −954 −250 −400.96 = **1,045.38521**
+> Closing plant = 6,000 +954 −600 = **6,354**
+> Closing debt = 2,500 −250 = **2,250**
+> Closing equity = 6,000 +1,002.40 −400.96 = **6,601.44**
+
+Article equation (2.2) is the cash-after-capex calculation. In this example CFO includes interest through net profit. It is distinct from unlevered free cash flow used in enterprise valuation.
+
+The2027 balance sheet reconciles: assets =1,277.80822 +1,045.47945 +6,354 +1,045.38521 =**9,722.67288**. Liabilities plus equity =871.23288 +2,250 +6,601.44 =**9,722.67288**. The model repeats the roll-forward through2031, with a residual tolerance for floating-point arithmetic. A negative calculated cash balance represents an unfunded plan requiring an explicit financing or operating response.
+
+## A2.4 Unlevered cash flow and DCF
+
+| Symbol | Meaning |
+| --- | --- |
+| FCFF | Free cash flow to the firm, before financing payments |
+| NOPAT | Operating profit after the assumed operating tax |
+| w | Weighted average cost of capital, nominalKES |
+| g | Stable terminal growth, nominalKES |
+| ROIC | Return on newly invested operating capital in the terminal state |
+| EV | Enterprise value |
+| NCI | Minority interests or other ownership claims deducted in the equity bridge |
+
+> NOPAT = EBIT(1 −tax rate)
+> FCFF = NOPAT +depreciation −capex −ΔNWC
+> FCFF2027 = 1,732×0.70 +600 −954 −152.05479 = **706.34521**
+> PV_forecast = Σ[t=1…5] FCFFₜ/(1+w)^t
+> Terminal reinvestment fraction = g/ROIC
+> FCFF₆ = NOPAT₅(1+g)(1−g/ROIC)
+> TV₅ = FCFF₆/(w−g)
+> EV = PV_forecast +TV₅/(1+w)^5
+> Equity value = EV +excess cash +nonoperating investments −debt −NCI
+> Value per share = equity value /shares
+
+At w=14%, g=4%, ROIC=16%, terminal reinvestment is25%. The workbook calculates PV_forecast **3,358.04817**, terminal NOPAT **1,626.33215**, terminal FCFF **1,219.74911**, terminal EV **12,197.49109**, and terminal PV **6,334.99466**. EV is **9,693.04283**. Adding1,200cash and deducting2,500debt gives equity value **8,393.04283**, or **KES 8.39304/share**.
+
+Article equation (2.4): MOS =1−price/value. At illustrative price6, MOS =1−6/8.39304 =**28.5122%**. Terminal PV represents **65.3561%** of EV. The sensitivity grid recomputes both forecast discounting and terminal reinvestment for each pair of w and g. Require w>g, ROIC>0, positive shares, and economically supportable growth; a terminal retention fraction above100% needs a different steady-state structure.
+
+## A2.5 Bank diagnostics and distribution capacity
+
+> NPL ratio = nonperforming loans /gross loans
+> Coverage = impairment allowance /NPL stock
+> Cost of risk = annual impairment charge /average gross loans
+> NIM = net interest income /average earning assets
+> CIR = operating expense /operating income
+> Capital ratio = eligible regulatory capital /risk-weighted assets
+> Headroom = actual capital ratio −applicable requirement
+
+For the fictional diagnostic base: NPL ratio =8,000/80,000 =10%; coverage =5,000/8,000 =62.5%; cost of risk =1,200/77,000 =1.5584%; NIM =6,000/95,000 =6.3158%; CIR =3,500/10,000 =35%. Core capital ratio =11,000/80,000 =13.75%, giving3.25percentage points over a10.5% input. Total capital ratio =15,000/80,000 =18.75%, giving4.25points over14.5%. Requirements are entity-specific inputs; the exercise is not a regulatory determination for a named bank.
+
+For the capacity model:
+
+> Required retained capital = max[0,RWA₀(1+growth_RWA)×required ratio −eligible capital₀]
+> Dividend capacity = max[0,scenario profit −required retained capital]
+
+The proxy assumes opening equity equals eligible capital and omits regulatory deductions, additional buffers, supervisory restrictions, and subsidiary-transfer constraints. Add those explicitly for an actual bank.
+
+The separate steady-state valuation uses P/B =(ROE−g)/(kₑ−g), derived from dividend retention g/ROE under clean-surplus assumptions. At ROE18%, g5%, kₑ16%, P/B =13/11 =**1.1818times**. Opening equity10,000 gives value11,818.18. The long-run ROE assumption is separate from the one-year profit stress, which may differ during the transition. A multi-stage residual-income model values B₀ +Σ[(ROEₜ−kₑ)Bₜ₋₁/(1+kₑ)^t] plus any terminal residual-income value.
+
+## A2.6 Insurance bridge and asset value
+
+Article equation (2.3), for the defined non-life example:
+
+> Combined ratio = claims/earned premium +expenses/earned premium
+> Underwriting result = earned premium −claims −expenses
+> PBT = underwriting +investment +other −finance cost
+> PAT = PBT −max(PBT,0)×tax rate
+> ROE = PAT /[(opening equity+closing equity)/2]
+
+At premiums4,000, claims2,600 and expenses1,080, the combined ratio is92% and underwriting profit320. Add880investment result and deduct100finance cost: PBT1,100. Tax330 leaves PAT770; average equity10,250 gives **7.5122% ROE**. This is a complete simplified profit bridge; investment income alone does not determine underwriting quality. Map IFRS17 service results and reinsurance to the actual issuer's definitions before applying it.
+
+Adjusted NAV can be expressed as reported attributable equity plus documented asset-value adjustments minus additional liability or tax adjustments. Price/adjusted book then compares market equity value with that estimate. Avoid adding the value of a subsidiary twice when it is already consolidated. For life insurers, analyse the contractual service margin, reserve assumptions, cash emergence, and capital requirements separately from a short-tail combined ratio.
+
+## A2.7 Historical quality signals
+
+The workbook's five-year history is fictional and separate from the forecast. Its nine-signal screen is inspired by Piotroski but uses closing-asset denominators and the stated simplified definitions. It tests positive profitability, positive cash generation, improving profitability, cash exceeding accrual profit, lower leverage, improved liquidity, no share issuance, improved gross margin, and improved asset turnover. Each condition contributes0or1. This educational variant should not be presented as an exact replication of the original empirical strategy.
+
+## Workbook formula dictionary
+
+### Dictionary entries
+
+Each entry defines a formula family. Copied years, issuers, and simulation paths follow the same relationship. The [cell-by-cell formula audit](<C:/Users/Nevo/Downloads/financial material/Kenyan Equities and Company Analysis/Four Part Series/Research/02-Statements-and-Valuation-formula-audit.csv>) provides every exact Excel expression. Input units and modelling conventions appear in each workbook’s Guide and Inputs sheets.
+
+#### Statements: B7 — Opening Revenue
+
+Mathematical equivalence: `Opening value from Inputs B7`
+
+Units and scope: KES million
+
+```excel
+='Inputs'!B7
+```
+
+#### Statements: B17 — Opening Receivables
+
+Mathematical equivalence: `Opening value from Inputs B8`
+
+Units and scope: KES million
+
+```excel
+='Inputs'!B8
+```
+
+#### Statements: B18 — Opening Inventory
+
+Mathematical equivalence: `Opening value from Inputs B9`
+
+Units and scope: KES million
+
+```excel
+='Inputs'!B9
+```
+
+#### Statements: B19 — Opening Trade payables
+
+Mathematical equivalence: `Opening value from Inputs B10`
+
+Units and scope: KES million
+
+```excel
+='Inputs'!B10
+```
+
+#### Statements: B25 — Opening Closing plant
+
+Mathematical equivalence: `Opening value from Inputs B11`
+
+Units and scope: KES million
+
+```excel
+='Inputs'!B11
+```
+
+#### Statements: B39 — Opening Closing cash
+
+Mathematical equivalence: `Opening value from Inputs B12`
+
+Units and scope: KES million
+
+```excel
+='Inputs'!B12
+```
+
+#### Statements: B29 — Opening Closing debt
+
+Mathematical equivalence: `Opening value from Inputs B13`
+
+Units and scope: KES million
+
+```excel
+='Inputs'!B13
+```
+
+#### Statements: B33 — Opening Closing equity
+
+Mathematical equivalence: `Opening value from Inputs B14`
+
+Units and scope: KES million
+
+```excel
+='Inputs'!B14
+```
+
+#### Statements: B20 — Opening working capital
+
+Mathematical equivalence: `NWC=receivables+inventory−payables`
+
+Units and scope: KES million
+
+```excel
+=B17+B18-B19
+```
+
+#### Statements: C7 — Revenue
+
+Mathematical equivalence: `Revenue_t=Revenue_(t−1)(1+g_t)`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=B7*(1+'Annual drivers'!B7)
+```
+
+#### Statements: C8 — Cash cost of sales
+
+Mathematical equivalence: `COGS=Revenue×cost ratio`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C7*'Annual drivers'!B15
+```
+
+#### Statements: C9 — EBITDA
+
+Mathematical equivalence: `EBITDA=Revenue×margin`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C7*'Annual drivers'!B8
+```
+
+#### Statements: C10 — Depreciation
+
+Mathematical equivalence: `D&A=opening plant×depreciation rate`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C23*'Annual drivers'!B9
+```
+
+#### Statements: C11 — EBIT
+
+Mathematical equivalence: `EBIT=EBITDA−D&A`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C9-C10
+```
+
+#### Statements: C12 — Interest expense
+
+Mathematical equivalence: `Interest=opening debt×rate`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C27*'Annual drivers'!B16
+```
+
+#### Statements: C13 — Profit before tax
+
+Mathematical equivalence: `PBT=EBIT−interest`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C11-C12
+```
+
+#### Statements: C14 — Cash tax expense
+
+Mathematical equivalence: `Tax=max(PBT,0)×tax rate; no loss carryforwards`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=MAX(0,C13)*'Annual drivers'!B11
+```
+
+#### Statements: C15 — Net profit
+
+Mathematical equivalence: `NI=PBT−tax`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C13-C14
+```
+
+#### Statements: C17 — Receivables
+
+Mathematical equivalence: `AR=Revenue×DSO/365`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C7*'Annual drivers'!B12/365
+```
+
+#### Statements: C18 — Inventory
+
+Mathematical equivalence: `Inventory=COGS×DIO/365`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C8*'Annual drivers'!B13/365
+```
+
+#### Statements: C19 — Trade payables
+
+Mathematical equivalence: `AP=COGS×DPO/365; COGS proxy for purchases`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C8*'Annual drivers'!B14/365
+```
+
+#### Statements: C20 — Operating working capital
+
+Mathematical equivalence: `NWC=AR+inventory−AP`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C17+C18-C19
+```
+
+#### Statements: C21 — Change in working capital
+
+Mathematical equivalence: `ΔNWC=NWC_t−NWC_(t−1)`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C20-B20
+```
+
+#### Statements: C23 — Opening plant
+
+Mathematical equivalence: `Opening plant=prior closing plant`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=B25
+```
+
+#### Statements: C24 — Capital expenditure
+
+Mathematical equivalence: `Capex=Revenue×capex fraction`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C7*'Annual drivers'!B10
+```
+
+#### Statements: C25 — Closing plant
+
+Mathematical equivalence: `Plant_close=Plant_open+Capex−D&A`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C23+C24-C10
+```
+
+#### Statements: C27 — Opening debt
+
+Mathematical equivalence: `Debt_open=prior Debt_close`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=B29
+```
+
+#### Statements: C28 — Principal repayment
+
+Mathematical equivalence: `Repayment=min(opening debt,scheduled principal)`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=MIN(C27,'Annual drivers'!B17)
+```
+
+#### Statements: C29 — Closing debt
+
+Mathematical equivalence: `Debt_close=Debt_open−repayment`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C27-C28
+```
+
+#### Statements: C31 — Opening equity
+
+Mathematical equivalence: `Equity_open=prior Equity_close`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=B33
+```
+
+#### Statements: C32 — Dividends
+
+Mathematical equivalence: `Dividends=max(NI,0)×payout`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=MAX(0,C15)*'Annual drivers'!B18
+```
+
+#### Statements: C33 — Closing equity
+
+Mathematical equivalence: `Equity_close=Equity_open+NI−dividends`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C31+C15-C32
+```
+
+#### Statements: C35 — Opening cash
+
+Mathematical equivalence: `Cash_open=prior Cash_close`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=B39
+```
+
+#### Statements: C36 — Operating cash flow
+
+Mathematical equivalence: `CFO=NI+D&A−ΔNWC`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C15+C10-C21
+```
+
+#### Statements: C37 — Investing cash flow
+
+Mathematical equivalence: `CFI=−Capex`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=-C24
+```
+
+#### Statements: C38 — Financing cash flow
+
+Mathematical equivalence: `CFF=−repayment−dividends`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=-C28-C32
+```
+
+#### Statements: C39 — Closing cash
+
+Mathematical equivalence: `Cash_close=Cash_open+CFO+CFI+CFF`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C35+C36+C37+C38
+```
+
+#### Statements: C41 — Total assets
+
+Mathematical equivalence: `Assets=AR+Inventory+Plant+Cash`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C17+C18+C25+C39
+```
+
+#### Statements: C42 — Liabilities plus equity
+
+Mathematical equivalence: `Liabilities+Equity=AP+Debt+Equity`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C19+C29+C33
+```
+
+#### Statements: C43 — Balance sheet difference
+
+Mathematical equivalence: `Check=Assets−Liabilities−Equity`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C41-C42
+```
+
+#### Statements: C45 — NOPAT
+
+Mathematical equivalence: `NOPAT=EBIT(1−tax rate)`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C11*(1-'Annual drivers'!B11)
+```
+
+#### Statements: C46 — Unlevered free cash flow
+
+Mathematical equivalence: `FCFF=NOPAT+D&A−Capex−ΔNWC`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C45+C10-C24-C21
+```
+
+#### Statements: C47 — EPS
+
+Mathematical equivalence: `EPS=NI/shares`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C15/'Inputs'!$B$15
+```
+
+#### Statements: C48 — DPS
+
+Mathematical equivalence: `DPS=dividends/shares`
+
+Units and scope: KES million; EPS and DPS KES/share
+
+```excel
+=C32/'Inputs'!$B$15
+```
+
+#### DCF: B7 — PV forecast cash flow
+
+Mathematical equivalence: `PV_FCFF=Σ FCFF_t/(1+WACC)^t`
+
+Units and scope: KES million except per-share and fractions
+
+```excel
+=SUM('Statements'!C46/(1+'Inputs'!B16),'Statements'!D46/(1+'Inputs'!B16)^2,'Statements'!E46/(1+'Inputs'!B16)^3,'Statements'!F46/(1+'Inputs'!B16)^4,'Statements'!G46/(1+'Inputs'!B16)^5)
+```
+
+#### DCF: B8 — Terminal NOPAT
+
+Mathematical equivalence: `NOPAT_6=NOPAT_5(1+g)`
+
+Units and scope: KES million except per-share and fractions
+
+```excel
+='Statements'!G45*(1+'Inputs'!B17)
+```
+
+#### DCF: B9 — Terminal reinvestment fraction
+
+Mathematical equivalence: `RR=g/ROIC`
+
+Units and scope: KES million except per-share and fractions
+
+```excel
+='Inputs'!B17/'Inputs'!B18
+```
+
+#### DCF: B10 — Terminal cash flow
+
+Mathematical equivalence: `FCFF_6=NOPAT_6(1−g/ROIC)`
+
+Units and scope: KES million except per-share and fractions
+
+```excel
+=B8*(1-B9)
+```
+
+#### DCF: B11 — Terminal enterprise value
+
+Mathematical equivalence: `TV_5=FCFF_6/(WACC−g)`
+
+Units and scope: KES million except per-share and fractions
+
+```excel
+=IF('Inputs'!B16<='Inputs'!B17,"Invalid WACC <= growth",B10/('Inputs'!B16-'Inputs'!B17))
+```
+
+#### DCF: B12 — PV terminal
+
+Mathematical equivalence: `PV_TV=TV_5/(1+WACC)^5`
+
+Units and scope: KES million except per-share and fractions
+
+```excel
+=IF(ISNUMBER(B11),B11/(1+'Inputs'!B16)^5,"Check terminal inputs")
+```
+
+#### DCF: B13 — Enterprise value
+
+Mathematical equivalence: `EV=PV_FCFF+PV_TV`
+
+Units and scope: KES million except per-share and fractions
+
+```excel
+=IF(ISNUMBER(B12),B7+B12,"Check terminal inputs")
+```
+
+#### DCF: B14 — Equity value
+
+Mathematical equivalence: `Equity=EV+cash−debt+investments−minority interests`
+
+Units and scope: KES million except per-share and fractions
+
+```excel
+=IF(ISNUMBER(B13),B13+'Inputs'!B12-'Inputs'!B13+'Inputs'!B20-'Inputs'!B19,"Check terminal inputs")
+```
+
+#### DCF: B15 — Value per share
+
+Mathematical equivalence: `V=Equity/shares`
+
+Units and scope: KES million except per-share and fractions
+
+```excel
+=IF(ISNUMBER(B14),B14/'Inputs'!B15,"Check terminal inputs")
+```
+
+#### DCF: B16 — Margin of safety
+
+Mathematical equivalence: `MOS=1−price/value`
+
+Units and scope: KES million except per-share and fractions
+
+```excel
+=IF(ISNUMBER(B15),1-'Inputs'!B21/B15,"Check terminal inputs")
+```
+
+#### DCF: B17 — Terminal share of EV
+
+Mathematical equivalence: `Terminal proportion=PV_TV/EV`
+
+Units and scope: KES million except per-share and fractions
+
+```excel
+=IF(ISNUMBER(B13),B12/B13,"Check terminal inputs")
+```
+
+#### DCF sensitivity: B7 — Value per share sensitivity
+
+Mathematical equivalence: `V(w,g)=[ΣFCFF_t/(1+w)^t+NOPAT5(1+g)(1−g/ROIC)/(w−g)/(1+w)^5+cash−debt+investments−NCI]/shares`
+
+Units and scope: KES/share
+
+```excel
+=IF($A7<=B$6,"Invalid",(('Statements'!C46/(1+$A7)^1+'Statements'!D46/(1+$A7)^2+'Statements'!E46/(1+$A7)^3+'Statements'!F46/(1+$A7)^4+'Statements'!G46/(1+$A7)^5)+'Statements'!G45*(1+B$6)*(1-B$6/'Inputs'!$B$18)/($A7-B$6)/(1+$A7)^5+'Inputs'!$B$12-'Inputs'!$B$13+'Inputs'!$B$20-'Inputs'!$B$19)/'Inputs'!$B$15)
+```
+
+#### Bank scenarios: L7 — After-tax scenario earnings
+
+Mathematical equivalence: `NI=(pre-provision profit−credit loss)(1−tax)`
+
+Units and scope: Stable ROE valuation separate from one-year earnings stress.
+
+```excel
+=(I7-J7)*(1-K7)
+```
+
+#### Bank scenarios: M7 — Required retained capital
+
+Mathematical equivalence: `retained=max[0,RWA0(1+growth)×capital ratio−opening capital]`
+
+Units and scope: Stable ROE valuation separate from one-year earnings stress.
+
+```excel
+=MAX(0,F7*(1+G7)*H7-B7)
+```
+
+#### Bank scenarios: N7 — Indicative dividend capacity
+
+Mathematical equivalence: `dividend=max(0,NI−required retention)`
+
+Units and scope: Stable ROE valuation separate from one-year earnings stress.
+
+```excel
+=MAX(0,L7-M7)
+```
+
+#### Bank scenarios: O7 — Scenario payout
+
+Mathematical equivalence: `payout=dividend/NI`
+
+Units and scope: Stable ROE valuation separate from one-year earnings stress.
+
+```excel
+=IF(L7>0,N7/L7,"Not meaningful")
+```
+
+#### Bank scenarios: P7 — Steady-state justified P/B
+
+Mathematical equivalence: `P/B=(ROE−g)/(k_e−g)`
+
+Units and scope: Stable ROE valuation separate from one-year earnings stress.
+
+```excel
+=IF(OR(D7<=E7,C7<E7),"Invalid growth",(C7-E7)/(D7-E7))
+```
+
+#### Bank scenarios: Q7 — Steady-state equity value
+
+Mathematical equivalence: `V=B0(ROE−g)/(k_e−g)`
+
+Units and scope: Stable ROE valuation separate from one-year earnings stress.
+
+```excel
+=IF(ISNUMBER(P7),P7*B7,"Check growth")
+```
+
+#### Insurance scenarios: K7 — Loss ratio
+
+Mathematical equivalence: `LR=claims/earned premium`
+
+Units and scope: No tax credit on losses; other comprehensive income may change closing equity.
+
+```excel
+=C7/B7
+```
+
+#### Insurance scenarios: L7 — Expense ratio
+
+Mathematical equivalence: `ER=expenses/earned premium`
+
+Units and scope: No tax credit on losses; other comprehensive income may change closing equity.
+
+```excel
+=D7/B7
+```
+
+#### Insurance scenarios: M7 — Combined ratio
+
+Mathematical equivalence: `CR=LR+ER`
+
+Units and scope: No tax credit on losses; other comprehensive income may change closing equity.
+
+```excel
+=K7+L7
+```
+
+#### Insurance scenarios: N7 — Underwriting result
+
+Mathematical equivalence: `U=earned premium−claims−expenses`
+
+Units and scope: No tax credit on losses; other comprehensive income may change closing equity.
+
+```excel
+=B7-C7-D7
+```
+
+#### Insurance scenarios: O7 — Profit before tax
+
+Mathematical equivalence: `PBT=U+investment+other−finance`
+
+Units and scope: No tax credit on losses; other comprehensive income may change closing equity.
+
+```excel
+=N7+E7+F7-G7
+```
+
+#### Insurance scenarios: P7 — Profit after tax
+
+Mathematical equivalence: `PAT=PBT−max(PBT,0)tax`
+
+Units and scope: No tax credit on losses; other comprehensive income may change closing equity.
+
+```excel
+=O7-MAX(0,O7)*H7
+```
+
+#### Insurance scenarios: Q7 — Average equity
+
+Mathematical equivalence: `E_avg=(E_open+E_close)/2`
+
+Units and scope: No tax credit on losses; other comprehensive income may change closing equity.
+
+```excel
+=(I7+J7)/2
+```
+
+#### Insurance scenarios: R7 — Return on equity
+
+Mathematical equivalence: `ROE=PAT/E_avg`
+
+Units and scope: No tax credit on losses; other comprehensive income may change closing equity.
+
+```excel
+=P7/Q7
+```
+
+#### Sector screens: J7 — Inventory days
+
+Mathematical equivalence: `DIO=average inventory/COGS×365`
+
+Units and scope: KES million except days and cover multiple
+
+```excel
+=AVERAGE(D7:E7)/C7*365
+```
+
+#### Sector screens: K7 — Collection days
+
+Mathematical equivalence: `DSO=average AR/revenue×365`
+
+Units and scope: KES million except days and cover multiple
+
+```excel
+=AVERAGE(F7:G7)/B7*365
+```
+
+#### Sector screens: L7 — Payable days
+
+Mathematical equivalence: `DPO=average AP/COGS×365`
+
+Units and scope: KES million except days and cover multiple
+
+```excel
+=AVERAGE(H7:I7)/C7*365
+```
+
+#### Sector screens: M7 — Cash conversion cycle
+
+Mathematical equivalence: `CCC=DIO+DSO−DPO`
+
+Units and scope: KES million except days and cover multiple
+
+```excel
+=J7+K7-L7
+```
+
+#### Sector screens: P7 — Cash after capex
+
+Mathematical equivalence: `FCF_proxy=CFO−capex`
+
+Units and scope: KES million except days and cover multiple
+
+```excel
+=N7-O7
+```
+
+#### Sector screens: R7 — Cash dividend cover
+
+Mathematical equivalence: `cover=FCF_proxy/dividend`
+
+Units and scope: KES million except days and cover multiple
+
+```excel
+=IF(Q7>0,P7/Q7,"No dividend")
+```
+
+#### Bank diagnostics: P7 — NPL ratio
+
+Mathematical equivalence: `NPL/gross loans`
+
+Units and scope: Fractions; headroom in percentage points when multiplied by100.
+
+```excel
+=C7/B7
+```
+
+#### Bank diagnostics: Q7 — Allowance coverage
+
+Mathematical equivalence: `allowance/NPL`
+
+Units and scope: Fractions; headroom in percentage points when multiplied by100.
+
+```excel
+=D7/C7
+```
+
+#### Bank diagnostics: R7 — Cost of risk
+
+Mathematical equivalence: `annual credit loss/average gross loans`
+
+Units and scope: Fractions; headroom in percentage points when multiplied by100.
+
+```excel
+=E7/AVERAGE(B7,F7)
+```
+
+#### Bank diagnostics: S7 — Net interest margin
+
+Mathematical equivalence: `NII/average earning assets`
+
+Units and scope: Fractions; headroom in percentage points when multiplied by100.
+
+```excel
+=G7/H7
+```
+
+#### Bank diagnostics: T7 — Cost-to-income
+
+Mathematical equivalence: `operating expense/operating income`
+
+Units and scope: Fractions; headroom in percentage points when multiplied by100.
+
+```excel
+=I7/J7
+```
+
+#### Bank diagnostics: U7 — Core capital ratio
+
+Mathematical equivalence: `core capital/RWA`
+
+Units and scope: Fractions; headroom in percentage points when multiplied by100.
+
+```excel
+=K7/M7
+```
+
+#### Bank diagnostics: V7 — Total capital ratio
+
+Mathematical equivalence: `total capital/RWA`
+
+Units and scope: Fractions; headroom in percentage points when multiplied by100.
+
+```excel
+=L7/M7
+```
+
+#### Bank diagnostics: W7 — Core headroom
+
+Mathematical equivalence: `core ratio−required ratio`
+
+Units and scope: Fractions; headroom in percentage points when multiplied by100.
+
+```excel
+=U7-N7
+```
+
+#### Bank diagnostics: X7 — Total headroom
+
+Mathematical equivalence: `total ratio−required ratio`
+
+Units and scope: Fractions; headroom in percentage points when multiplied by100.
+
+```excel
+=V7-O7
+```
+
+#### Historical quality: K7 — Return on assets
+
+Mathematical equivalence: `NI/closing assets, same basis each year`
+
+Units and scope: Comparable classroom ratios; full Piotroski research conventions use defined asset timing.
+
+```excel
+=D7/F7
+```
+
+#### Historical quality: L7 — Cash return on assets
+
+Mathematical equivalence: `CFO/closing assets`
+
+Units and scope: Comparable classroom ratios; full Piotroski research conventions use defined asset timing.
+
+```excel
+=E7/F7
+```
+
+#### Historical quality: M7 — Gross margin
+
+Mathematical equivalence: `(Revenue−COGS)/Revenue`
+
+Units and scope: Comparable classroom ratios; full Piotroski research conventions use defined asset timing.
+
+```excel
+=(B7-C7)/B7
+```
+
+#### Historical quality: N7 — Asset turnover
+
+Mathematical equivalence: `Revenue/closing assets`
+
+Units and scope: Comparable classroom ratios; full Piotroski research conventions use defined asset timing.
+
+```excel
+=B7/F7
+```
+
+#### Historical quality: O7 — Leverage
+
+Mathematical equivalence: `Long-term debt/closing assets`
+
+Units and scope: Comparable classroom ratios; full Piotroski research conventions use defined asset timing.
+
+```excel
+=G7/F7
+```
+
+#### Historical quality: P7 — Current ratio
+
+Mathematical equivalence: `Current assets/current liabilities`
+
+Units and scope: Comparable classroom ratios; full Piotroski research conventions use defined asset timing.
+
+```excel
+=H7/I7
+```
+
+#### Quality signals: D7 — Positive ROA
+
+Mathematical equivalence: `point=1{current > comparison}; else0`
+
+Units and scope: Binary signal; see stated denominator conventions.
+
+```excel
+=IF(B7>C7,1,0)
+```
+
+#### Quality signals: D8 — Positive cash flow
+
+Mathematical equivalence: `point=1{current > comparison}; else0`
+
+Units and scope: Binary signal; see stated denominator conventions.
+
+```excel
+=IF(B8>C8,1,0)
+```
+
+#### Quality signals: D9 — Improving ROA
+
+Mathematical equivalence: `point=1{current > comparison}; else0`
+
+Units and scope: Binary signal; see stated denominator conventions.
+
+```excel
+=IF(B9>C9,1,0)
+```
+
+#### Quality signals: D10 — Cash exceeds accrual profit
+
+Mathematical equivalence: `point=1{current > comparison}; else0`
+
+Units and scope: Binary signal; see stated denominator conventions.
+
+```excel
+=IF(B10>C10,1,0)
+```
+
+#### Quality signals: D11 — Lower leverage
+
+Mathematical equivalence: `point=1{current < comparison}; else0`
+
+Units and scope: Binary signal; see stated denominator conventions.
+
+```excel
+=IF(B11<C11,1,0)
+```
+
+#### Quality signals: D12 — Improving liquidity
+
+Mathematical equivalence: `point=1{current > comparison}; else0`
+
+Units and scope: Binary signal; see stated denominator conventions.
+
+```excel
+=IF(B12>C12,1,0)
+```
+
+#### Quality signals: D13 — No share issuance
+
+Mathematical equivalence: `point=1{current <= comparison}; else0`
+
+Units and scope: Binary signal; see stated denominator conventions.
+
+```excel
+=IF(B13<=C13,1,0)
+```
+
+#### Quality signals: D14 — Improving gross margin
+
+Mathematical equivalence: `point=1{current > comparison}; else0`
+
+Units and scope: Binary signal; see stated denominator conventions.
+
+```excel
+=IF(B14>C14,1,0)
+```
+
+#### Quality signals: D15 — Improving asset turnover
+
+Mathematical equivalence: `point=1{current > comparison}; else0`
+
+Units and scope: Binary signal; see stated denominator conventions.
+
+```excel
+=IF(B15>C15,1,0)
+```
+
+#### Quality signals: D17 — Combined educational signal count
+
+Mathematical equivalence: `score=Σ9 binary points`
+
+Units and scope: 0–9; research prioritisation, not automatic selection
+
+```excel
+=SUM(D7:D15)
+```

@@ -1,0 +1,198 @@
+[
+  [
+    "Payroll",
+    "B8",
+    "'='Policy'!$B$21*MIN('Monthly inputs'!D8,'Policy'!$B$23)",
+    "N = 0.06 × min(pensionable pay, earnings ceiling)",
+    "Ceiling 72,000 January; 108,000 February–December. Employee only; S05–S06."
+  ],
+  [
+    "Payroll",
+    "C8",
+    "'='Policy'!$B$18*'Monthly inputs'!E8",
+    "A = 0.015 × AHL base",
+    "S11; employer match excluded from employee cash."
+  ],
+  [
+    "Payroll",
+    "D8",
+    "'=MAX('Policy'!$B$20,'Policy'!$B$19*'Monthly inputs'!F8)",
+    "H = max(300, 0.0275 × SHIF base)",
+    "S07; active salaried membership for all 12 months."
+  ],
+  [
+    "Payroll",
+    "E8",
+    "'=MIN(B8+'Monthly inputs'!G8,'Policy'!$B$13*'Monthly inputs'!L8,'Policy'!$B$12)",
+    "P = min(N + private pension, 0.30 × pension tax income, 30,000)",
+    "S02–S04; section 22A occupational defined-contribution illustration. Separate tax pensionable income and NSSF earnings inputs; section 22B individual-fund rules require separate review."
+  ],
+  [
+    "Payroll",
+    "F8",
+    "'=MIN('Monthly inputs'!H8,'Policy'!$B$14)",
+    "R = min(PRMF cash contribution, 15,000)",
+    "S02; separate qualifying fund deduction."
+  ],
+  [
+    "Payroll",
+    "G8",
+    "'=MIN('Monthly inputs'!J8,'Policy'!$B$15)",
+    "I = min(qualifying interest paid, 30,000)",
+    "S02; principal is not deductible."
+  ],
+  [
+    "Payroll",
+    "H8",
+    "'=MAX(0,'Monthly inputs'!B8+'Monthly inputs'!C8-SUM(C8:G8))",
+    "T = max(0, cash gross + taxable noncash − A − H − P − R − I)",
+    "Monthly taxable employment income."
+  ],
+  [
+    "Payroll",
+    "I8",
+    "'='Policy'!$F$7*MIN(MAX(0,(H8)-'Policy'!$D$7),'Policy'!$E$7)+'Policy'!$F$8*MIN(MAX(0,(H8)-'Policy'!$D$8),'Policy'!$E$8)+'Policy'!$F$9*MIN(MAX(0,(H8)-'Policy'!$D$9),'Policy'!$E$9)+'Policy'!$F$10*MIN(MAX(0,(H8)-'Policy'!$D$10),'Policy'!$E$10)+'Policy'!$F$11*MIN(MAX(0,(H8)-'Policy'!$D$11),'Policy'!$E$11)",
+    "B(T) = Σ rateⱼ × max(0, min(T − lowerⱼ, widthⱼ))",
+    "Monthly widths 24,000; 8,333; 467,667; 300,000; unbounded. Rates 10%,25%,30%,32.5%,35%. S01."
+  ],
+  [
+    "Payroll",
+    "J8",
+    "'=MIN('Policy'!$B$16*'Monthly inputs'!I8,'Policy'!$B$17)",
+    "Q = min(0.15 × qualifying premium, 5,000)",
+    "S08. Relief is non-refundable; annual cap 60,000."
+  ],
+  [
+    "Payroll",
+    "K8",
+    "'=MAX(0,I8-'Policy'!$B$11-J8)",
+    "PAYE = max(0, B(T) − personal relief − Q)",
+    "Resident personal relief 2,400 monthly."
+  ],
+  [
+    "Payroll",
+    "L8",
+    "'='Monthly inputs'!B8-B8-C8-D8-K8-'Monthly inputs'!G8-'Monthly inputs'!H8-'Monthly inputs'!I8-'Monthly inputs'!J8",
+    "C = gross cash − NSSF − AHL − SHIF − PAYE − private pension − PRMF − premium − interest",
+    "After listed commitments, whether payroll withheld or paid separately. Principal and other debt must enter household spending."
+  ],
+  [
+    "Payroll",
+    "M8",
+    "'=L8-'Monthly inputs'!K8",
+    "S = cash after commitments − essential spending",
+    "Spending includes rent and other cash costs; no double counting insurance/pension/interest."
+  ],
+  [
+    "Annual reconciliation",
+    "B7",
+    "'=SUM('Payroll'!H7:H18)",
+    "Annual reconciliation.B7 = sum('Payroll'!H7:H18)",
+    "Employment taxable income under monthly deduction assumptions."
+  ],
+  [
+    "Annual reconciliation",
+    "B8",
+    "'='Inputs'!B7",
+    "Annual reconciliation.B8 = 'Inputs'!B7",
+    "Classify income before entry."
+  ],
+  [
+    "Annual reconciliation",
+    "B9",
+    "'=SUM(B7:B8)",
+    "Annual reconciliation.B9 = sum(B7:B8)",
+    "Assumes deductible amounts already assigned correctly; no cross-source loss offset model."
+  ],
+  [
+    "Annual reconciliation",
+    "B10",
+    "'='Policy'!$F$15*MIN(MAX(0,(B9)-'Policy'!$D$15),'Policy'!$E$15)+'Policy'!$F$16*MIN(MAX(0,(B9)-'Policy'!$D$16),'Policy'!$E$16)+'Policy'!$F$17*MIN(MAX(0,(B9)-'Policy'!$D$17),'Policy'!$E$17)+'Policy'!$F$18*MIN(MAX(0,(B9)-'Policy'!$D$18),'Policy'!$E$18)+'Policy'!$F$19*MIN(MAX(0,(B9)-'Policy'!$D$19),'Policy'!$E$19)",
+    "Annual reconciliation.B10 = 'Policy'!$F$15×MIN(MAX(0,(B9)-'Policy'!$D$15),'Policy'!$E$15)+'Policy'!$F$16×MIN(MAX(0,(B9)-'Policy'!$D$16),'Policy'!$E$16)+'Policy'!$F$17×MIN(MAX(0,(B9)-'Policy'!$D$17),'Policy'!$E$17)+'Policy'!$F$18×MIN(MAX(0,(B9)-'Policy'!$D$18),'Policy'!$E$18)+'Policy'!$F$19×MIN(MAX(0,(B9)-'Policy'!$D$19),'Policy'!$E$19)",
+    "Exact annual bands; monthly rounding differs slightly."
+  ],
+  [
+    "Annual reconciliation",
+    "B11",
+    "'=(12*'Policy'!$B$11)",
+    "Annual reconciliation.B11 = (12×'Policy'!$B$11)",
+    "Resident full-year illustration."
+  ],
+  [
+    "Annual reconciliation",
+    "B12",
+    "'=MIN((12*'Policy'!$B$17),'Policy'!$B$16*SUM('Monthly inputs'!I7:I18))",
+    "Annual reconciliation.B12 = MIN((12×'Policy'!$B$17),'Policy'!$B$16×sum('Monthly inputs'!I7:I18))",
+    "Qualifying premiums only."
+  ],
+  [
+    "Annual reconciliation",
+    "B13",
+    "'=MAX(0,B10-B11-B12)",
+    "Annual reconciliation.B13 = MAX(0,B10-B11-B12)",
+    "Before income-tax credits."
+  ],
+  [
+    "Annual reconciliation",
+    "B14",
+    "'=SUM('Payroll'!K7:K18)",
+    "Annual reconciliation.B14 = sum('Payroll'!K7:K18)",
+    "From payroll schedule."
+  ],
+  [
+    "Annual reconciliation",
+    "B15",
+    "'=SUM('Inputs'!B8:B9)",
+    "Annual reconciliation.B15 = sum('Inputs'!B8:B9)",
+    "No final withholding tax credit assumed."
+  ],
+  [
+    "Annual reconciliation",
+    "B16",
+    "'=B13-B14-B15",
+    "Annual reconciliation.B16 = B13-B14-B15",
+    "Positive: further income tax; negative: potential overpayment, subject to reconciliation."
+  ],
+  [
+    "Annual reconciliation",
+    "B17",
+    "'=MAX(0,'Policy'!$F$15*MIN(MAX(0,(B7)-'Policy'!$D$15),'Policy'!$E$15)+'Policy'!$F$16*MIN(MAX(0,(B7)-'Policy'!$D$16),'Policy'!$E$16)+'Policy'!$F$17*MIN(MAX(0,(B7)-'Policy'!$D$17),'Policy'!$E$17)+'Policy'!$F$18*MIN(MAX(0,(B7)-'Policy'!$D$18),'Policy'!$E$18)+'Policy'!$F$19*MIN(MAX(0,(B7)-'Policy'!$D$19),'Policy'!$E$19)-B11-B12)",
+    "Annual reconciliation.B17 = MAX(0,'Policy'!$F$15×MIN(MAX(0,(B7)-'Policy'!$D$15),'Policy'!$E$15)+'Policy'!$F$16×MIN(MAX(0,(B7)-'Policy'!$D$16),'Policy'!$E$16)+'Policy'!$F$17×MIN(MAX(0,(B7)-'Policy'!$D$17),'Policy'!$E$17)+'Policy'!$F$18×MIN(MAX(0,(B7)-'Policy'!$D$18),'Policy'!$E$18)+'Policy'!$F$19×MIN(MAX(0,(B7)-'Policy'!$D$19),'Policy'!$E$19)-B11-B12)",
+    "Independent annual salary band calculation."
+  ],
+  [
+    "Annual reconciliation",
+    "B18",
+    "'=B14-B17",
+    "Annual reconciliation.B18 = B14-B17",
+    "KES +0.20 typical at this salary due to published integer monthly band."
+  ],
+  [
+    "Pension sensitivity",
+    "E7",
+    "'=MAX(0,'Policy'!$F$7*MIN(MAX(0,(D7)-'Policy'!$D$7),'Policy'!$E$7)+'Policy'!$F$8*MIN(MAX(0,(D7)-'Policy'!$D$8),'Policy'!$E$8)+'Policy'!$F$9*MIN(MAX(0,(D7)-'Policy'!$D$9),'Policy'!$E$9)+'Policy'!$F$10*MIN(MAX(0,(D7)-'Policy'!$D$10),'Policy'!$E$10)+'Policy'!$F$11*MIN(MAX(0,(D7)-'Policy'!$D$11),'Policy'!$E$11)-'Policy'!$B$11-'Payroll'!J8)",
+    "PAYE(x) = max(0,B(T(x)) − 2,400 − Q)",
+    "All other February inputs held constant."
+  ],
+  [
+    "Pension sensitivity",
+    "G7",
+    "'='Payroll'!K8-E7",
+    "Tax saving(x) = baseline PAYE − PAYE(x)",
+    "All amounts KES; see Inputs and sheet headers for timing."
+  ],
+  [
+    "Pension sensitivity",
+    "H7",
+    "'=A7-G7",
+    "Net cash cost(x) = extra pension − tax saving(x)",
+    "All amounts KES; see Inputs and sheet headers for timing."
+  ],
+  [
+    "Policy",
+    "D8:E11",
+    "'=D7+E7",
+    "Monthly lower bound bⱼ = bⱼ₋₁ + widthⱼ₋₁; widths link to B7:B10",
+    "Tax rates and annual schedule are versioned policy values. Keep annual and monthly schedules coherent when updating legislation."
+  ]
+]

@@ -114,4 +114,14 @@ media/generated/
 media/uploads/
 private_media/
 
+# Local deployment secrets
+/.private-deployment-secrets/
+
+# Reproducible document extraction and review intermediates
+/Owner's Earning/_docx_package_*/
+/Owner's Earning/_docx_review/
+/NSE Dividend Growth Project 2026/qa/*.png
+/NSE Dividend Growth Project 2026/qa/*-pdf*/
+*.inspect.ndjson
+
 # Keep source research documents, Markdown, approved workbooks, charts and images trackable.

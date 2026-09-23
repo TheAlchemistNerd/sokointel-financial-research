@@ -1,0 +1,9 @@
+flowchart TD
+    A[Record homes, work, travel days, and relevant status] --> B[Apply each country's domestic residence tests]
+    B --> C{More than one domestic residence?}
+    C -- Yes --> D[Check applicable treaty and individual tie-breakers]
+    C -- No --> E[Establish relevant domestic tax scope]
+    D --> E
+    E --> F[Classify dividends, gains, salary, interest, and capital]
+    F --> G[Apply exemptions, credits, and reporting rules]
+    G --> H[Document conclusion and review when facts change]

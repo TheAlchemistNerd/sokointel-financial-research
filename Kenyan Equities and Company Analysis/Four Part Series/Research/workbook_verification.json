@@ -1,0 +1,146 @@
+[
+  {
+    "file": "01-Screening-and-Income.xlsx",
+    "worksheets": 9,
+    "formulas": 468,
+    "formula_errors": [],
+    "input_tests": [
+      {
+        "test": "91-day settlement",
+        "actual": 98181.5115466515,
+        "expected": 98181.51154665,
+        "tolerance": 1e-05
+      },
+      {
+        "test": "Zero price suppresses yield",
+        "actual": ""
+      },
+      {
+        "test": "Restored Equity net yield",
+        "actual": 0.07650560224089635,
+        "expected": 0.07650560224089635,
+        "tolerance": 1e-07
+      }
+    ],
+    "xlsx_zip_integrity": "valid"
+  },
+  {
+    "file": "02-Statements-and-Valuation.xlsx",
+    "worksheets": 15,
+    "formulas": 356,
+    "formula_errors": [],
+    "input_tests": [
+      {
+        "test": "DCF independent cash-flow calculation",
+        "actual": 8.393042831903212,
+        "expected": 8.39304283190321,
+        "tolerance": 1e-07
+      },
+      {
+        "test": "Later driver leaves earlier revenue unchanged",
+        "actual": 11236,
+        "expected": 11236,
+        "tolerance": 1e-07
+      },
+      {
+        "test": "Changed 2029 growth flows through",
+        "actual": 11910.16,
+        "expected": 11910.16,
+        "tolerance": 1e-07
+      },
+      {
+        "test": "Balance sheet after driver edit",
+        "actual": 1.8189894035458565e-12,
+        "expected": 0,
+        "tolerance": 1e-07
+      },
+      {
+        "test": "WACC equal to growth suppresses valuation",
+        "actual": "Check terminal inputs"
+      },
+      {
+        "test": "Restored DCF",
+        "actual": 8.393042831903212,
+        "expected": 8.39304283190321,
+        "tolerance": 1e-07
+      }
+    ],
+    "xlsx_zip_integrity": "valid"
+  },
+  {
+    "file": "03-Portfolio-Construction.xlsx",
+    "worksheets": 14,
+    "formulas": 1008,
+    "formula_errors": [],
+    "input_tests": [
+      {
+        "test": "Balanced volatility",
+        "actual": 0.13555307005007303,
+        "expected": 0.13555307,
+        "tolerance": 1e-08
+      },
+      {
+        "test": "Overallocated weights detected",
+        "actual": 2
+      },
+      {
+        "test": "Restored policy constraints",
+        "actual": 0,
+        "expected": 0,
+        "tolerance": 1e-07
+      }
+    ],
+    "xlsx_zip_integrity": "valid"
+  },
+  {
+    "file": "04-Compounding-and-Simulation.xlsx",
+    "worksheets": 14,
+    "formulas": 10509,
+    "formula_errors": [],
+    "input_tests": [
+      {
+        "test": "Closed-form future value",
+        "actual": 13324123.242185257,
+        "expected": 13324123.2421853,
+        "tolerance": 1e-05
+      },
+      {
+        "test": "Zero volatility and crisis match deterministic path",
+        "actual": 13324123.242185274,
+        "expected": 13324123.242185257,
+        "tolerance": 1e-05
+      },
+      {
+        "test": "Last path matches zero-risk case",
+        "actual": 13324123.242185274,
+        "expected": 13324123.242185257,
+        "tolerance": 1e-05
+      },
+      {
+        "test": "Time-weighted performance",
+        "actual": 0.14949999999999997,
+        "expected": 0.1495,
+        "tolerance": 1e-07
+      },
+      {
+        "test": "Contribution default reaches final year",
+        "actual": 60000,
+        "expected": 60000,
+        "tolerance": 1e-07
+      },
+      {
+        "test": "Inflation input reaches price index",
+        "actual": 4.660957143849308,
+        "expected": 4.660957143849308,
+        "tolerance": 1e-07
+      },
+      {
+        "test": "IRR discounts investor flows to zero",
+        "actual": -0.00019226595759391785,
+        "expected": 0,
+        "tolerance": 0.01
+      }
+    ],
+    "xlsx_zip_integrity": "valid"
+  }
+]

@@ -1,0 +1,156 @@
+[
+  [
+    "Claims scenarios",
+    "B7",
+    "'=A7*'Inputs'!$B$13",
+    "SHA scenario payment = gross bill × assumed fraction",
+    "Illustrative fraction, not SHA tariff, entitlement or claim adjudication."
+  ],
+  [
+    "Claims scenarios",
+    "C7",
+    "'=A7-B7",
+    "Residual = gross bill − SHA payment",
+    "All amounts KES; see Inputs and sheet headers for timing."
+  ],
+  [
+    "Claims scenarios",
+    "D7",
+    "'=C7*'Inputs'!$B$14",
+    "Eligible residual = residual × private eligible share",
+    "All amounts KES; see Inputs and sheet headers for timing."
+  ],
+  [
+    "Claims scenarios",
+    "E7",
+    "'=MAX(0,D7-'Inputs'!$B$15)",
+    "After deductible = max(0, eligible residual − deductible)",
+    "All amounts KES; see Inputs and sheet headers for timing."
+  ],
+  [
+    "Claims scenarios",
+    "F7",
+    "'=MIN('Inputs'!$B$17,E7*(1-'Inputs'!$B$16))",
+    "Private payment = min(limit, after deductible × (1 − patient coinsurance))",
+    "One aggregated material event; coordination of benefits expressly assumed."
+  ],
+  [
+    "Claims scenarios",
+    "G7",
+    "'=A7-B7-F7",
+    "Patient bill = gross bill − public payment − private payment",
+    "All amounts KES; see Inputs and sheet headers for timing."
+  ],
+  [
+    "Claims scenarios",
+    "H7",
+    "'='Inputs'!$B$7-(MIN((12*'Policy'!$B$17),'Policy'!$B$16*('Inputs'!$B$7+'Inputs'!$B$8),'Inputs'!$B$9)-MIN((12*'Policy'!$B$17),'Policy'!$B$16*'Inputs'!$B$8,'Inputs'!$B$9))",
+    "Net premium = premium − incremental usable insurance relief",
+    "Annual credit cap shared across qualifying policies. Uses tax available after personal relief."
+  ],
+  [
+    "Claims scenarios",
+    "I7",
+    "'=G7+H7",
+    "Annual household medical cost = patient bill + net premium",
+    "Excludes statutory SHIF already in payroll."
+  ],
+  [
+    "Monte Carlo",
+    "B7:C2006",
+    "'=B7*EXP(LN('Inputs'!$B$11)-'Inputs'!$B$12^2/2+'Inputs'!$B$12*'Random draws'!C7)",
+    "L = 1{U < p} × exp[ln(m) − s²/2 + sZ]",
+    "m conditional arithmetic mean bill; s log standard deviation; U uniform and Z standard normal; seed 20260908."
+  ],
+  [
+    "Monte Carlo",
+    "H7:L2006",
+    "'=G7+I7",
+    "J = 1{V < q(event)}; need = patient bill + J × months × spending; gap = max(0,need−reserve)",
+    "Conditional dependence is explicit. One event, one annual interruption; reserve assumed accessible and premium funded separately."
+  ],
+  [
+    "Results",
+    "B7",
+    "'=AVERAGE('Monte Carlo'!G7:G2006)",
+    "Results.B7 = mean('Monte Carlo'!G7:G2006)",
+    "Across all years, including no claim."
+  ],
+  [
+    "Results",
+    "B8",
+    "'=AVERAGE('Monte Carlo'!J7:J2006)",
+    "Results.B8 = mean('Monte Carlo'!J7:J2006)",
+    "Medical bill plus assumed income interruption cost."
+  ],
+  [
+    "Results",
+    "B9",
+    "'=PERCENTILE('Monte Carlo'!J7:J2006,.95)",
+    "Results.B9 = quantile('Monte Carlo'!J7:J2006,.95)",
+    "Conditional on specified scenario distributions."
+  ],
+  [
+    "Results",
+    "B10",
+    "'=PERCENTILE('Monte Carlo'!J7:J2006,.99)",
+    "Results.B10 = quantile('Monte Carlo'!J7:J2006,.99)",
+    "Tail is particularly sensitive to severity distribution."
+  ],
+  [
+    "Results",
+    "B11",
+    "'=AVERAGE('Monte Carlo'!L7:L2006)",
+    "Results.B11 = mean('Monte Carlo'!L7:L2006)",
+    "Positive shortfall, not equality to reserve."
+  ],
+  [
+    "Results",
+    "B12",
+    "'=SQRT(B11*(1-B11)/2000)",
+    "Results.B12 = sqrt(B11×(1-B11)÷2000)",
+    "Sampling uncertainty; excludes parameter uncertainty."
+  ],
+  [
+    "Results",
+    "B13",
+    "'=AVERAGE('Monte Carlo'!K7:K2006)",
+    "Results.B13 = mean('Monte Carlo'!K7:K2006)",
+    "Average across all trials; not average conditional on shortfall."
+  ],
+  [
+    "Results",
+    "B14",
+    "'='Claims scenarios'!H7",
+    "Results.B14 = 'Claims scenarios'!H7",
+    "Paid separately from opening liquid reserve."
+  ],
+  [
+    "Results",
+    "B15",
+    "'=B7+B14",
+    "Results.B15 = B7+B14",
+    "Premium plus simulated average patient bill; excludes income gap."
+  ],
+  [
+    "Reserve sensitivity",
+    "B7",
+    "'=COUNTIF('Monte Carlo'!J7:J2006,\">\"&A7)/2000",
+    "p̂(gap) = count(need > reserve) / N",
+    "Same simulated paths at each reserve; avoids random comparison noise."
+  ],
+  [
+    "Reserve sensitivity",
+    "C7",
+    "'=A7/'Inputs'!$B$19",
+    "Runway months = reserve / essential monthly expenditure",
+    "No new inflows and no additional medical event for this simple runway metric."
+  ],
+  [
+    "Policy",
+    "D8:E11",
+    "'=D7+E7",
+    "Monthly lower bound bⱼ = bⱼ₋₁ + widthⱼ₋₁; widths link to B7:B10",
+    "Tax rates and annual schedule are versioned policy values. Keep annual and monthly schedules coherent when updating legislation."
+  ]
+]

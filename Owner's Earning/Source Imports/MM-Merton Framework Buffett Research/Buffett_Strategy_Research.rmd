@@ -1,0 +1,1012 @@
+---
+title: "Research Material: Warren Buffett's Investment Philosophy vs. The Merton Model"
+subtitle: "A Contrarian Approach to Business Valuation and Risk Assessment"
+author: "Corporate Strategy Research"
+date: "2026-06-13"
+output:
+  word_document:
+    toc: true
+    toc_depth: 3
+    fig_caption: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+# Chapter 1: The Analytical Bridge: Business Finance vs. Financial Economics
+
+The study of corporate finance is divided between two ways of seeing risk. The first is the business-finance tradition associated with Warren Buffett and Charlie Munger: read the statements, understand the economics, demand a margin of safety, and avoid situations where leverage can turn a temporary problem into a permanent loss. The second is the financial-economics tradition represented by structural credit models such as the Merton Model: infer the value and volatility of firm assets from traded securities and then calculate a probability of default.
+
+The conflict is not that one side cares about risk and the other does not. Both care deeply about default risk. The disagreement is over measurement. The Merton framework treats market prices, equity volatility, and option-pricing logic as useful signals of corporate fragility. Buffett's framework treats those signals as secondary, and often misleading, unless they are anchored to owner earnings, balance-sheet conservatism, and durable competitive advantage.
+
+This research material improves the earlier outline by converting the Word source, "Buffet's approach.docx", through `pandoc` and using it as the basis for targeted expansion. The result is an incremental business-owner counter-framework to the Merton research: a practical method for asking whether a company can keep generating owner earnings under stress, rather than whether its market price recently became volatile.
+
+## 1.1 Business Motivations and Research Objectives
+
+The motivation for this investigation is to provide a grounded counter-perspective to the `MM-Merton_Research.rmd` framework. Where that document emphasizes stochastic calculus, Ito's Lemma, and risk-neutral pricing, this document emphasizes durability, cash conversion, capital intensity, management discipline, and the structural protection afforded by economic moats.
+
+The research objectives are:
+
+1. To explain why Buffett would reject a volatility-centered interpretation of business risk.
+2. To contrast Buffett's "Margin of Safety" with Merton's "Distance to Default."
+3. To document financial-statement red flags that can make reported profits unreliable.
+4. To formalize the owner-earnings method as a repeatable forensic audit process.
+5. To provide a complete Python implementation that fetches SEC company facts, computes Buffett-style metrics, and flags likely accounting or business-quality concerns.
+
+## 1.2 Buffett's Rejection of the Merton Model
+
+The core question raised by the source document is direct: would Buffett find the Merton Model useful, or would he treat it as the kind of pseudo-scientific abstraction Richard Feynman criticized as "accounting fluff"? The likely answer is that Buffett would accept the problem Merton is trying to solve, but reject the model as a primary decision tool for long-term business ownership.
+
+Merton's model is elegant because it frames equity as a call option on the assets of the firm. Debt becomes the strike price, and default occurs when the value of assets falls below the promised liability threshold. That structure is analytically powerful, but it imports option-pricing assumptions into the assessment of operating businesses. Buffett's critique is that a business is not merely a traded security with a volatility parameter; it is an institution with customers, brands, cost structures, incentives, capital requirements, and management behavior.
+
+Buffett's critique rests on three pillars.
+
+### 1.2.1 Volatility Is Not Risk
+
+The Merton model relies heavily on equity volatility ($\sigma_E$) to infer underlying asset volatility ($\sigma_A$). In Buffett's framework, that substitution is dangerous. Volatility is the motion of quoted prices; risk is the probability of permanent capital loss.
+
+A stock-price decline can mean several different things. It can signal genuine deterioration in the firm's cash generation, but it can also reflect liquidity stress, investor panic, index selling, or short-term disappointment. If the business still has strong owner earnings, modest debt, pricing power, and stable customer demand, the fall in price may increase the investor's margin of safety rather than increase the economic risk of ownership.
+
+### 1.2.2 False Precision ("Physics Envy")
+
+The Merton Model uses simultaneous non-linear equations and stochastic assumptions to produce exact-looking default probabilities. Buffett and Munger object to that style of precision when it masks fragile assumptions. A model that produces a default probability of 2.34% can appear more reliable than a qualitative conclusion such as "the firm is conservatively financed," even when the exact number depends on unstable inputs such as market value, implied or historical volatility, and an assumed asset drift.
+
+The more practical Buffett question is not whether default probability can be stated to two decimal places. It is whether the company can endure a bad cycle without issuing distressed equity, violating covenants, losing its moat, or starving maintenance investment. That question requires approximate but economically grounded judgment.
+
+### 1.2.3 The Efficient Market Assumption
+
+Merton's calibration treats market capitalization as a meaningful reflection of firm value. Buffett's career is built on the opposite premise: market prices frequently detach from business reality. During market panic, a falling equity value mechanically moves the firm closer to Merton's default boundary. In the Buffett framework, the same fall may simply create a wider spread between price and intrinsic value.
+
+This difference is decisive. Financial economics asks what the market is implying. Buffett asks what the business can produce for owners over time.
+
+# Chapter 2: The Fallacy of Volatility as Risk
+
+The Merton Model treats volatility as an input to credit risk. Higher equity volatility feeds into higher estimated asset volatility, which reduces Distance to Default. Buffett's framework challenges the premise that price motion and business impairment are equivalent.
+
+## 2.1 The Volatility vs. Risk Distinction
+
+Risk, in this research, is defined as permanent impairment of owner capital. That impairment can arise from leverage, declining competitive position, accounting manipulation, loss of pricing power, technological obsolescence, poor capital allocation, or regulatory attack. Volatility can accompany those events, but it is not the event itself.
+
+- **The Merton view:** If price fluctuations widen, $\sigma_E$ increases. The model interprets this as a higher probability that assets will fall below liabilities.
+- **The Buffett view:** If owner earnings and the moat remain intact, a falling price can improve the expected return and reduce investment risk through a larger margin of safety.
+
+The practical implication is that a Buffett-style audit must begin with financial statements and business economics, not the stock chart.
+
+## 2.2 False Precision and Model Fragility
+
+The source document frames "physics envy" as a central weakness of over-mathematized finance. In physics, mathematical precision can be justified when the underlying system obeys stable laws. Businesses do not behave that way. They are adaptive systems shaped by incentives, regulation, technological shifts, customer psychology, and management choices.
+
+False precision becomes most dangerous when a model converts uncertain assumptions into a single confident number. In a Merton-style framework, small changes to asset volatility, debt maturity, asset drift, or market value can materially alter estimated default risk. Buffett's answer is to avoid dependence on fragile calibration. He prefers simple but robust tests: recurring cash earnings, debt-service coverage, conservative leverage, and evidence that the moat survives stress.
+
+## 2.3 Black-Scholes, Long-Dated Options, and the "Know-Nothing" System
+
+The Word source also connects Buffett and Munger's criticism of Merton to their criticism of Black-Scholes. The link is natural: the Merton Model grows out of the same option-pricing tradition. Black-Scholes treats volatility as a primary input and is most defensible when the user knows little about the underlying business beyond price behavior, dividends, time, and rates.
+
+Buffett and Munger objected most strongly to applying that logic to long-dated options. Over a short period, volatility may dominate outcomes. Over a decade or two, retained earnings, reinvestment rates, inflation pass-through, and competitive advantage matter more. A long-dated put on a diversified equity index can look expensive under a low-drift, volatility-centered model while being economically attractive to sell if productive businesses compound intrinsic value over time.
+
+This criticism does not mean option-pricing mathematics is useless. It means the model should not be mistaken for business understanding. For a Buffett-style analyst, the correct sequence is: understand the business first, then decide whether the market price or derivative price is offering a mispriced bargain.
+
+## 2.4 The Equity Premium Puzzle as a Buffett-Munger Rebuttal
+
+The source document treats the Equity Premium Puzzle as another example of finance theory struggling with business reality. Academic models ask why equities have historically outperformed risk-free government bonds by so much. Buffett's practical answer is that equities represent ownership of productive capital, while bonds represent fixed claims exposed to inflation.
+
+The key business-owner interpretation is:
+
+- Productive businesses can reinvest retained earnings at attractive rates.
+- Strong brands and network effects can raise prices as nominal costs rise.
+- Long-term bonds cannot adapt their coupon to inflation or business productivity.
+- Short-term loss aversion makes investors overprice volatility and underprice compounding.
+
+The extracted Word document expresses the Black-Scholes and equity-premium divide as the following decision map:
+
+```text
+[Black-Scholes Assumption] ----> Drift = Risk-Free Rate (r) ----> Put Premium is High
+                    ^
+                    |
+              THE PUZZLE GAP
+                    |
+                    v
+[Buffett / Reality View] ----> Drift = Real-World mu (r + EPP) -> Put Premium should be Near-Zero
+```
+
+The same idea can be stated through a myopic-loss-aversion loop:
+
+```text
+[Long-Term Compounding Capital] --> evaluated through --> [Short-Term Market Price Fluctuations]
+              ^                                                        |
+              |                                                        v
+[Depressed Equity Valuations] <-- irrationally high premium <-- [Psychological Pain of Temporary Losses]
+       (Buffett's buying zone)
+```
+
+The practical Buffett-Munger answer to the "puzzle" is:
+
+```text
++--------------------------------------------------------------------------+
+| THE "PUZZLE" RESOLVED                                                    |
+|                                                                          |
+| Academic model: expects stocks and bonds to yield similar returns.        |
+| It sees the 5%-8% historical equity gap as an unexplained puzzle.         |
+|                                                                          |
+| Value-investing model: stocks represent ownership of productive capital.  |
+| Bonds represent fixed, inflation-exposed claims.                          |
+| The gap is the reward for owning adaptive productive assets.              |
++--------------------------------------------------------------------------+
+```
+
+This logic reinforces the central critique of Merton and Black-Scholes: models that focus on price volatility can miss the economic engine that creates long-term equity value.
+
+# Chapter 3: The "Owner Earnings" Approach
+
+Instead of option Greeks, Buffett evaluates default risk and intrinsic value through owner earnings and margin of safety. The guiding logic is simple:
+
+```text
+[Gross Cash Flow] --> Minus --> [Essential CapEx] --> Equals --> [Owner Earnings]
+        |
+        v
+If owner earnings comfortably cover fixed debt charges with a large cushion:
+Default Risk = Effectively Zero
+```
+
+If normalized owner earnings comfortably cover fixed debt charges, mandatory reinvestment, and likely stress scenarios, default risk is economically remote even when market volatility is high.
+
+## 3.1 The Mathematical Formula
+
+In his 1986 Berkshire Hathaway shareholder letter, Buffett defined owner earnings as a more realistic measure of distributable cash than reported earnings or EBITDA. EBITDA is especially weak in capital-intensive businesses because it adds back depreciation while ignoring the real cash required to maintain the asset base.
+
+The research uses the following working formula:
+
+$$\text{Owner Earnings} = \text{Net Income} + \text{D\&A} + \text{Other Non-Cash Charges} - \text{Maintenance CapEx} \pm \Delta \text{Non-Cash Working Capital} - \text{Economic SBC Cost}$$
+
+The final adjustment for stock-based compensation is important for modern technology companies. SBC may be non-cash in the accounting period, but it is not economically free. It either dilutes owners or forces the company to spend cash on repurchases that merely offset dilution.
+
+## 3.2 Step-by-Step Practical Calculation Protocol
+
+To calculate owner earnings from a 10-K:
+
+1. Locate net income attributable to common shareholders.
+2. Add back depreciation and amortization from the cash-flow statement.
+3. Add back other legitimate non-cash charges, but treat SBC as an economic cost in the final owner view.
+4. Estimate maintenance capital expenditures using footnotes, management discussion, depreciation history, and a multi-year average.
+5. Adjust for non-cash working capital: receivables, inventory, and payables.
+6. Compare owner earnings with EBITDA, free cash flow, interest expense, and long-term debt.
+7. Stress-test the result under margin compression, demand decline, higher maintenance capex, and regulatory pressure.
+
+## 3.3 Quantitative Valuation Matrix
+
+The source document includes a multi-year owner-earnings matrix. The improved research uses the following structure as the analytical template:
+
+| Line item | Source document section | Year 1 ($M) | Year 2 ($M) | Year 3 ($M) |
+|---|---:|---:|---:|---:|
+| Net income | Income statement bottom line | 500 | 550 | 610 |
+| Depreciation and amortization | Cash-flow statement, operating section | 80 | 85 | 90 |
+| Stock-based compensation | Cash-flow statement, operating section | 40 | 45 | 50 |
+| Maintenance CapEx | Cash-flow statement and MD&A estimate | (95) | (105) | (120) |
+| Change in accounts receivable | Cash-flow statement, operating section | (15) | (20) | (25) |
+| Change in inventory | Cash-flow statement, operating section | (10) | (12) | (17) |
+| Change in accounts payable | Cash-flow statement, operating section | 10 | 12 | 15 |
+| Calculated owner earnings | Final operational metric | 520 | 587 | 643 |
+| Reported EBITDA | Wall Street comparison metric | 680 | 740 | 815 |
+| Owner earnings / EBITDA | Quality score | 76.4% | 79.3% | 78.9% |
+
+The general reusable version of the same matrix is:
+
+| Line item | Source | Buffett interpretation |
+|---|---|---|
+| Net income | Income statement | Starting accounting profit, not final economic profit |
+| Depreciation and amortization | Cash-flow statement | Non-cash add-back, but a warning if it understates true replacement cost |
+| Maintenance CapEx | Cash-flow statement and MD&A | Required reinvestment to preserve current earning power |
+| Working-capital changes | Cash-flow statement | Cash tied up in receivables, inventory, or supplier financing |
+| Stock-based compensation | Cash-flow statement and equity footnotes | Economic dilution or future cash repurchase requirement |
+| Owner earnings | Computed | Best estimate of cash owners can extract without weakening the business |
+| EBITDA | Company reporting or computed | Comparison metric that can overstate quality |
+| Owner earnings / EBITDA | Computed | Quality ratio; a persistent gap signals capital intensity or accounting softness |
+
+Owner earnings close to or above reported net income indicate high-quality conversion. Owner earnings materially below EBITDA indicate that reported profitability may be overstating the economic cash available to shareholders.
+
+# Chapter 4: Financial Statement Red Flags: Income Statement
+
+Buffett reads financial statements as evidence of business quality. The income statement is not merely a report of past profit; it is a record of pricing power, cost discipline, and the expense required to defend the moat.
+
+The source document's financial statement inspection architecture is:
+
+```text
+FINANCIAL STATEMENT INSPECTION (BUFFETT METHOD)
+                         |
+        +----------------+----------------+
+        v                v                v
+[INCOME STATEMENT] [BALANCE SHEET] [CASH FLOW STATEMENT]
+ Gross margin < 40%  Ballooning goodwill  CapEx > 50% of net income
+ Soaring SG&A        Rising long-term debt Diverging net income vs. CFO
+ Massive R&D needs   Inventory > sales     Constant SBC dilution
+```
+
+## 4.1 Falling or Volatile Gross Profit Margins (Below 40%)
+
+Gross margin is the first moat screen because it shows whether customers are willing to pay materially above production cost. A consistently high gross margin suggests pricing power, brand strength, proprietary technology, or scale advantage. A low or volatile gross margin suggests commodity economics.
+
+Decision rule:
+
+- Gross margin above 40% and stable: potential moat signal.
+- Gross margin between 20% and 40%: requires deeper industry comparison.
+- Gross margin below 20% or falling over multiple years: likely commodity pressure or weakening differentiation.
+
+The trend matters as much as the level. A company can have a temporarily high gross margin during a cycle, but a durable compounder should maintain margins through competitive pressure.
+
+## 4.2 Soaring Selling, General, and Administrative (SG&A) Expenses
+
+SG&A as a percentage of gross profit reveals how much overhead is required to defend revenue. A strong moat should reduce the need for constant promotional spending, excessive customer acquisition, or administrative scaling.
+
+Decision rule:
+
+- SG&A below 30% of gross profit: efficient operating structure.
+- SG&A moving toward 50%: warning that growth may be purchased rather than earned.
+- SG&A near or above 80%: severe red flag unless there is a clear, temporary investment cycle.
+
+The Buffett-style question is whether the customer comes to the company because the product has durable pull, or whether the company must keep paying to reacquire demand.
+
+## 4.3 Massive, Continuous Research & Development (R&D) Requirements
+
+R&D can create moats, but it can also reveal a technology treadmill. A business that must spend heavily every year simply to avoid obsolescence has a weaker owner-earnings profile than its accounting margins suggest.
+
+The issue is not whether R&D is good or bad. The issue is whether R&D is discretionary growth investment or mandatory survival cost. In fast-moving hardware, biotechnology, and some software categories, a large portion of R&D may function like maintenance CapEx. The forensic framework therefore records R&D intensity as a structural risk indicator even when it is not subtracted directly from owner earnings.
+
+# Chapter 5: Structural Red Flags: Balance Sheet & Cash Flow
+
+The balance sheet and cash-flow statement test whether reported earnings are supported by actual liquidity and conservative financing. This is where the Buffett framework most clearly departs from a market-price model: a company can have a rising share price and still be building structural fragility.
+
+## 5.1 Balance Sheet Red Flags
+
+### 5.1.1 Excessive, Ballooning Goodwill
+
+Goodwill increases when a company acquires businesses above the fair value of identifiable net assets. Some goodwill is normal, but rapidly growing goodwill can indicate acquisition-dependent growth and poor capital allocation.
+
+The Buffett concern is that purchased growth may disguise weak organic economics. If goodwill later requires impairment, the accounting write-down confirms that management overpaid with shareholder capital. The Python framework therefore flags goodwill as a percentage of assets and goodwill growth where available.
+
+### 5.1.2 High Long-Term Debt Burden Relative to Net Income
+
+Buffett prefers companies that do not need debt to survive. The practical debt test is how many years of current net income would be required to repay long-term debt.
+
+Decision rule:
+
+- Debt / net income below 3x: usually acceptable if cash flows are stable.
+- Debt / net income between 3x and 4x: caution zone.
+- Debt / net income above 4x: over-leverage risk unless the business has regulated or exceptionally stable cash flows.
+
+This metric is deliberately blunt. It is designed to catch businesses where a cyclical decline could make debt service dominate owner earnings.
+
+### 5.1.3 Inventory and Accounts Receivable Growing Faster Than Sales
+
+Receivables and inventory can expose the quality of revenue. If receivables grow faster than sales, the company may be loosening credit terms or booking revenue before collecting cash. If inventory grows faster than sales, the company may be overproducing or facing demand weakness.
+
+The key forensic test is growth spread:
+
+$$\text{Receivables Growth Spread} = \text{Receivables Growth} - \text{Revenue Growth}$$
+
+$$\text{Inventory Growth Spread} = \text{Inventory Growth} - \text{Revenue Growth}$$
+
+Positive spreads over multiple periods deserve scrutiny.
+
+## 5.2 Cash Flow Statement Red Flags
+
+### 5.2.1 Capital Expenditures Exceeding 50% of Net Income
+
+CapEx becomes dangerous when it consumes too much of reported earnings. The source document uses a 50% of net income threshold as a red flag. That rule is especially relevant for airlines, autos, heavy manufacturing, telecom infrastructure, and other asset-intensive sectors.
+
+For Buffett, the critical split is maintenance CapEx versus growth CapEx. Growth CapEx can be valuable if it earns high returns. Maintenance CapEx is the unavoidable cost of staying in place. The Python framework uses depreciation and multi-year CapEx as a proxy when detailed maintenance disclosures are unavailable.
+
+### 5.2.2 Divergence Between Net Income and Cash Flow from Operations (CFO)
+
+Net income can rise while operating cash flow weakens. This divergence is one of the most important accounting-quality warnings because it suggests that reported earnings are not turning into cash.
+
+Decision rule:
+
+- CFO / net income above 1.0: strong cash conversion.
+- CFO / net income between 0.8 and 1.0: monitor.
+- CFO / net income below 0.8: red flag, especially if repeated.
+
+The framework also flags negative CFO when net income is positive.
+
+### 5.2.3 Heavy Reliance on Stock-Based Compensation (SBC) Dilution
+
+Modern companies often add back SBC when presenting free cash flow. Buffett's logic rejects that treatment. If employees are paid in shares, owners are diluted. If the company repurchases shares to offset dilution, cash has left the business.
+
+The audit therefore records SBC as a percentage of CFO and revenue. High SBC intensity reduces the quality of owner earnings and should be treated as an economic claim on shareholders, even when GAAP classifies it as non-cash.
+
+# Chapter 6: Identifying the Four Economic Moats in Modern Technology Companies
+
+An economic moat is a durable structural advantage that protects long-term profits from competition. The source document adapts Buffett's traditional moat concept to modern technology businesses through four categories: network effects, switching costs, intangible assets, and cost advantages.
+
+The extracted moat architecture is:
+
+```text
+TECHNOLOGY MOAT ARCHITECTURE
+                         |
+        +----------------+----------------+----------------+
+        v                v                v                v
+[NETWORK EFFECTS] [SWITCHING COSTS] [INTANGIBLE ASSETS] [COST ADVANTAGES]
+ Value scales     High friction      Patents, data,      Scale economies
+ with user        to change          brands, approvals   and infrastructure
+ density          providers
+ e.g. iOS         e.g. enterprise    e.g. ASML, Apple    e.g. AWS/cloud scale
+ ecosystem        SaaS               brand               infrastructure
+```
+
+| Moat category | Technology expression | Primary evidence | Example from source |
+|---|---|---|---|
+| Network effects | Product improves as user/developer/data density rises | User scale, developer activity, data feedback loops | iOS ecosystem, Google Search |
+| Switching costs | Customer faces operational, data, or ecosystem friction when leaving | Retention, migration difficulty, embedded workflows | Enterprise SaaS, Apple device ecosystem |
+| Intangible assets | Brand, patents, proprietary data, regulatory approvals, technical know-how | Premium pricing, defensible IP, trust | ASML lithography, Apple brand |
+| Cost advantages | Scale lowers per-unit delivery cost | Margin durability, infrastructure leverage | AWS/cloud infrastructure scale |
+
+## 6.1 Network Effects
+
+Network effects occur when a product becomes more valuable as more participants use it. In technology, this can create winner-take-most outcomes.
+
+- **Two-sided market networks:** Apple's iOS ecosystem becomes more valuable to users as developers build more apps, and more valuable to developers as the user base grows.
+- **Data network dynamics:** Search, advertising, fraud detection, mapping, and recommendation systems can improve as usage data accumulates, reinforcing the leader's advantage.
+
+The forensic test is whether scale improves the product itself, or whether the company is merely large.
+
+## 6.2 High Switching Costs
+
+Switching costs arise when customers face time, expense, operational risk, or data loss if they leave. Enterprise software is the clearest example: replacing a core CRM, ERP, or human-capital platform can require months of migration and retraining.
+
+Consumer ecosystems can also create switching costs. Apple combines hardware, software, app purchases, messages, watches, cloud storage, and services into a single user habit. The moat is not one product in isolation; it is the friction of leaving the system.
+
+## 6.3 Intangible Assets
+
+Intangible assets include brands, patents, proprietary data, regulatory approvals, and technical know-how. The Buffett test is whether the intangible asset produces pricing power or protection from substitution.
+
+Examples include ASML's lithography know-how, Apple's brand premium, and cybersecurity vendors whose reputation reduces buyer willingness to experiment with unproven alternatives.
+
+## 6.4 Cost Advantages
+
+Cost advantages allow a firm to deliver the same or better product at lower unit cost. In cloud computing, hyperscale infrastructure lowers procurement, utilization, energy, and distribution costs. In digital platforms, fixed software costs can be spread across massive global usage.
+
+The red flag is confusing scale with a moat. A company has a cost advantage only if the scale benefit is hard for competitors to replicate and visible in margins or cash conversion.
+
+# Chapter 7: Evaluating Regulatory and Antitrust Threats to Modern Technology Moats
+
+A technology moat can be economically powerful and legally vulnerable at the same time. The source document emphasizes that antitrust risk should be treated as a direct threat to pricing power, distribution control, bundling, and ecosystem lock-in.
+
+The extracted antitrust audit architecture is:
+
+```text
+ANTITRUST VULNERABILITY AUDIT ARCHITECTURE
+                         |
+        +----------------+----------------+
+        v                v                v
+[MARKET FORECLOSURE] [MONOPOLY EXTRACTION] [STRUCTURAL REMEDIES]
+ Bundling / tying     Fee compression      Mandatory interoperability
+ API controls         Intermediary taxes   Forced corporate breakups
+ Data-silo lock-in    Anti-steering rules  Platform openness
+```
+
+| Regulation directive | Target channel mechanism | Operational impact on growth | Software unit economics result |
+|---|---|---|---|
+| Alternative app stores | Distribution infrastructure | Reduces channel friction and allows direct platform control | Eliminates gatekeeper commissions but increases engineering fragmentation |
+| External payment links | In-app payment routing | Weakens mandatory payment rails and anti-steering rules | Compresses take rates and reduces high-margin platform fees |
+| Interoperability mandates | Messaging and social graphs | Reduces network lock-in by allowing cross-platform communication | Moves competition from network size toward product quality and security |
+| Data portability | Identity, files, contacts, and user history | Lowers migration costs for users and enterprise customers | Reduces switching-cost moat and increases churn risk |
+| Structural separation | Integrated operating segments | Breaks cross-subsidy, default placement, and data-sharing loops | Can unlock segment value but weakens parent ecosystem economics |
+
+## 7.1 Quantifying Market Foreclosure and Tying Vulnerabilities
+
+Regulators focus on whether dominant platforms use control over one market to foreclose competition in another. Forensic questions include:
+
+- Does the company bundle a product into a dominant operating system or platform?
+- Does it restrict APIs for competitors while giving privileged access to internal products?
+- Does it use default placement, payment rules, or ranking power to disadvantage rivals?
+
+These questions convert qualitative antitrust risk into analyzable moat risk.
+
+## 7.2 Pricing Power Under Regulatory Pressure
+
+Pricing power is valuable, but excessive take rates can attract intervention. Digital marketplaces, app stores, and payment intermediaries face particular scrutiny when they charge high transaction fees while controlling access to customers.
+
+The stress-test framework models fee compression by reducing take rates, recalculating segment operating income, and measuring the effect on consolidated owner earnings. A durable business should survive fee compression without impairing its core economics.
+
+## 7.3 Interoperability Mandates and Platform Openness
+
+Interoperability can weaken ecosystem lock-in. Messaging, payments, app distribution, and identity systems are vulnerable to mandates that force dominant platforms to open access to third parties.
+
+The analytical question is whether the moat depends on product superiority or closed architecture. Product-based moats can survive openness. Lock-in-based moats may compress quickly when switching friction is reduced.
+
+## 7.4 Structural Breakup Assessments
+
+When structural remedies are plausible, the analyst should value the company as separate operating segments:
+
+$$\text{Breakup Value} = \sum(\text{Segment Owner Earnings} \times \text{Segment Multiple}) - \text{Fines} - \text{Dis-synergy Costs}$$
+
+Integrated ecosystems can have stronger moats than their individual pieces. A breakup may reduce cross-subsidy, data sharing, default distribution, and bundled retention.
+
+# Chapter 8: Forensic Application: Auditing and Case Studies
+
+Buffett's framework becomes most useful when converted into repeatable audit logic. The full Python framework is placed in Appendix A. It fetches SEC company facts, normalizes core accounting tags, calculates owner earnings and red-flag ratios, and generates a structured report.
+
+## 8.1 Automated 10-K Forensic Auditing Tool
+
+The audit framework follows the logic of the Word source:
+
+1. Pull public SEC XBRL company facts by ticker and CIK.
+2. Extract revenue, gross profit, net income, CFO, CapEx, D&A, SBC, debt, goodwill, receivables, inventory, assets, and shares.
+3. Compute owner earnings using conservative maintenance CapEx assumptions.
+4. Flag gross-margin weakness, SG&A burden, R&D intensity, debt burden, weak cash conversion, high CapEx intensity, goodwill pressure, working-capital quality, and SBC dilution.
+5. Produce a simple decision report: moat quality, accounting quality, balance-sheet risk, cash-conversion quality, and regulatory stress sensitivity.
+
+The code is intentionally designed as a research framework rather than a trading bot. Its output should start the analyst's reading process, not replace judgment.
+
+## 8.2 Case Study Valuation: Apple Inc.'s Owner Earnings
+
+Apple is the natural case study because the source document repeatedly uses it to connect owner earnings, ecosystem moats, App Store economics, and antitrust risk.
+
+The Apple protocol is:
+
+1. Extract net income, D&A, SBC, CapEx, working capital, debt, and shares from the latest 10-K.
+2. Estimate maintenance CapEx using a conservative average of depreciation and historical CapEx.
+3. Treat SBC as an economic cost because it dilutes owners or requires offsetting buybacks.
+4. Compute owner earnings and compare them with net income, CFO, and EBITDA.
+5. Stress-test Services economics under App Store take-rate compression.
+
+This framework explains why Buffett can view Apple as more than a hardware company. The business combines brand pricing power, ecosystem switching costs, a two-sided developer network, services monetization, and exceptional cash conversion. The risk is not ordinary price volatility; the risk is whether regulation, platform openness, or hardware replacement cycles permanently impair owner earnings.
+
+## 8.3 Financial Stress-Test Template: Apple's App Store Fee Compression
+
+The stress test models a regulatory reduction in platform take rates from a high range of 15% to 30% toward a lower baseline such as 12%. The analytical steps are:
+
+1. Estimate App Store gross billings or relevant Services revenue exposure.
+2. Apply the current blended take rate to estimate platform fee revenue.
+3. Recalculate fee revenue under the stressed take rate.
+4. Apply a segment operating margin assumption.
+5. Measure the loss as a percentage of consolidated owner earnings.
+
+The key Buffett question is not whether the headline impact is negative. It is whether the firm still generates enough owner earnings after the shock to preserve its capital allocation flexibility, buyback capacity, and balance-sheet strength.
+
+## 8.4 Historical Antitrust Case Analysis: US v. Microsoft
+
+The Microsoft case shows how regulatory pressure can damage a moat indirectly. The litigation focused on tying and foreclosure: Microsoft used Windows distribution power to protect Internet Explorer and restrict browser competition. The financial statements did not immediately show catastrophic revenue loss, but the strategic cost was large. Regulatory pressure constrained Microsoft's ability to dominate adjacent internet markets.
+
+For Buffett-style analysis, the lesson is that antitrust risk often appears first as opportunity cost, not current-period impairment. A moat can remain profitable while losing strategic optionality.
+
+## 8.5 Synthesis: Buffett's Practical Replacement for Merton
+
+Buffett's alternative to Merton is not anti-analytical. It is a different measurement stack:
+
+| Risk layer | Merton-style proxy | Buffett-style proxy |
+|---|---|---|
+| Default risk | Distance to Default | Owner earnings coverage of fixed charges |
+| Business risk | Equity and asset volatility | Permanent impairment of earning power |
+| Market signal | Market capitalization | Price versus intrinsic value |
+| Moat signal | Not directly modeled | Gross margin, switching costs, network effects, brand, cost advantage |
+| Accounting quality | Indirect | CFO conversion, working capital, SBC, CapEx intensity |
+| Stress resilience | Volatility shock | Revenue, margin, regulation, and reinvestment stress |
+
+The source document's strategic continuum matrix adds the equity-premium implication:
+
+| Metric layer | Business finance: Buffett view | Financial economics: quantitative view | Equity Premium Puzzle point |
+|---|---|---|---|
+| Asset growth dynamics | Driven by organic owner earnings compounding through ROE | Driven by stochastic drift parameters such as $r$ or $\mu$ | Markets compound faster than risk-free metrics can rationally justify |
+| Option pricing engine | Treats long-term index puts as cheaper risk when productive assets compound | Uses Black-Scholes variance scaling in a risk-neutral matrix | Black-Scholes can overprice long-term puts by ignoring operational equity drift |
+| Risk management mode | Insulated through margin of safety and conservative debt | Calculated through rolling statistical Distance to Default | Empirical returns can expand business safety beyond utility-model predictions |
+
+The research conclusion is that Merton can be useful as a market-implied credit-risk signal, especially for liquid, levered firms. It should not be treated as a complete assessment of business risk. Buffett's framework is better suited for long-term ownership because it begins with the economics of the enterprise.
+
+# Appendix A: Complete Python Buffett Forensic Audit Framework
+
+The following complete framework implements the research logic in reproducible Python. It is designed for public SEC company-facts data and can be run from the command line with a ticker and SEC-compliant user-agent string.
+
+```python
+#!/usr/bin/env python3
+"""
+Buffett-style forensic audit framework.
+
+Purpose:
+    Fetch SEC company facts, compute owner earnings, and flag financial
+    statement risks inspired by the Buffett/Munger business-owner framework.
+
+Example:
+    python buffett_audit.py --ticker AAPL --user-agent "Your Name your@email.com"
+
+Notes:
+    SEC fair-access policy requires a descriptive User-Agent.
+    This is a research tool, not investment advice.
+"""
+
+from __future__ import annotations
+
+import argparse
+import math
+import time
+from dataclasses import dataclass, field
+from typing import Any, Dict, Iterable, List, Optional, Tuple
+
+import numpy as np
+import pandas as pd
+import requests
+
+
+SEC_TICKER_URL = "https://www.sec.gov/files/company_tickers.json"
+SEC_FACTS_URL = "https://data.sec.gov/api/xbrl/companyfacts/CIK{cik}.json"
+
+
+US_GAAP_TAGS = {
+    "revenue": [
+        "Revenues",
+        "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "SalesRevenueNet",
+    ],
+    "gross_profit": ["GrossProfit"],
+    "net_income": [
+        "NetIncomeLoss",
+        "ProfitLoss",
+        "NetIncomeLossAvailableToCommonStockholdersBasic",
+    ],
+    "operating_income": ["OperatingIncomeLoss"],
+    "sga": ["SellingGeneralAndAdministrativeExpense"],
+    "rd": ["ResearchAndDevelopmentExpense"],
+    "cfo": ["NetCashProvidedByUsedInOperatingActivities"],
+    "capex": [
+        "PaymentsToAcquirePropertyPlantAndEquipment",
+        "PaymentsToAcquireProductiveAssets",
+    ],
+    "depreciation_amortization": [
+        "DepreciationDepletionAndAmortization",
+        "DepreciationDepletionAndAmortizationExpense",
+        "DepreciationAndAmortization",
+    ],
+    "sbc": ["ShareBasedCompensation", "ShareBasedCompensationArrangementByShareBasedPaymentAwardExpense"],
+    "long_term_debt": [
+        "LongTermDebtNoncurrent",
+        "LongTermDebtAndFinanceLeaseObligationsNoncurrent",
+        "LongTermDebt",
+    ],
+    "interest_expense": ["InterestExpenseNonOperating", "InterestExpense"],
+    "goodwill": ["Goodwill"],
+    "assets": ["Assets"],
+    "inventory": ["InventoryNet"],
+    "receivables": ["AccountsReceivableNetCurrent"],
+    "shares": [
+        "EntityCommonStockSharesOutstanding",
+        "WeightedAverageNumberOfDilutedSharesOutstanding",
+        "CommonStocksIncludingAdditionalPaidInCapitalMember",
+    ],
+}
+
+
+@dataclass
+class MetricResult:
+    name: str
+    value: Optional[float]
+    threshold: str
+    status: str
+    interpretation: str
+
+
+@dataclass
+class AuditReport:
+    ticker: str
+    cik: str
+    fiscal_year: Optional[int]
+    metrics: Dict[str, Optional[float]]
+    flags: List[MetricResult] = field(default_factory=list)
+
+    def to_frame(self) -> pd.DataFrame:
+        return pd.DataFrame(
+            [
+                {
+                    "metric": flag.name,
+                    "value": flag.value,
+                    "threshold": flag.threshold,
+                    "status": flag.status,
+                    "interpretation": flag.interpretation,
+                }
+                for flag in self.flags
+            ]
+        )
+
+    def summary(self) -> str:
+        red = sum(1 for flag in self.flags if flag.status == "RED")
+        yellow = sum(1 for flag in self.flags if flag.status == "YELLOW")
+        green = sum(1 for flag in self.flags if flag.status == "GREEN")
+        return (
+            f"{self.ticker} Buffett audit for FY {self.fiscal_year}: "
+            f"{green} green, {yellow} yellow, {red} red flags."
+        )
+
+
+class SECClient:
+    def __init__(self, user_agent: str, pause_seconds: float = 0.15) -> None:
+        if "@" not in user_agent:
+            raise ValueError("Use a descriptive SEC User-Agent including an email address.")
+        self.headers = {"User-Agent": user_agent, "Accept-Encoding": "gzip, deflate"}
+        self.pause_seconds = pause_seconds
+        self.session = requests.Session()
+        self.session.headers.update(self.headers)
+
+    def get_json(self, url: str) -> Dict[str, Any]:
+        time.sleep(self.pause_seconds)
+        response = self.session.get(url, timeout=30)
+        response.raise_for_status()
+        return response.json()
+
+    def ticker_to_cik(self, ticker: str) -> str:
+        data = self.get_json(SEC_TICKER_URL)
+        ticker = ticker.upper()
+        for row in data.values():
+            if row["ticker"].upper() == ticker:
+                return str(row["cik_str"]).zfill(10)
+        raise KeyError(f"Ticker not found in SEC ticker map: {ticker}")
+
+    def company_facts(self, cik: str) -> Dict[str, Any]:
+        return self.get_json(SEC_FACTS_URL.format(cik=cik))
+
+
+class CompanyFactsParser:
+    def __init__(self, facts: Dict[str, Any]) -> None:
+        self.facts = facts
+        self.us_gaap = facts.get("facts", {}).get("us-gaap", {})
+
+    def annual_series(self, tags: Iterable[str]) -> pd.Series:
+        frames: List[pd.DataFrame] = []
+        for tag in tags:
+            item = self.us_gaap.get(tag)
+            if not item:
+                continue
+            units = item.get("units", {})
+            unit_key = "USD" if "USD" in units else next(iter(units.keys()), None)
+            if unit_key is None:
+                continue
+            rows = []
+            for fact in units.get(unit_key, []):
+                form = fact.get("form")
+                fy = fact.get("fy")
+                val = fact.get("val")
+                frame = fact.get("frame", "")
+                if form not in {"10-K", "20-F", "40-F"}:
+                    continue
+                if fy is None or val is None:
+                    continue
+                if frame and not str(frame).startswith("CY"):
+                    continue
+                rows.append({"fy": int(fy), "value": float(val), "filed": fact.get("filed", "")})
+            if rows:
+                frame_df = pd.DataFrame(rows)
+                frame_df["tag"] = tag
+                frames.append(frame_df)
+
+        if not frames:
+            return pd.Series(dtype="float64")
+
+        combined = pd.concat(frames, ignore_index=True)
+        combined = combined.sort_values(["fy", "filed"])
+        latest = combined.groupby("fy").tail(1)
+        return latest.set_index("fy")["value"].sort_index()
+
+    def metric_series(self, metric: str) -> pd.Series:
+        return self.annual_series(US_GAAP_TAGS[metric])
+
+    def latest_metric(self, metric: str) -> Tuple[Optional[int], Optional[float]]:
+        series = self.metric_series(metric)
+        if series.empty:
+            return None, None
+        fy = int(series.index.max())
+        return fy, float(series.loc[fy])
+
+
+def safe_divide(numerator: Optional[float], denominator: Optional[float]) -> Optional[float]:
+    if numerator is None or denominator in (None, 0):
+        return None
+    if isinstance(denominator, float) and math.isclose(denominator, 0.0):
+        return None
+    return float(numerator) / float(denominator)
+
+
+def latest_growth(series: pd.Series) -> Optional[float]:
+    clean = series.dropna().sort_index()
+    if len(clean) < 2:
+        return None
+    previous = clean.iloc[-2]
+    current = clean.iloc[-1]
+    if previous == 0:
+        return None
+    return float((current - previous) / abs(previous))
+
+
+class BuffettForensicAuditor:
+    def __init__(self, ticker: str, user_agent: str) -> None:
+        self.ticker = ticker.upper()
+        self.client = SECClient(user_agent)
+        self.cik = self.client.ticker_to_cik(self.ticker)
+        self.facts = self.client.company_facts(self.cik)
+        self.parser = CompanyFactsParser(self.facts)
+
+    def latest_metrics(self) -> Dict[str, Optional[float]]:
+        metrics: Dict[str, Optional[float]] = {}
+        fiscal_years: List[int] = []
+        for metric in US_GAAP_TAGS:
+            fy, value = self.parser.latest_metric(metric)
+            metrics[metric] = value
+            if fy is not None:
+                fiscal_years.append(fy)
+        metrics["fiscal_year"] = max(fiscal_years) if fiscal_years else None
+        return metrics
+
+    def estimate_maintenance_capex(self) -> Optional[float]:
+        capex = self.parser.metric_series("capex").tail(3).abs()
+        da = self.parser.metric_series("depreciation_amortization").tail(3).abs()
+        candidates = []
+        if not capex.empty:
+            candidates.append(float(capex.mean()))
+        if not da.empty:
+            candidates.append(float(da.mean()))
+        if not candidates:
+            return None
+        return min(candidates) if len(candidates) == 1 else float(np.mean(candidates))
+
+    def owner_earnings(self, metrics: Dict[str, Optional[float]]) -> Optional[float]:
+        net_income = metrics.get("net_income")
+        da = metrics.get("depreciation_amortization") or 0.0
+        sbc = metrics.get("sbc") or 0.0
+        maintenance_capex = self.estimate_maintenance_capex()
+        if net_income is None or maintenance_capex is None:
+            return None
+        working_capital_adjustment = self.working_capital_adjustment()
+        return float(net_income + da - maintenance_capex + working_capital_adjustment - sbc)
+
+    def working_capital_adjustment(self) -> float:
+        receivables = self.parser.metric_series("receivables").tail(2)
+        inventory = self.parser.metric_series("inventory").tail(2)
+        adjustment = 0.0
+        if len(receivables) == 2:
+            adjustment -= float(receivables.iloc[-1] - receivables.iloc[-2])
+        if len(inventory) == 2:
+            adjustment -= float(inventory.iloc[-1] - inventory.iloc[-2])
+        return adjustment
+
+    def flag(self, name: str, value: Optional[float], threshold: str, status: str, interpretation: str) -> MetricResult:
+        return MetricResult(name, value, threshold, status, interpretation)
+
+    def status_by_threshold(
+        self,
+        value: Optional[float],
+        green_test: bool,
+        yellow_test: bool,
+    ) -> str:
+        if value is None:
+            return "UNKNOWN"
+        if green_test:
+            return "GREEN"
+        if yellow_test:
+            return "YELLOW"
+        return "RED"
+
+    def build_report(self) -> AuditReport:
+        metrics = self.latest_metrics()
+        metrics["maintenance_capex_estimate"] = self.estimate_maintenance_capex()
+        metrics["owner_earnings"] = self.owner_earnings(metrics)
+        metrics["gross_margin"] = safe_divide(metrics.get("gross_profit"), metrics.get("revenue"))
+        metrics["sga_to_gross_profit"] = safe_divide(metrics.get("sga"), metrics.get("gross_profit"))
+        metrics["rd_to_revenue"] = safe_divide(metrics.get("rd"), metrics.get("revenue"))
+        metrics["debt_to_net_income"] = safe_divide(metrics.get("long_term_debt"), metrics.get("net_income"))
+        metrics["cfo_to_net_income"] = safe_divide(metrics.get("cfo"), metrics.get("net_income"))
+        metrics["capex_to_net_income"] = safe_divide(abs(metrics["capex"]) if metrics.get("capex") is not None else None, metrics.get("net_income"))
+        metrics["sbc_to_cfo"] = safe_divide(metrics.get("sbc"), metrics.get("cfo"))
+        metrics["goodwill_to_assets"] = safe_divide(metrics.get("goodwill"), metrics.get("assets"))
+        metrics["owner_earnings_to_net_income"] = safe_divide(metrics.get("owner_earnings"), metrics.get("net_income"))
+
+        revenue_growth = latest_growth(self.parser.metric_series("revenue"))
+        receivables_growth = latest_growth(self.parser.metric_series("receivables"))
+        inventory_growth = latest_growth(self.parser.metric_series("inventory"))
+        metrics["revenue_growth"] = revenue_growth
+        metrics["receivables_growth_spread"] = None if receivables_growth is None or revenue_growth is None else receivables_growth - revenue_growth
+        metrics["inventory_growth_spread"] = None if inventory_growth is None or revenue_growth is None else inventory_growth - revenue_growth
+
+        flags = [
+            self.flag(
+                "Gross margin",
+                metrics["gross_margin"],
+                "GREEN >= 40%; YELLOW 20%-40%; RED < 20%",
+                self.status_by_threshold(
+                    metrics["gross_margin"],
+                    metrics["gross_margin"] is not None and metrics["gross_margin"] >= 0.40,
+                    metrics["gross_margin"] is not None and metrics["gross_margin"] >= 0.20,
+                ),
+                "Proxy for pricing power and moat strength.",
+            ),
+            self.flag(
+                "SG&A to gross profit",
+                metrics["sga_to_gross_profit"],
+                "GREEN <= 30%; YELLOW <= 50%; RED > 50%",
+                self.status_by_threshold(
+                    metrics["sga_to_gross_profit"],
+                    metrics["sga_to_gross_profit"] is not None and metrics["sga_to_gross_profit"] <= 0.30,
+                    metrics["sga_to_gross_profit"] is not None and metrics["sga_to_gross_profit"] <= 0.50,
+                ),
+                "Measures how much overhead is needed to defend gross profit.",
+            ),
+            self.flag(
+                "R&D to revenue",
+                metrics["rd_to_revenue"],
+                "GREEN <= 10%; YELLOW <= 20%; RED > 20%",
+                self.status_by_threshold(
+                    metrics["rd_to_revenue"],
+                    metrics["rd_to_revenue"] is not None and metrics["rd_to_revenue"] <= 0.10,
+                    metrics["rd_to_revenue"] is not None and metrics["rd_to_revenue"] <= 0.20,
+                ),
+                "High values can indicate a technology treadmill.",
+            ),
+            self.flag(
+                "Long-term debt to net income",
+                metrics["debt_to_net_income"],
+                "GREEN <= 3x; YELLOW <= 4x; RED > 4x",
+                self.status_by_threshold(
+                    metrics["debt_to_net_income"],
+                    metrics["debt_to_net_income"] is not None and metrics["debt_to_net_income"] <= 3.0,
+                    metrics["debt_to_net_income"] is not None and metrics["debt_to_net_income"] <= 4.0,
+                ),
+                "Years of current net income needed to repay long-term debt.",
+            ),
+            self.flag(
+                "CFO to net income",
+                metrics["cfo_to_net_income"],
+                "GREEN >= 1.0; YELLOW >= 0.8; RED < 0.8",
+                self.status_by_threshold(
+                    metrics["cfo_to_net_income"],
+                    metrics["cfo_to_net_income"] is not None and metrics["cfo_to_net_income"] >= 1.0,
+                    metrics["cfo_to_net_income"] is not None and metrics["cfo_to_net_income"] >= 0.8,
+                ),
+                "Tests whether accounting earnings convert into cash.",
+            ),
+            self.flag(
+                "CapEx to net income",
+                metrics["capex_to_net_income"],
+                "GREEN <= 50%; YELLOW <= 75%; RED > 75%",
+                self.status_by_threshold(
+                    metrics["capex_to_net_income"],
+                    metrics["capex_to_net_income"] is not None and metrics["capex_to_net_income"] <= 0.50,
+                    metrics["capex_to_net_income"] is not None and metrics["capex_to_net_income"] <= 0.75,
+                ),
+                "Flags capital intensity that can erode owner earnings.",
+            ),
+            self.flag(
+                "SBC to CFO",
+                metrics["sbc_to_cfo"],
+                "GREEN <= 5%; YELLOW <= 15%; RED > 15%",
+                self.status_by_threshold(
+                    metrics["sbc_to_cfo"],
+                    metrics["sbc_to_cfo"] is not None and metrics["sbc_to_cfo"] <= 0.05,
+                    metrics["sbc_to_cfo"] is not None and metrics["sbc_to_cfo"] <= 0.15,
+                ),
+                "Treats stock compensation as dilution or future buyback cost.",
+            ),
+            self.flag(
+                "Goodwill to assets",
+                metrics["goodwill_to_assets"],
+                "GREEN <= 10%; YELLOW <= 25%; RED > 25%",
+                self.status_by_threshold(
+                    metrics["goodwill_to_assets"],
+                    metrics["goodwill_to_assets"] is not None and metrics["goodwill_to_assets"] <= 0.10,
+                    metrics["goodwill_to_assets"] is not None and metrics["goodwill_to_assets"] <= 0.25,
+                ),
+                "Flags acquisition-dependent growth and impairment risk.",
+            ),
+            self.flag(
+                "Owner earnings to net income",
+                metrics["owner_earnings_to_net_income"],
+                "GREEN >= 90%; YELLOW >= 70%; RED < 70%",
+                self.status_by_threshold(
+                    metrics["owner_earnings_to_net_income"],
+                    metrics["owner_earnings_to_net_income"] is not None and metrics["owner_earnings_to_net_income"] >= 0.90,
+                    metrics["owner_earnings_to_net_income"] is not None and metrics["owner_earnings_to_net_income"] >= 0.70,
+                ),
+                "Compares true owner cash generation with reported profit.",
+            ),
+            self.flag(
+                "Receivables growth spread",
+                metrics["receivables_growth_spread"],
+                "GREEN <= 5%; YELLOW <= 15%; RED > 15%",
+                self.status_by_threshold(
+                    metrics["receivables_growth_spread"],
+                    metrics["receivables_growth_spread"] is not None and metrics["receivables_growth_spread"] <= 0.05,
+                    metrics["receivables_growth_spread"] is not None and metrics["receivables_growth_spread"] <= 0.15,
+                ),
+                "Receivables growing faster than sales can indicate weak collection quality.",
+            ),
+            self.flag(
+                "Inventory growth spread",
+                metrics["inventory_growth_spread"],
+                "GREEN <= 5%; YELLOW <= 15%; RED > 15%",
+                self.status_by_threshold(
+                    metrics["inventory_growth_spread"],
+                    metrics["inventory_growth_spread"] is not None and metrics["inventory_growth_spread"] <= 0.05,
+                    metrics["inventory_growth_spread"] is not None and metrics["inventory_growth_spread"] <= 0.15,
+                ),
+                "Inventory growing faster than sales can indicate demand weakness.",
+            ),
+        ]
+
+        return AuditReport(
+            ticker=self.ticker,
+            cik=self.cik,
+            fiscal_year=int(metrics["fiscal_year"]) if metrics.get("fiscal_year") else None,
+            metrics=metrics,
+            flags=flags,
+        )
+
+
+def app_store_fee_stress_test(
+    gross_billings: float,
+    current_take_rate: float,
+    stressed_take_rate: float,
+    operating_margin: float,
+    consolidated_owner_earnings: float,
+) -> Dict[str, float]:
+    current_revenue = gross_billings * current_take_rate
+    stressed_revenue = gross_billings * stressed_take_rate
+    revenue_loss = current_revenue - stressed_revenue
+    operating_income_loss = revenue_loss * operating_margin
+    owner_earnings_hit = safe_divide(operating_income_loss, consolidated_owner_earnings) or 0.0
+    return {
+        "current_fee_revenue": current_revenue,
+        "stressed_fee_revenue": stressed_revenue,
+        "revenue_loss": revenue_loss,
+        "operating_income_loss": operating_income_loss,
+        "owner_earnings_hit_pct": owner_earnings_hit,
+    }
+
+
+def format_currency(value: Optional[float]) -> str:
+    if value is None or pd.isna(value):
+        return "n/a"
+    return f"${value / 1_000_000_000:,.2f}B"
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Run a Buffett-style SEC forensic audit.")
+    parser.add_argument("--ticker", required=True, help="Ticker symbol, e.g. AAPL")
+    parser.add_argument("--user-agent", required=True, help='SEC User-Agent, e.g. "Name email@example.com"')
+    parser.add_argument("--csv", default=None, help="Optional path to write flag table as CSV")
+    args = parser.parse_args()
+
+    auditor = BuffettForensicAuditor(args.ticker, args.user_agent)
+    report = auditor.build_report()
+    table = report.to_frame()
+
+    print(report.summary())
+    print()
+    print("Key computed values:")
+    for key in [
+        "revenue",
+        "net_income",
+        "cfo",
+        "maintenance_capex_estimate",
+        "owner_earnings",
+        "long_term_debt",
+    ]:
+        print(f"  {key}: {format_currency(report.metrics.get(key))}")
+
+    print()
+    print(table.to_string(index=False))
+
+    if args.csv:
+        table.to_csv(args.csv, index=False)
+        print(f"\nWrote CSV report to {args.csv}")
+
+
+if __name__ == "__main__":
+    main()
+```
+
+# Appendix B: Analyst Checklist
+
+Use this checklist after running the Python framework:
+
+1. Read the latest 10-K MD&A and footnotes for maintenance CapEx clues.
+2. Confirm whether SBC is offset by buybacks or causing net dilution.
+3. Compare gross margin and SG&A trends against direct competitors.
+4. Separate reported Services, platform, or marketplace revenue from hardware or product revenue where possible.
+5. Stress-test the most regulated profit pool.
+6. Reconcile automated XBRL results with the filed statements before making conclusions.
+7. Treat every red flag as a prompt for reading, not as an automatic rejection.

@@ -1,0 +1,440 @@
+{
+  "article_statistics": [
+    {
+      "file": "Part 1 - What Your Payslip Can Actually Fund.md",
+      "prose_words_whitespace": 3552,
+      "lexical_words_excluding_citations": 3614,
+      "paragraphs": 30,
+      "minimum": 110,
+      "maximum": 127,
+      "references": 10
+    },
+    {
+      "file": "Part 2 - Building a Pension That Can Pay for Life.md",
+      "prose_words_whitespace": 3625,
+      "lexical_words_excluding_citations": 3649,
+      "paragraphs": 30,
+      "minimum": 115,
+      "maximum": 126,
+      "references": 7
+    },
+    {
+      "file": "Part 3 - Paying for Healthcare Without Unravelling the Household.md",
+      "prose_words_whitespace": 3649,
+      "lexical_words_excluding_citations": 3683,
+      "paragraphs": 30,
+      "minimum": 111,
+      "maximum": 128,
+      "references": 6
+    },
+    {
+      "file": "Part 4 - A Home the Household Can Keep.md",
+      "prose_words_whitespace": 3569,
+      "lexical_words_excluding_citations": 3599,
+      "paragraphs": 29,
+      "minimum": 117,
+      "maximum": 129,
+      "references": 5
+    }
+  ],
+  "independent_checks": [
+    {
+      "check": "01-PAYE-and-Cash-Flow.xlsx cached formula error scan",
+      "result": "no errors",
+      "sheets": 9
+    },
+    {
+      "check": "02-Pensions-and-Retirement.xlsx cached formula error scan",
+      "result": "no errors",
+      "sheets": 11
+    },
+    {
+      "check": "03-Medical-and-Emergency-Funds.xlsx cached formula error scan",
+      "result": "no errors",
+      "sheets": 10
+    },
+    {
+      "check": "04-Mortgages-and-Housing.xlsx cached formula error scan",
+      "result": "no errors",
+      "sheets": 11
+    },
+    {
+      "check": "Payroll month 1 tax",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Payroll month 1 cash",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Payroll month 2 tax",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Payroll month 2 cash",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Payroll month 3 tax",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Payroll month 3 cash",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Payroll month 4 tax",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Payroll month 4 cash",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Payroll month 5 tax",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Payroll month 5 cash",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Payroll month 6 tax",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Payroll month 6 cash",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Payroll month 7 tax",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Payroll month 7 cash",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Payroll month 8 tax",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Payroll month 8 cash",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Payroll month 9 tax",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Payroll month 9 cash",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Payroll month 10 tax",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Payroll month 10 cash",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Payroll month 11 tax",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Payroll month 11 cash",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Payroll month 12 tax",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Payroll month 12 cash",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Annual balance",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Pension closed-form terminal",
+      "difference": 2.2351741790771484e-08,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Pension median",
+      "difference": -1.862645149230957e-09,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Pension p10",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Pension p90",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Pension success",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Medical patient mean",
+      "difference": -1.4551915228366852e-11,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Medical need mean",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Medical p95",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Medical p99",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Medical shortfall",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Medical gap mean",
+      "difference": -1.8189894035458565e-12,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Mortgage initial payment",
+      "difference": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "check": "Mortgage independent closed-form cash-flow NPV",
+      "difference": -3.4924596548080444e-10,
+      "tolerance": 0.001
+    },
+    {
+      "check": "Mortgage wealth identity",
+      "difference": 4.656612873077393e-10,
+      "tolerance": 1e-05
+    }
+  ],
+  "input_perturbation_checks": [
+    {
+      "workbook": "01-PAYE-and-Cash-Flow.xlsx",
+      "label": "Extra pension reduces tax by 3000",
+      "before": 28876.85,
+      "after": 25876.85,
+      "restored": 28876.85
+    },
+    {
+      "workbook": "01-PAYE-and-Cash-Flow.xlsx",
+      "label": "Contribution beyond ceiling has capped tax effect",
+      "before": 16480,
+      "after": 30000,
+      "restored": 16480
+    },
+    {
+      "workbook": "01-PAYE-and-Cash-Flow.xlsx",
+      "label": "Removing premium removes insurance relief",
+      "before": 750,
+      "after": 0,
+      "restored": 750
+    },
+    {
+      "workbook": "01-PAYE-and-Cash-Flow.xlsx",
+      "label": "Policy relief affects actual tax",
+      "before": 28876.85,
+      "after": 28776.85,
+      "restored": 28876.85
+    },
+    {
+      "workbook": "01-PAYE-and-Cash-Flow.xlsx",
+      "label": "Later month does not change January",
+      "before": 29524.85,
+      "after": 29524.85,
+      "restored": 29524.85
+    },
+    {
+      "workbook": "02-Pensions-and-Retirement.xlsx",
+      "label": "Higher fees reduce wealth",
+      "before": 46078527.75706536,
+      "after": 41901073.63773347,
+      "restored": 46078527.75706536
+    },
+    {
+      "workbook": "02-Pensions-and-Retirement.xlsx",
+      "label": "More saving increases wealth",
+      "before": 46078527.75706536,
+      "after": 54003500.37110872,
+      "restored": 46078527.75706536
+    },
+    {
+      "workbook": "02-Pensions-and-Retirement.xlsx",
+      "label": "Later contribution pause leaves first year intact",
+      "before": 724500,
+      "after": 724500,
+      "restored": 724500
+    },
+    {
+      "workbook": "02-Pensions-and-Retirement.xlsx",
+      "label": "Later contribution pause reduces terminal wealth",
+      "before": 46078527.75706536,
+      "after": 45054191.529104285,
+      "restored": 46078527.75706536
+    },
+    {
+      "workbook": "02-Pensions-and-Retirement.xlsx",
+      "label": "Higher inflation reduces real wealth",
+      "before": 10661532.190247912,
+      "after": 9734442.434574185,
+      "restored": 10661532.190247912
+    },
+    {
+      "workbook": "03-Medical-and-Emergency-Funds.xlsx",
+      "label": "Larger reserve reduces shortfalls",
+      "before": 0.059,
+      "after": 0.004,
+      "restored": 0.059
+    },
+    {
+      "workbook": "03-Medical-and-Emergency-Funds.xlsx",
+      "label": "Zero insurer limit leaves full residual",
+      "before": 74400,
+      "after": 240000,
+      "restored": 74400
+    },
+    {
+      "workbook": "03-Medical-and-Emergency-Funds.xlsx",
+      "label": "Shared relief cap prevents duplicate saving",
+      "before": 51000,
+      "after": 60000,
+      "restored": 51000
+    },
+    {
+      "workbook": "03-Medical-and-Emergency-Funds.xlsx",
+      "label": "No events means no medical bill",
+      "before": 17182.09294506652,
+      "after": 0,
+      "restored": 17182.09294506652
+    },
+    {
+      "workbook": "03-Medical-and-Emergency-Funds.xlsx",
+      "label": "Higher deductible raises patient bill",
+      "before": 74400,
+      "after": 92400,
+      "restored": 74400
+    },
+    {
+      "workbook": "04-Mortgages-and-Housing.xlsx",
+      "label": "Zero interest payment branch",
+      "before": 56235.634141358656,
+      "after": 20000,
+      "restored": 56235.634141358656
+    },
+    {
+      "workbook": "04-Mortgages-and-Housing.xlsx",
+      "label": "Higher rate increases payment",
+      "before": 56235.634141358656,
+      "after": 70406.42636732625,
+      "restored": 56235.634141358656
+    },
+    {
+      "workbook": "04-Mortgages-and-Housing.xlsx",
+      "label": "Shorter horizon preserves wealth identity",
+      "before": 4.656612873077393e-10,
+      "after": -1.1641532182693481e-10,
+      "restored": 4.656612873077393e-10
+    },
+    {
+      "workbook": "04-Mortgages-and-Housing.xlsx",
+      "label": "Prepayment reduces future balance",
+      "before": 4746031.837685519,
+      "after": 4686349.508308454,
+      "restored": 4746031.837685519
+    },
+    {
+      "workbook": "04-Mortgages-and-Housing.xlsx",
+      "label": "Exit tax reduces NPV",
+      "before": -732620.764741983,
+      "after": -750463.8537202098,
+      "restored": -732620.764741983
+    },
+    {
+      "workbook": "04-Mortgages-and-Housing.xlsx",
+      "label": "Later rate reset leaves first payment unchanged",
+      "before": 56235.634141358656,
+      "after": 56235.634141358656,
+      "restored": 56235.634141358656
+    }
+  ],
+  "medical_convergence_checks": [
+    {
+      "seed": 20260908,
+      "trials": 2000,
+      "mean_need": 56032.09294506653,
+      "shortfall_probability": 0.059,
+      "interruption_probability": 0.1295,
+      "p95_need": 331800.4585009797
+    },
+    {
+      "seed": 20260908,
+      "trials": 20000,
+      "mean_need": 53517.32600464229,
+      "shortfall_probability": 0.05675,
+      "interruption_probability": 0.11745,
+      "p95_need": 330081.2012025448
+    },
+    {
+      "seed": 20260909,
+      "trials": 20000,
+      "mean_need": 53249.70492753418,
+      "shortfall_probability": 0.05595,
+      "interruption_probability": 0.11635,
+      "p95_need": 331529.0149383534
+    },
+    {
+      "seed": 20260910,
+      "trials": 20000,
+      "mean_need": 54256.29839215431,
+      "shortfall_probability": 0.0582,
+      "interruption_probability": 0.11825,
+      "p95_need": 332695.15439576516
+    }
+  ]
+}

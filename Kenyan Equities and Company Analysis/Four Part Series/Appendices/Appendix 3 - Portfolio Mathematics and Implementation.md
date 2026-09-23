@@ -1,0 +1,636 @@
+# Appendix 3 ; Portfolio construction, estimation, and implementation
+
+All expected returns, volatilities, entry prices, trading capacity, and correlations are educational assumptions. The portfolio weights are constructed examples, not historical backtest results. The bill assumption is after bill tax; equity expected returns include gross dividends before the separate dividend-withholding deduction used in the compounding model.
+
+## A3.1 Weights and expected returns
+
+For n assets, w_i is the allocation to asset i and mu_i is its assumed annual arithmetic total return. Long-only fully invested weights satisfy w_ige0 and sumw_i=1. Article equation (3.1) is:
+
+\[
+\mu_p = \sum_i w_{i} \mu_i
+\]
+
+For the Balanced allocation, in the order EQTY,KCB,COOP,SCOM,BAT,JUB,KEGN,bills:
+
+\[
+\mu_p = .10\times.12 +.10\times.12 +.10\times.115 +.15\times.13
+\]
+\[
++.08\times.10 +.07\times.115 +.10\times.11 +.30\times.075
+\]
+\[
+= .012 +.012 +.0115 +.0195 +.008 +.00805 +.011 +.0225
+\]
+\[
+= **.10455 =10.455%**
+\]
+
+Return assumptions combine price movement and distributions. Net expected return for an implementation may subtract expected dividend tax, trading costs, and other applicable charges once. If mu already incorporates those items, preserve that convention instead of deducting them again.
+
+## A3.2 Covariance, factor construction, and portfolio risk
+
+| Symbol | Meaning |
+| --- | --- |
+| sigma_i | Annual standard deviation of asset i's arithmetic return |
+| rho_i_j | Assumed correlation between returns i and j |
+| sum_i_j | Covariance, rho_i_jsigma_isigma_j |
+| l_i | Loading on a standardised common factor, between-1and1 |
+| w^T | Transpose of the weight vector |
+
+The starting matrix uses rho_i_j=l_il_j for inej and rho_i_i=1. It is positive semidefinite because it equals ll^T +diag(1-l_i^{2}). Each asset has a common component and an independent residual component. This is an assumed dependence structure, not an estimate from NSE history.
+
+\[
+\sum_i_j = \rho_i_j\sigma_i\sigma_j
+\]
+\[
+Portfolio variance \sigma_p^{2} = w^{T}\sumw = \sum_i\sum_jw_iw_j\sum_i_j
+\]
+\[
+Portfolio volatility \sigma_p = \sqrt(w^{T}\sumw)
+\]
+
+For the assumed one-factor structure, the same variance can be calculated independently:
+
+\[
+\sigma_p^{2} = (\sum_iw_i\sigma_il_i)^{2} +\sum_i(w_{i}\sigma_i)^{2}(1-l_{i}^{2})
+\]
+\[
+Balanced common loading = **0.122**
+\]
+\[
+Common variance =0.122^{2} = **0.014884**
+\]
+\[
+Residual variance = **0.0034906348**
+\]
+\[
+Total variance = **0.0183746348**
+\]
+\[
+Volatility =\sqrt{0.0183746348} = **13.555307%**
+\]
+
+The same calculation gives Income Reserve7.988178% and Growth15.557476%. A square-root-of-time annualisation is appropriate only under the assumptions that make variances additive over the chosen periods. Serial dependence, changing volatility, and stale prices require further treatment.
+
+## A3.3 Risk contributions and concentration
+
+\[
+Marginal variance exposure a_{i} = (\sumw)_i
+\]
+\[
+Variance contribution VC_i =w_{ia}_i
+\]
+\[
+Share of variance =VC_i/\sigma_p^{2}
+\]
+\[
+\sumVC_i=\sigma_p^{2}; \sumshares=1
+\]
+
+Volatility contributions can instead be written RC_i=w_i(sumw)_i/sigma_p, which add to sigma_p. The workbook displays variance contributions and their shares, consistently. A hedge can have a negative contribution in a broader universe, so contribution signs should be interpreted rather than automatically forced positive.
+
+The policy checks require full investment, nonnegative weights, no equity above25%, aggregate bank exposure no more than30%, and bills at least20%. These are adjustable educational constraints. The sampled-search engine additionally limits bills to70%. The three initial policies satisfy that upper limit; if constraints change, regenerate candidates and recheck the policies.
+
+For a concentration statistic, HHI=sumw_i^{2} and effective number of equal-sized positions=1/HHI. These measure capital concentration, not economic independence. A look-through exposure map should add shared sovereign holdings, customer groups, currency, regional operations, and household employment or business exposure.
+
+## A3.4 Sharpe ratios, objective functions, and sampled search
+
+\[
+Sharpe =(\mu_p-r_{f})/\sigma_p
+\]
+
+With mu_p=.10455, r_f=.075, and sigma_p=.13555307, Balanced Sharpe is **0.217996** under the workbook's pre-equity-tax return convention. Use matching net returns and a matching benchmark when making an after-cost comparison. The bill sleeve's small positive volatility describes rollover uncertainty; it is separate from the r_f comparison input.
+
+Classical minimum variance solves min_w w^Tsumw subject to the selected constraints. A target-return formulation adds w^Tmugetarget. Maximum Sharpe maximises the ratio above subject to the same feasible region. Risk parity instead seeks equal risk contributions; inverse-volatility weights are a simpler heuristic and generally differ from exact risk parity when correlations vary.
+
+The implemented search draws80,000Dirichlet candidate vectors with NumPy seed 20260907, keeps those satisfying the initial constraints, and adds the three policy portfolios. There are4,578feasible candidates. The workbook preserves200audit candidates plus both selected candidates. The full feasible search is reproducible from the script.
+
+| Sampled choice | Expected return | Volatility | Sharpe |
+| --- | ---: | ---: | ---: |
+| Lowest variance in sample | 9.13595% | 7.57104% | 0.21608 |
+| Highest Sharpe in sample | 10.72146% | 14.47788% | 0.22251 |
+
+The exact optimum may be outside the sample. Candidate metrics recalculate in Excel, but selecting a new best candidate after changing assumptions requires rerunning the search. These outputs are most useful as comparisons with simpler allocations and as a way to identify assumptions that drive concentration.
+
+## A3.5 Historical estimation and shrinkage
+
+Given aligned total-return observations r_i,t, sample mean mû_i=(1/T)sumr_i,t and sample covariance S_i_j=sum[(r_i,t-mû_i)(r_j,t-mû_j)]/(T-1). For a covariance shrinkage estimator:
+
+\[
+\sum_shrunk =(1-δ)S +δF, where0\leδ\le1
+\]
+
+F is a structured target, such as a constant-correlation covariance matrix. Ledoit–Wolf methods estimate a shrinkage intensity using statistical criteria; an analyst-selected δ should be labelled as an assumption rather than called an estimated Ledoit–Wolf result. Expected returns can also be shrunk towards a common or valuation-based prior.
+
+Prepare adjusted total returns, use a consistent tax convention, align dates, document missing observations, and review stale trading. Preserve delisted securities and the historical investable universe for a genuine backtest. Use only information available at each rebalance date, including publication lags. The current series implements forward educational models; it does not claim a survivorship-free historical NSE backtest.
+
+## A3.6 Joint scenarios and income stress
+
+For scenario s:
+
+\[
+Portfolio return R_{p},s =\sumw_iR_i,s
+\]
+\[
+Equity cash income =\sumq_iD_i(1-t_{i})
+\]
+\[
+With ordinary dividend cuts c_{i}: income_stress =\sumq_iD_i(1-c_{i})(1-t_{i})
+\]
+
+The workbook's Joint stress returns already include the scenario's distributions. Use the separate income equation to budget cash, rather than adding that income to total return again. Scenarios carry no assigned probability unless one is explicitly introduced. Crisis correlations, sovereign payment problems, currency changes, and market closures can be tested as additional joint scenarios when relevant to a particular portfolio.
+
+## A3.7 Whole-share sizing and liquidity
+
+Article equation (3.2): allocated cash A_i=Ww_i. With price P_i, proportional acquisition cost c_i, and trading lot L_i:
+
+\[
+q_{i} =floor[A_{i}/(P_{i}(1+c_{i})L_{i})]L_{i}
+\]
+\[
+Position value =q_{iP}_i
+\]
+\[
+Acquisition cost =q_{iP}_ic_i
+\]
+\[
+Residual =A_{i}-position value-cost
+\]
+
+For EQTY in Balanced: A=100,000; P=70; c=.02; L=1. Units=floor(100,000/71.40)=**1,400shares**. Value98,000; cost1,960; residual40. With observed-year DPS5.75 and the 5% teaching tax, income=1,400times5.75times.95=**7,647.50** if that payment assumption is used.
+
+Across the initial Balanced orders: reserved securities/bill cash985,817 +equity costs13,716.34 +residual466.66 =**1,000,000**. The bill row is a cash reservation, not a bill face quantity; use workbook01 to obtain the actual face and residual cash. Lot size1 is an illustrative share-order input to confirm with the trading venue and intermediary.
+
+\[
+Acquisition days =position value/(average daily traded value\timesparticipation fraction)
+\]
+
+This capacity estimate omits nonlinear market impact and changing spreads. Stress volume and price separately before relying on it for a large or urgent trade.
+
+## A3.8 Rebalancing and cash feasibility
+
+Current weight equals current position value divided by total current value. Drift equals current weight minus target weight. A band trigger is1when absolute drift exceeds the chosen band. The Rebalance sheet calculates signed whole-share changes towards the target, estimated buy/sell costs, and net cash required. Positive total net cash requires additional funding or reduced purchases. It is an indicative trade list before that funding adjustment, not an automatically cash-feasible execution batch.
+
+Practical sequencing is to reserve expected costs, apply available contributions and distributions, calculate sells where justified, and size purchases within the resulting cash. Recalculate after partial fills. Retain cash-flow and contract-note records for performance measurement. Update the policy when household circumstances change, and update valuation assumptions when the business case changes.
+
+## Workbook formula dictionary
+
+### Dictionary entries
+
+Each entry defines a formula family. Copied years, issuers, and simulation paths follow the same relationship. The [cell-by-cell formula audit](<C:/Users/Nevo/Downloads/financial material/Kenyan Equities and Company Analysis/Four Part Series/Research/03-Portfolio-Construction-formula-audit.csv>) provides every exact Excel expression. Input units and modelling conventions appear in each workbook’s Guide and Inputs sheets.
+
+#### Correlation: C7 ; Correlation
+
+Mathematical equivalence: `rhoij=li lj; rhoii=1`
+
+Units and scope: Assumption, not an estimated historical correlation.
+
+```excel
+='Asset assumptions'!G7*'Asset assumptions'!G8
+```
+
+#### Covariance: B7 ; Covariance
+
+Mathematical equivalence: `sumij=rhoij sigmai sigmaj`
+
+Units and scope: Annual return squared
+
+```excel
+='Correlation'!B7*'Asset assumptions'!F7*'Asset assumptions'!F7
+```
+
+#### Policies: J7 ; Allocation reconciliation
+
+Mathematical equivalence: `sumw_i=1`
+
+Units and scope: fraction
+
+```excel
+=SUM(B7:I7)
+```
+
+#### Policies: K7 ; Bank sector weight
+
+Mathematical equivalence: `w_bank=sum bank weights`
+
+Units and scope: fraction
+
+```excel
+=SUM(B7:D7)
+```
+
+#### Policies: L7 ; Expected gross total return
+
+Mathematical equivalence: `mup=sumw_i mu_i`
+
+Units and scope: Annual fraction; asset assumptions include distributions.
+
+```excel
+=B7*'Asset assumptions'!E7+C7*'Asset assumptions'!E8+D7*'Asset assumptions'!E9+E7*'Asset assumptions'!E10+F7*'Asset assumptions'!E11+G7*'Asset assumptions'!E12+H7*'Asset assumptions'!E13+I7*'Asset assumptions'!E14
+```
+
+#### Policies: M7 ; Portfolio volatility
+
+Mathematical equivalence: `sigmap=sqrt(w^Tsumw)`
+
+Units and scope: Annual standard deviation
+
+The full Excel expression is in `Policies!M7` and the accompanying cell-by-cell formula audit.
+
+#### Policies: N7 ; Sharpe under model assumptions
+
+Mathematical equivalence: `(mup-r_f)/sigmap`
+
+Units and scope: Mean assumptions are gross of dividend tax; benchmark defined explicitly.
+
+```excel
+=(L7-'Inputs'!$B$11)/M7
+```
+
+#### Policies: O7 ; After-tax recurring equity income
+
+Mathematical equivalence: `y_income=sumw_i D_i/P_i (1-t_d)`
+
+Units and scope: fraction of whole portfolio; bill cash separately budgeted
+
+```excel
+=B7*'Asset assumptions'!D7/'Asset assumptions'!C7*(1-'Inputs'!$B$10)+C7*'Asset assumptions'!D8/'Asset assumptions'!C8*(1-'Inputs'!$B$10)+D7*'Asset assumptions'!D9/'Asset assumptions'!C9*(1-'Inputs'!$B$10)+E7*'Asset assumptions'!D10/'Asset assumptions'!C10*(1-'Inputs'!$B$10)+F7*'Asset assumptions'!D11/'Asset assumptions'!C11*(1-'Inputs'!$B$10)+G7*'Asset assumptions'!D12/'Asset assumptions'!C12*(1-'Inputs'!$B$10)+H7*'Asset assumptions'!D13/'Asset assumptions'!C13*(1-'Inputs'!$B$10)
+```
+
+#### Policies: P7 ; Constraint violations
+
+Mathematical equivalence: `Count budget,bank,single-name,bill-floor,long-only breaches`
+
+Units and scope: Nonzero means adjust weights or policy.
+
+```excel
+=IF(ABS(J7-1)>0.000001,1,0)+IF(K7>'Inputs'!$B$13,1,0)+IF(MAX(B7:H7)>'Inputs'!$B$12,1,0)+IF(I7<'Inputs'!$B$14,1,0)+IF(MIN(B7:I7)<0,1,0)
+```
+
+#### Positions: B7 ; Target allocation
+
+Mathematical equivalence: `w_i from selected balanced policy`
+
+Units and scope: fraction
+
+```excel
+='Policies'!B8
+```
+
+#### Positions: C7 ; Allocated budget = weighttimesbudget
+
+Mathematical equivalence: `Allocated budget = weighttimesbudget`
+
+Units and scope: KES or explicitly labelled units; no market-impact model beyond assumed participation.
+
+```excel
+=B7*'Inputs'!$B$7
+```
+
+#### Positions: D7 ; Price input
+
+Mathematical equivalence: `Price input`
+
+Units and scope: KES or explicitly labelled units; no market-impact model beyond assumed participation.
+
+```excel
+='Asset assumptions'!C7
+```
+
+#### Positions: E7 ; Acquisition cost fraction
+
+Mathematical equivalence: `Acquisition cost fraction`
+
+Units and scope: KES or explicitly labelled units; no market-impact model beyond assumed participation.
+
+```excel
+='Inputs'!$B$8
+```
+
+#### Positions: F7 ; Lot size
+
+Mathematical equivalence: `Lot size`
+
+Units and scope: KES or explicitly labelled units; no market-impact model beyond assumed participation.
+
+```excel
+='Asset assumptions'!I7
+```
+
+#### Positions: G7 ; Units = floor[budget/(price(1+fee))/lot]timeslot
+
+Mathematical equivalence: `Units = floor[budget/(price(1+fee))/lot]timeslot`
+
+Units and scope: KES or explicitly labelled units; no market-impact model beyond assumed participation.
+
+```excel
+=INT(C7/(D7*(1+E7))/F7)*F7
+```
+
+#### Positions: H7 ; Security value = unitstimesprice
+
+Mathematical equivalence: `Security value = unitstimesprice`
+
+Units and scope: KES or explicitly labelled units; no market-impact model beyond assumed participation.
+
+```excel
+=G7*D7
+```
+
+#### Positions: I7 ; Cost = security valuetimesfee
+
+Mathematical equivalence: `Cost = security valuetimesfee`
+
+Units and scope: KES or explicitly labelled units; no market-impact model beyond assumed participation.
+
+```excel
+=H7*E7
+```
+
+#### Positions: J7 ; Residual cash = budget-security value-cost
+
+Mathematical equivalence: `Residual cash = budget-security value-cost`
+
+Units and scope: KES or explicitly labelled units; no market-impact model beyond assumed participation.
+
+```excel
+=C7-H7-I7
+```
+
+#### Positions: K7 ; Income = unitstimesDPStimes(1-tax)
+
+Mathematical equivalence: `Income = unitstimesDPStimes(1-tax)`
+
+Units and scope: KES or explicitly labelled units; no market-impact model beyond assumed participation.
+
+```excel
+=G7*'Asset assumptions'!D7*(1-'Inputs'!$B$10)
+```
+
+#### Positions: L7 ; Actual security weight = value/initial budget
+
+Mathematical equivalence: `Actual security weight = value/initial budget`
+
+Units and scope: KES or explicitly labelled units; no market-impact model beyond assumed participation.
+
+```excel
+=H7/'Inputs'!$B$7
+```
+
+#### Positions: M7 ; Turnover assumption
+
+Mathematical equivalence: `Turnover assumption`
+
+Units and scope: KES or explicitly labelled units; no market-impact model beyond assumed participation.
+
+```excel
+='Asset assumptions'!H7
+```
+
+#### Positions: N7 ; Acquisition days = order value/(daily turnovertimesparticipation)
+
+Mathematical equivalence: `Acquisition days = order value/(daily turnovertimesparticipation)`
+
+Units and scope: KES or explicitly labelled units; no market-impact model beyond assumed participation.
+
+```excel
+=H7/(M7*'Inputs'!$B$16)
+```
+
+#### Positions: C16 ; Column total
+
+Mathematical equivalence: `total=sum rows`
+
+Units and scope: Units follow column
+
+```excel
+=SUM(C7:C14)
+```
+
+#### Positions: C18 ; Budget reconciliation
+
+Mathematical equivalence: `budget-security value-cost-residual=0`
+
+Units and scope: KES
+
+```excel
+=C16-H16-I16-J16
+```
+
+#### Risk contributions: C7 ; Covariance with portfolio
+
+Mathematical equivalence: `(sumw)_i=sumjsumij wj`
+
+Units and scope: return squared
+
+```excel
+='Covariance'!B7*'Policies'!B8+'Covariance'!C7*'Policies'!C8+'Covariance'!D7*'Policies'!D8+'Covariance'!E7*'Policies'!E8+'Covariance'!F7*'Policies'!F8+'Covariance'!G7*'Policies'!G8+'Covariance'!H7*'Policies'!H8+'Covariance'!I7*'Policies'!I8
+```
+
+#### Risk contributions: D7 ; Variance contribution
+
+Mathematical equivalence: `VC_i=w_i(sumw)_i`
+
+Units and scope: return squared
+
+```excel
+=B7*C7
+```
+
+#### Risk contributions: E7 ; Variance share
+
+Mathematical equivalence: `share_i=VC_i/sigmap^{2}`
+
+Units and scope: fraction
+
+```excel
+=D7/'Policies'!$M$8^2
+```
+
+#### Risk contributions: D16 ; Total variance
+
+Mathematical equivalence: `sumVC_i=sigmap^{2}`
+
+Units and scope: return squared
+
+```excel
+=SUM(D7:D14)
+```
+
+#### Risk contributions: E16 ; Risk-share reconciliation
+
+Mathematical equivalence: `sumshare_i=1`
+
+Units and scope: fraction
+
+```excel
+=SUM(E7:E14)
+```
+
+#### Joint stress: J7 ; Weighted scenario return
+
+Mathematical equivalence: `R_s=sumw_i R_i,s`
+
+Units and scope: Annual total-return fraction
+
+```excel
+=SUMPRODUCT(B7:I7,'Policies'!B7:I7)
+```
+
+#### Sampled portfolios: J7 ; Candidate return
+
+Mathematical equivalence: `mup=w^Tmu`
+
+Units and scope: Assumed annual total return
+
+```excel
+=B7*'Asset assumptions'!E7+C7*'Asset assumptions'!E8+D7*'Asset assumptions'!E9+E7*'Asset assumptions'!E10+F7*'Asset assumptions'!E11+G7*'Asset assumptions'!E12+H7*'Asset assumptions'!E13+I7*'Asset assumptions'!E14
+```
+
+#### Sampled portfolios: K7 ; Candidate volatility
+
+Mathematical equivalence: `sigmap=sqrt(w^Tsumw)`
+
+Units and scope: Annual
+
+The full Excel expression is in `Sampled portfolios!K7` and the accompanying cell-by-cell formula audit.
+
+#### Sampled portfolios: L7 ; Candidate Sharpe
+
+Mathematical equivalence: `(mup-r_f)/sigmap`
+
+Units and scope: Gross-return comparison
+
+```excel
+=(J7-'Inputs'!$B$11)/K7
+```
+
+#### Search results: J7 ; Selected candidate metric
+
+Mathematical equivalence: `Selected metric linked to candidate formulas`
+
+Units and scope: Re-run search for changed optimal weights.
+
+```excel
+='Sampled portfolios'!J207
+```
+
+#### Rebalance: D7 ; V=qP
+
+Mathematical equivalence: `V=qP`
+
+Units and scope: Preview before cash-cost adjustment; positive total net cash needs additional funding.
+
+```excel
+=B7*C7
+```
+
+#### Rebalance: E7 ; w=V/sumV
+
+Mathematical equivalence: `w=V/sumV`
+
+Units and scope: Preview before cash-cost adjustment; positive total net cash needs additional funding.
+
+```excel
+=D7/SUM($D$7:$D$14)
+```
+
+#### Rebalance: F7 ; target from balanced policy
+
+Mathematical equivalence: `target from balanced policy`
+
+Units and scope: Preview before cash-cost adjustment; positive total net cash needs additional funding.
+
+```excel
+='Policies'!B8
+```
+
+#### Rebalance: G7 ; drift=current-target
+
+Mathematical equivalence: `drift=current-target`
+
+Units and scope: Preview before cash-cost adjustment; positive total net cash needs additional funding.
+
+```excel
+=E7-F7
+```
+
+#### Rebalance: H7 ; trigger=1{|drift|>band}
+
+Mathematical equivalence: `trigger=1{|drift|>band}`
+
+Units and scope: Preview before cash-cost adjustment; positive total net cash needs additional funding.
+
+```excel
+=IF(ABS(G7)>'Inputs'!$B$15,1,0)
+```
+
+#### Rebalance: I7 ; target value=target weighttimessumV
+
+Mathematical equivalence: `target value=target weighttimessumV`
+
+Units and scope: Preview before cash-cost adjustment; positive total net cash needs additional funding.
+
+```excel
+=F7*SUM($D$7:$D$14)
+```
+
+#### Rebalance: J7 ; signed whole units toward target, rounded toward zero
+
+Mathematical equivalence: `signed whole units toward target, rounded toward zero`
+
+Units and scope: Preview before cash-cost adjustment; positive total net cash needs additional funding.
+
+```excel
+=IF(I7>=D7,INT((I7-D7)/C7),-INT((D7-I7)/C7))
+```
+
+#### Rebalance: K7 ; trade value=units changetimesprice
+
+Mathematical equivalence: `trade value=units changetimesprice`
+
+Units and scope: Preview before cash-cost adjustment; positive total net cash needs additional funding.
+
+```excel
+=J7*C7
+```
+
+#### Rebalance: L7 ; cost rate=buy or sell rate
+
+Mathematical equivalence: `cost rate=buy or sell rate`
+
+Units and scope: Preview before cash-cost adjustment; positive total net cash needs additional funding.
+
+```excel
+=IF(J7>0,'Inputs'!$B$8,'Inputs'!$B$9)
+```
+
+#### Rebalance: M7 ; cost=|trade value|timesrate
+
+Mathematical equivalence: `cost=|trade value|timesrate`
+
+Units and scope: Preview before cash-cost adjustment; positive total net cash needs additional funding.
+
+```excel
+=ABS(K7)*L7
+```
+
+#### Rebalance: N7 ; cash needed=signed trade value+cost
+
+Mathematical equivalence: `cash needed=signed trade value+cost`
+
+Units and scope: Preview before cash-cost adjustment; positive total net cash needs additional funding.
+
+```excel
+=K7+M7
+```
+
+#### Rebalance: N16 ; Net cash requirement
+
+Mathematical equivalence: `net cash=sum(buys-sales+costs)`
+
+Units and scope: KES; fund this amount or reduce buys before implementation.
+
+```excel
+=SUM(N7:N14)
+```

@@ -1,0 +1,12 @@
+flowchart TD
+    A[Income in actual country and currency] --> B[Reserve essential spending and family support]
+    B --> C{Purpose of this transfer}
+    C -- Invest --> D[Confirm broker entity, permissions, and deposit instructions]
+    D --> E{Eligible route shown for this account?}
+    E -- Own-name bank --> F[Review bank FX and transfer quote]
+    E -- Supported Wise integration --> G[Confirm Wise residence and source-currency eligibility]
+    F --> H[Confirm cash credited and available before investing]
+    G --> H
+    C -- Family support --> I[Compare recipient amount and arrival terms]
+    I --> J[Kenyan bank or supported M-Pesa delivery]
+    J --> K[Reconcile amount received]
