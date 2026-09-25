@@ -1,0 +1,2065 @@
+[
+  {
+    "key": "owner-earnings",
+    "captured_at": "2026-09-25T13:21:50.190Z",
+    "url": "http://127.0.0.1:8765/calculators/owner-earnings/#business-results",
+    "definitions": [
+      {
+        "display": "block",
+        "text": "OE is estimated annual owner earnings; N is annual normalized net income after replacing owner labour; D is depreciation/amortisation already expensed; A is other justified noncash adjustment; M is annual maintenance investment; ΔW is an increase in required operating working capital. All are KES/year. A release of working capital is negative."
+      },
+      {
+        "display": "block",
+        "text": "H is dated headroom, C stated available cash, R additional confirmed collections, U listed due uses, X restricted cash, B the retained reserve and Q the disputed/uncollected amount counted in C or R. All are KES over the stated cash horizon. Subtract the proposed draw from reviewed H."
+      }
+    ],
+    "equations": 2,
+    "inputs": [
+      {
+        "name": "period",
+        "value": "Illustrative year"
+      },
+      {
+        "name": "profit",
+        "value": "1800000"
+      },
+      {
+        "name": "owner_pay",
+        "value": "900000"
+      },
+      {
+        "name": "replacement_pay",
+        "value": "1200000"
+      },
+      {
+        "name": "adjustments",
+        "value": "0"
+      },
+      {
+        "name": "depreciation",
+        "value": "240000"
+      },
+      {
+        "name": "other_noncash",
+        "value": "0"
+      },
+      {
+        "name": "maintenance_low",
+        "value": "300000"
+      },
+      {
+        "name": "maintenance",
+        "value": "380000"
+      },
+      {
+        "name": "maintenance_high",
+        "value": "500000"
+      },
+      {
+        "name": "working_capital",
+        "value": "370000"
+      },
+      {
+        "name": "annual_principal",
+        "value": "0"
+      },
+      {
+        "name": "annual_growth",
+        "value": "0"
+      },
+      {
+        "name": "reserve_topup",
+        "value": "0"
+      },
+      {
+        "name": "decision_date",
+        "value": "2026-09-25"
+      },
+      {
+        "name": "through_date",
+        "value": "2026-10-02"
+      },
+      {
+        "name": "cash",
+        "value": "1200000"
+      },
+      {
+        "name": "receipts",
+        "value": "0"
+      },
+      {
+        "name": "disputed",
+        "value": "200000"
+      },
+      {
+        "name": "payroll",
+        "value": "250000"
+      },
+      {
+        "name": "suppliers",
+        "value": "260000"
+      },
+      {
+        "name": "rent",
+        "value": "80000"
+      },
+      {
+        "name": "taxes",
+        "value": "90000"
+      },
+      {
+        "name": "principal",
+        "value": "100000"
+      },
+      {
+        "name": "prepaid",
+        "value": "130000"
+      },
+      {
+        "name": "dated_investment",
+        "value": "0"
+      },
+      {
+        "name": "restricted",
+        "value": "0"
+      },
+      {
+        "name": "reserve",
+        "value": "150000"
+      },
+      {
+        "name": "withdrawal",
+        "value": "0"
+      }
+    ],
+    "title": "MSME owner earnings and cash headroom | Sokointel",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "files": [
+      "owner-earnings-full.png",
+      "owner-earnings-results.png",
+      "owner-earnings-formulas.png"
+    ]
+  },
+  {
+    "key": "cash-13-weeks",
+    "captured_at": "2026-09-25T13:23:26.219Z",
+    "url": "http://127.0.0.1:8765/calculators/cash-13-weeks/#business-results",
+    "definitions": [
+      {
+        "display": "block",
+        "text": "Cₜ is week-end cash; Cₜ₋₁ is opening cash; Rₜ is operating cash received, Eₜ new owner funds, Fₜ new borrowing and Uₜ all scheduled cash uses. Values are KES in week t; t runs from 1 to 13."
+      },
+      {
+        "display": "block",
+        "text": "B is the chosen KES reserve floor and C₀ opening unrestricted cash. This is the initial buffer required to cover the deepest forecast gap, assuming the remaining cash flows are unchanged."
+      }
+    ],
+    "equations": 2,
+    "inputs": [
+      {
+        "name": "start",
+        "value": "2026-09-28"
+      },
+      {
+        "name": "opening",
+        "value": "1200000"
+      },
+      {
+        "name": "reserve",
+        "value": "500000"
+      },
+      {
+        "name": "receipt_delay",
+        "value": "0"
+      },
+      {
+        "name": "financing_delay",
+        "value": "0"
+      },
+      {
+        "checked": false,
+        "name": "exclude_financing",
+        "value": "on"
+      },
+      {
+        "name": "source_note",
+        "value": "Illustrative workbook case; replace with dated records"
+      },
+      {
+        "name": "w1_receipts",
+        "value": "1450000"
+      },
+      {
+        "name": "w1_down_receipts",
+        "value": "1100000"
+      },
+      {
+        "name": "w1_suppliers",
+        "value": "800000"
+      },
+      {
+        "name": "w1_down_suppliers",
+        "value": "900000"
+      },
+      {
+        "name": "w1_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w1_other_due",
+        "value": "250000"
+      },
+      {
+        "name": "w2_receipts",
+        "value": "1200000"
+      },
+      {
+        "name": "w2_down_receipts",
+        "value": "800000"
+      },
+      {
+        "name": "w2_suppliers",
+        "value": "800000"
+      },
+      {
+        "name": "w2_down_suppliers",
+        "value": "850000"
+      },
+      {
+        "name": "w2_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w2_other_due",
+        "value": "250000"
+      },
+      {
+        "name": "w3_receipts",
+        "value": "1900000"
+      },
+      {
+        "name": "w3_down_receipts",
+        "value": "1200000"
+      },
+      {
+        "name": "w3_suppliers",
+        "value": "1100000"
+      },
+      {
+        "name": "w3_down_suppliers",
+        "value": "1200000"
+      },
+      {
+        "name": "w3_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w3_other_due",
+        "value": "250000"
+      },
+      {
+        "name": "w4_receipts",
+        "value": "1300000"
+      },
+      {
+        "name": "w4_down_receipts",
+        "value": "900000"
+      },
+      {
+        "name": "w4_suppliers",
+        "value": "800000"
+      },
+      {
+        "name": "w4_down_suppliers",
+        "value": "950000"
+      },
+      {
+        "name": "w4_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w4_other_due",
+        "value": "250000"
+      },
+      {
+        "name": "w5_receipts",
+        "value": "2500000"
+      },
+      {
+        "name": "w5_down_receipts",
+        "value": "1600000"
+      },
+      {
+        "name": "w5_suppliers",
+        "value": "1300000"
+      },
+      {
+        "name": "w5_down_suppliers",
+        "value": "1450000"
+      },
+      {
+        "name": "w5_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w5_other_due",
+        "value": "250000"
+      },
+      {
+        "name": "w6_receipts",
+        "value": "1100000"
+      },
+      {
+        "name": "w6_down_receipts",
+        "value": "700000"
+      },
+      {
+        "name": "w6_suppliers",
+        "value": "800000"
+      },
+      {
+        "name": "w6_down_suppliers",
+        "value": "850000"
+      },
+      {
+        "name": "w6_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w6_other_due",
+        "value": "250000"
+      },
+      {
+        "name": "w7_receipts",
+        "value": "1400000"
+      },
+      {
+        "name": "w7_down_receipts",
+        "value": "900000"
+      },
+      {
+        "name": "w7_suppliers",
+        "value": "800000"
+      },
+      {
+        "name": "w7_down_suppliers",
+        "value": "950000"
+      },
+      {
+        "name": "w7_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w7_other_due",
+        "value": "250000"
+      },
+      {
+        "name": "w8_receipts",
+        "value": "1900000"
+      },
+      {
+        "name": "w8_down_receipts",
+        "value": "1200000"
+      },
+      {
+        "name": "w8_suppliers",
+        "value": "1100000"
+      },
+      {
+        "name": "w8_down_suppliers",
+        "value": "1200000"
+      },
+      {
+        "name": "w8_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w8_other_due",
+        "value": "250000"
+      },
+      {
+        "name": "w9_receipts",
+        "value": "1200000"
+      },
+      {
+        "name": "w9_down_receipts",
+        "value": "800000"
+      },
+      {
+        "name": "w9_suppliers",
+        "value": "800000"
+      },
+      {
+        "name": "w9_down_suppliers",
+        "value": "900000"
+      },
+      {
+        "name": "w9_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w9_other_due",
+        "value": "250000"
+      },
+      {
+        "name": "w10_receipts",
+        "value": "2300000"
+      },
+      {
+        "name": "w10_down_receipts",
+        "value": "1500000"
+      },
+      {
+        "name": "w10_suppliers",
+        "value": "1200000"
+      },
+      {
+        "name": "w10_down_suppliers",
+        "value": "1350000"
+      },
+      {
+        "name": "w10_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w10_other_due",
+        "value": "250000"
+      },
+      {
+        "name": "w11_receipts",
+        "value": "1000000"
+      },
+      {
+        "name": "w11_down_receipts",
+        "value": "650000"
+      },
+      {
+        "name": "w11_suppliers",
+        "value": "750000"
+      },
+      {
+        "name": "w11_down_suppliers",
+        "value": "800000"
+      },
+      {
+        "name": "w11_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w11_other_due",
+        "value": "250000"
+      },
+      {
+        "name": "w12_receipts",
+        "value": "1600000"
+      },
+      {
+        "name": "w12_down_receipts",
+        "value": "1050000"
+      },
+      {
+        "name": "w12_suppliers",
+        "value": "950000"
+      },
+      {
+        "name": "w12_down_suppliers",
+        "value": "1100000"
+      },
+      {
+        "name": "w12_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w12_other_due",
+        "value": "250000"
+      },
+      {
+        "name": "w13_receipts",
+        "value": "2000000"
+      },
+      {
+        "name": "w13_down_receipts",
+        "value": "1300000"
+      },
+      {
+        "name": "w13_suppliers",
+        "value": "1100000"
+      },
+      {
+        "name": "w13_down_suppliers",
+        "value": "1250000"
+      },
+      {
+        "name": "w13_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w13_other_due",
+        "value": "250000"
+      },
+      {
+        "name": "w1_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w1_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w1_financing",
+        "value": "0"
+      },
+      {
+        "name": "w1_tax",
+        "value": "0"
+      },
+      {
+        "name": "w1_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w1_growth",
+        "value": "0"
+      },
+      {
+        "name": "w1_interest",
+        "value": "0"
+      },
+      {
+        "name": "w1_principal",
+        "value": "0"
+      },
+      {
+        "name": "w1_draws",
+        "value": "0"
+      },
+      {
+        "name": "w2_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w2_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w2_financing",
+        "value": "0"
+      },
+      {
+        "name": "w2_tax",
+        "value": "0"
+      },
+      {
+        "name": "w2_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w2_growth",
+        "value": "0"
+      },
+      {
+        "name": "w2_interest",
+        "value": "0"
+      },
+      {
+        "name": "w2_principal",
+        "value": "0"
+      },
+      {
+        "name": "w2_draws",
+        "value": "0"
+      },
+      {
+        "name": "w3_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w3_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w3_financing",
+        "value": "0"
+      },
+      {
+        "name": "w3_tax",
+        "value": "0"
+      },
+      {
+        "name": "w3_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w3_growth",
+        "value": "0"
+      },
+      {
+        "name": "w3_interest",
+        "value": "0"
+      },
+      {
+        "name": "w3_principal",
+        "value": "0"
+      },
+      {
+        "name": "w3_draws",
+        "value": "0"
+      },
+      {
+        "name": "w4_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w4_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w4_financing",
+        "value": "0"
+      },
+      {
+        "name": "w4_tax",
+        "value": "0"
+      },
+      {
+        "name": "w4_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w4_growth",
+        "value": "0"
+      },
+      {
+        "name": "w4_interest",
+        "value": "0"
+      },
+      {
+        "name": "w4_principal",
+        "value": "0"
+      },
+      {
+        "name": "w4_draws",
+        "value": "0"
+      },
+      {
+        "name": "w5_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w5_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w5_financing",
+        "value": "0"
+      },
+      {
+        "name": "w5_tax",
+        "value": "0"
+      },
+      {
+        "name": "w5_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w5_growth",
+        "value": "0"
+      },
+      {
+        "name": "w5_interest",
+        "value": "0"
+      },
+      {
+        "name": "w5_principal",
+        "value": "0"
+      },
+      {
+        "name": "w5_draws",
+        "value": "0"
+      },
+      {
+        "name": "w6_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w6_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w6_financing",
+        "value": "0"
+      },
+      {
+        "name": "w6_tax",
+        "value": "0"
+      },
+      {
+        "name": "w6_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w6_growth",
+        "value": "0"
+      },
+      {
+        "name": "w6_interest",
+        "value": "0"
+      },
+      {
+        "name": "w6_principal",
+        "value": "0"
+      },
+      {
+        "name": "w6_draws",
+        "value": "0"
+      },
+      {
+        "name": "w7_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w7_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w7_financing",
+        "value": "0"
+      },
+      {
+        "name": "w7_tax",
+        "value": "0"
+      },
+      {
+        "name": "w7_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w7_growth",
+        "value": "0"
+      },
+      {
+        "name": "w7_interest",
+        "value": "0"
+      },
+      {
+        "name": "w7_principal",
+        "value": "0"
+      },
+      {
+        "name": "w7_draws",
+        "value": "0"
+      },
+      {
+        "name": "w8_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w8_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w8_financing",
+        "value": "0"
+      },
+      {
+        "name": "w8_tax",
+        "value": "0"
+      },
+      {
+        "name": "w8_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w8_growth",
+        "value": "0"
+      },
+      {
+        "name": "w8_interest",
+        "value": "0"
+      },
+      {
+        "name": "w8_principal",
+        "value": "0"
+      },
+      {
+        "name": "w8_draws",
+        "value": "0"
+      },
+      {
+        "name": "w9_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w9_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w9_financing",
+        "value": "0"
+      },
+      {
+        "name": "w9_tax",
+        "value": "0"
+      },
+      {
+        "name": "w9_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w9_growth",
+        "value": "0"
+      },
+      {
+        "name": "w9_interest",
+        "value": "0"
+      },
+      {
+        "name": "w9_principal",
+        "value": "0"
+      },
+      {
+        "name": "w9_draws",
+        "value": "0"
+      },
+      {
+        "name": "w10_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w10_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w10_financing",
+        "value": "0"
+      },
+      {
+        "name": "w10_tax",
+        "value": "0"
+      },
+      {
+        "name": "w10_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w10_growth",
+        "value": "0"
+      },
+      {
+        "name": "w10_interest",
+        "value": "0"
+      },
+      {
+        "name": "w10_principal",
+        "value": "0"
+      },
+      {
+        "name": "w10_draws",
+        "value": "0"
+      },
+      {
+        "name": "w11_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w11_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w11_financing",
+        "value": "0"
+      },
+      {
+        "name": "w11_tax",
+        "value": "0"
+      },
+      {
+        "name": "w11_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w11_growth",
+        "value": "0"
+      },
+      {
+        "name": "w11_interest",
+        "value": "0"
+      },
+      {
+        "name": "w11_principal",
+        "value": "0"
+      },
+      {
+        "name": "w11_draws",
+        "value": "0"
+      },
+      {
+        "name": "w12_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w12_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w12_financing",
+        "value": "0"
+      },
+      {
+        "name": "w12_tax",
+        "value": "0"
+      },
+      {
+        "name": "w12_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w12_growth",
+        "value": "0"
+      },
+      {
+        "name": "w12_interest",
+        "value": "0"
+      },
+      {
+        "name": "w12_principal",
+        "value": "0"
+      },
+      {
+        "name": "w12_draws",
+        "value": "0"
+      },
+      {
+        "name": "w13_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w13_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w13_financing",
+        "value": "0"
+      },
+      {
+        "name": "w13_tax",
+        "value": "0"
+      },
+      {
+        "name": "w13_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w13_growth",
+        "value": "0"
+      },
+      {
+        "name": "w13_interest",
+        "value": "0"
+      },
+      {
+        "name": "w13_principal",
+        "value": "0"
+      },
+      {
+        "name": "w13_draws",
+        "value": "0"
+      }
+    ],
+    "mathErrors": 0,
+    "title": "Thirteen-week operating cash planner | Sokointel",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "files": [
+      "cash-13-weeks-full.png",
+      "cash-13-weeks-results.png"
+    ]
+  },
+  {
+    "key": "failure-warning",
+    "captured_at": "2026-09-25T13:23:30.274Z",
+    "url": "http://127.0.0.1:8765/calculators/failure-warning/#business-results",
+    "definitions": [
+      {
+        "display": "block",
+        "text": "All terms are KES for week t: closing cash C, operating receipts R, new owner funds E, new borrowing F and all cash uses U. Opening cash C₀ is unrestricted. No emergency financing is inserted automatically."
+      },
+      {
+        "display": "block",
+        "text": "CCC is the cash conversion cycle in days. DIO is inventory days, DSO receivable days and DPO payable days. Use comparable periods and denominators; overdue claims still require review."
+      },
+      {
+        "display": "block",
+        "text": "S is the illustrative KES weekly sales input, mᵦ base contribution margin and mₛ downside margin, entered as percentages. This stress assumes constant sales and immediately paid variable costs; it is separate from editable baseline supplier payments."
+      }
+    ],
+    "equations": 3,
+    "inputs": [
+      {
+        "name": "start",
+        "value": "2026-09-28"
+      },
+      {
+        "name": "opening",
+        "value": "6000000"
+      },
+      {
+        "name": "reserve",
+        "value": "750000"
+      },
+      {
+        "name": "receipt_delay",
+        "value": "0"
+      },
+      {
+        "name": "financing_delay",
+        "value": "0"
+      },
+      {
+        "checked": false,
+        "name": "exclude_financing",
+        "value": "on"
+      },
+      {
+        "name": "source_note",
+        "value": "Illustrative workbook case; replace with dated records"
+      },
+      {
+        "name": "weekly_sales",
+        "value": "1500000"
+      },
+      {
+        "name": "base_margin",
+        "value": "20"
+      },
+      {
+        "name": "stress_margin",
+        "value": "20"
+      },
+      {
+        "name": "supplier_acceleration",
+        "value": "0"
+      },
+      {
+        "name": "inventory_tieup",
+        "value": "0"
+      },
+      {
+        "name": "overdue_suppliers",
+        "value": "0"
+      },
+      {
+        "name": "dio",
+        "value": "30"
+      },
+      {
+        "name": "dso",
+        "value": "20"
+      },
+      {
+        "name": "dpo",
+        "value": "35"
+      },
+      {
+        "name": "stress_dio",
+        "value": "45"
+      },
+      {
+        "name": "stress_dso",
+        "value": "30"
+      },
+      {
+        "name": "stress_dpo",
+        "value": "20"
+      },
+      {
+        "name": "w1_receipts",
+        "value": "1400000"
+      },
+      {
+        "name": "w1_down_receipts",
+        "value": "900000"
+      },
+      {
+        "name": "w1_suppliers",
+        "value": "900000"
+      },
+      {
+        "name": "w1_down_suppliers",
+        "value": "1000000"
+      },
+      {
+        "name": "w1_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w1_other_due",
+        "value": "180000"
+      },
+      {
+        "name": "w2_receipts",
+        "value": "1200000"
+      },
+      {
+        "name": "w2_down_receipts",
+        "value": "700000"
+      },
+      {
+        "name": "w2_suppliers",
+        "value": "800000"
+      },
+      {
+        "name": "w2_down_suppliers",
+        "value": "900000"
+      },
+      {
+        "name": "w2_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w2_other_due",
+        "value": "180000"
+      },
+      {
+        "name": "w3_receipts",
+        "value": "1600000"
+      },
+      {
+        "name": "w3_down_receipts",
+        "value": "1000000"
+      },
+      {
+        "name": "w3_suppliers",
+        "value": "1000000"
+      },
+      {
+        "name": "w3_down_suppliers",
+        "value": "1150000"
+      },
+      {
+        "name": "w3_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w3_other_due",
+        "value": "180000"
+      },
+      {
+        "name": "w4_receipts",
+        "value": "1000000"
+      },
+      {
+        "name": "w4_down_receipts",
+        "value": "600000"
+      },
+      {
+        "name": "w4_suppliers",
+        "value": "800000"
+      },
+      {
+        "name": "w4_down_suppliers",
+        "value": "900000"
+      },
+      {
+        "name": "w4_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w4_other_due",
+        "value": "180000"
+      },
+      {
+        "name": "w5_receipts",
+        "value": "2200000"
+      },
+      {
+        "name": "w5_down_receipts",
+        "value": "1200000"
+      },
+      {
+        "name": "w5_suppliers",
+        "value": "1300000"
+      },
+      {
+        "name": "w5_down_suppliers",
+        "value": "1450000"
+      },
+      {
+        "name": "w5_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w5_other_due",
+        "value": "180000"
+      },
+      {
+        "name": "w6_receipts",
+        "value": "1500000"
+      },
+      {
+        "name": "w6_down_receipts",
+        "value": "900000"
+      },
+      {
+        "name": "w6_suppliers",
+        "value": "900000"
+      },
+      {
+        "name": "w6_down_suppliers",
+        "value": "1000000"
+      },
+      {
+        "name": "w6_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w6_other_due",
+        "value": "180000"
+      },
+      {
+        "name": "w7_receipts",
+        "value": "900000"
+      },
+      {
+        "name": "w7_down_receipts",
+        "value": "500000"
+      },
+      {
+        "name": "w7_suppliers",
+        "value": "750000"
+      },
+      {
+        "name": "w7_down_suppliers",
+        "value": "850000"
+      },
+      {
+        "name": "w7_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w7_other_due",
+        "value": "180000"
+      },
+      {
+        "name": "w8_receipts",
+        "value": "1800000"
+      },
+      {
+        "name": "w8_down_receipts",
+        "value": "1100000"
+      },
+      {
+        "name": "w8_suppliers",
+        "value": "1100000"
+      },
+      {
+        "name": "w8_down_suppliers",
+        "value": "1250000"
+      },
+      {
+        "name": "w8_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w8_other_due",
+        "value": "180000"
+      },
+      {
+        "name": "w9_receipts",
+        "value": "1300000"
+      },
+      {
+        "name": "w9_down_receipts",
+        "value": "750000"
+      },
+      {
+        "name": "w9_suppliers",
+        "value": "900000"
+      },
+      {
+        "name": "w9_down_suppliers",
+        "value": "950000"
+      },
+      {
+        "name": "w9_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w9_other_due",
+        "value": "180000"
+      },
+      {
+        "name": "w10_receipts",
+        "value": "2000000"
+      },
+      {
+        "name": "w10_down_receipts",
+        "value": "1250000"
+      },
+      {
+        "name": "w10_suppliers",
+        "value": "1250000"
+      },
+      {
+        "name": "w10_down_suppliers",
+        "value": "1400000"
+      },
+      {
+        "name": "w10_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w10_other_due",
+        "value": "180000"
+      },
+      {
+        "name": "w11_receipts",
+        "value": "1200000"
+      },
+      {
+        "name": "w11_down_receipts",
+        "value": "700000"
+      },
+      {
+        "name": "w11_suppliers",
+        "value": "800000"
+      },
+      {
+        "name": "w11_down_suppliers",
+        "value": "900000"
+      },
+      {
+        "name": "w11_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w11_other_due",
+        "value": "180000"
+      },
+      {
+        "name": "w12_receipts",
+        "value": "1700000"
+      },
+      {
+        "name": "w12_down_receipts",
+        "value": "900000"
+      },
+      {
+        "name": "w12_suppliers",
+        "value": "1000000"
+      },
+      {
+        "name": "w12_down_suppliers",
+        "value": "1150000"
+      },
+      {
+        "name": "w12_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w12_other_due",
+        "value": "180000"
+      },
+      {
+        "name": "w13_receipts",
+        "value": "1800000"
+      },
+      {
+        "name": "w13_down_receipts",
+        "value": "1100000"
+      },
+      {
+        "name": "w13_suppliers",
+        "value": "1150000"
+      },
+      {
+        "name": "w13_down_suppliers",
+        "value": "1300000"
+      },
+      {
+        "name": "w13_fixed",
+        "value": "350000"
+      },
+      {
+        "name": "w13_other_due",
+        "value": "180000"
+      },
+      {
+        "name": "w1_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w1_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w1_financing",
+        "value": "0"
+      },
+      {
+        "name": "w1_tax",
+        "value": "0"
+      },
+      {
+        "name": "w1_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w1_growth",
+        "value": "0"
+      },
+      {
+        "name": "w1_interest",
+        "value": "0"
+      },
+      {
+        "name": "w1_principal",
+        "value": "0"
+      },
+      {
+        "name": "w1_draws",
+        "value": "0"
+      },
+      {
+        "name": "w2_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w2_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w2_financing",
+        "value": "0"
+      },
+      {
+        "name": "w2_tax",
+        "value": "0"
+      },
+      {
+        "name": "w2_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w2_growth",
+        "value": "0"
+      },
+      {
+        "name": "w2_interest",
+        "value": "0"
+      },
+      {
+        "name": "w2_principal",
+        "value": "0"
+      },
+      {
+        "name": "w2_draws",
+        "value": "0"
+      },
+      {
+        "name": "w3_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w3_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w3_financing",
+        "value": "0"
+      },
+      {
+        "name": "w3_tax",
+        "value": "0"
+      },
+      {
+        "name": "w3_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w3_growth",
+        "value": "0"
+      },
+      {
+        "name": "w3_interest",
+        "value": "0"
+      },
+      {
+        "name": "w3_principal",
+        "value": "0"
+      },
+      {
+        "name": "w3_draws",
+        "value": "0"
+      },
+      {
+        "name": "w4_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w4_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w4_financing",
+        "value": "0"
+      },
+      {
+        "name": "w4_tax",
+        "value": "0"
+      },
+      {
+        "name": "w4_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w4_growth",
+        "value": "0"
+      },
+      {
+        "name": "w4_interest",
+        "value": "0"
+      },
+      {
+        "name": "w4_principal",
+        "value": "0"
+      },
+      {
+        "name": "w4_draws",
+        "value": "0"
+      },
+      {
+        "name": "w5_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w5_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w5_financing",
+        "value": "0"
+      },
+      {
+        "name": "w5_tax",
+        "value": "0"
+      },
+      {
+        "name": "w5_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w5_growth",
+        "value": "0"
+      },
+      {
+        "name": "w5_interest",
+        "value": "0"
+      },
+      {
+        "name": "w5_principal",
+        "value": "0"
+      },
+      {
+        "name": "w5_draws",
+        "value": "0"
+      },
+      {
+        "name": "w6_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w6_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w6_financing",
+        "value": "0"
+      },
+      {
+        "name": "w6_tax",
+        "value": "0"
+      },
+      {
+        "name": "w6_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w6_growth",
+        "value": "0"
+      },
+      {
+        "name": "w6_interest",
+        "value": "0"
+      },
+      {
+        "name": "w6_principal",
+        "value": "0"
+      },
+      {
+        "name": "w6_draws",
+        "value": "0"
+      },
+      {
+        "name": "w7_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w7_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w7_financing",
+        "value": "0"
+      },
+      {
+        "name": "w7_tax",
+        "value": "0"
+      },
+      {
+        "name": "w7_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w7_growth",
+        "value": "0"
+      },
+      {
+        "name": "w7_interest",
+        "value": "0"
+      },
+      {
+        "name": "w7_principal",
+        "value": "0"
+      },
+      {
+        "name": "w7_draws",
+        "value": "0"
+      },
+      {
+        "name": "w8_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w8_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w8_financing",
+        "value": "0"
+      },
+      {
+        "name": "w8_tax",
+        "value": "0"
+      },
+      {
+        "name": "w8_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w8_growth",
+        "value": "0"
+      },
+      {
+        "name": "w8_interest",
+        "value": "0"
+      },
+      {
+        "name": "w8_principal",
+        "value": "0"
+      },
+      {
+        "name": "w8_draws",
+        "value": "0"
+      },
+      {
+        "name": "w9_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w9_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w9_financing",
+        "value": "0"
+      },
+      {
+        "name": "w9_tax",
+        "value": "0"
+      },
+      {
+        "name": "w9_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w9_growth",
+        "value": "0"
+      },
+      {
+        "name": "w9_interest",
+        "value": "0"
+      },
+      {
+        "name": "w9_principal",
+        "value": "0"
+      },
+      {
+        "name": "w9_draws",
+        "value": "0"
+      },
+      {
+        "name": "w10_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w10_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w10_financing",
+        "value": "0"
+      },
+      {
+        "name": "w10_tax",
+        "value": "0"
+      },
+      {
+        "name": "w10_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w10_growth",
+        "value": "0"
+      },
+      {
+        "name": "w10_interest",
+        "value": "0"
+      },
+      {
+        "name": "w10_principal",
+        "value": "0"
+      },
+      {
+        "name": "w10_draws",
+        "value": "0"
+      },
+      {
+        "name": "w11_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w11_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w11_financing",
+        "value": "0"
+      },
+      {
+        "name": "w11_tax",
+        "value": "0"
+      },
+      {
+        "name": "w11_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w11_growth",
+        "value": "0"
+      },
+      {
+        "name": "w11_interest",
+        "value": "0"
+      },
+      {
+        "name": "w11_principal",
+        "value": "0"
+      },
+      {
+        "name": "w11_draws",
+        "value": "0"
+      },
+      {
+        "name": "w12_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w12_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w12_financing",
+        "value": "0"
+      },
+      {
+        "name": "w12_tax",
+        "value": "0"
+      },
+      {
+        "name": "w12_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w12_growth",
+        "value": "0"
+      },
+      {
+        "name": "w12_interest",
+        "value": "0"
+      },
+      {
+        "name": "w12_principal",
+        "value": "0"
+      },
+      {
+        "name": "w12_draws",
+        "value": "0"
+      },
+      {
+        "name": "w13_other_operating",
+        "value": "0"
+      },
+      {
+        "name": "w13_owner_funding",
+        "value": "0"
+      },
+      {
+        "name": "w13_financing",
+        "value": "0"
+      },
+      {
+        "name": "w13_tax",
+        "value": "0"
+      },
+      {
+        "name": "w13_maintenance",
+        "value": "0"
+      },
+      {
+        "name": "w13_growth",
+        "value": "0"
+      },
+      {
+        "name": "w13_interest",
+        "value": "0"
+      },
+      {
+        "name": "w13_principal",
+        "value": "0"
+      },
+      {
+        "name": "w13_draws",
+        "value": "0"
+      }
+    ],
+    "mathErrors": 0,
+    "title": "Business cash stress and warning planner | Sokointel",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "files": [
+      "failure-warning-full.png",
+      "failure-warning-results.png"
+    ]
+  },
+  {
+    "key": "credit-detailed",
+    "captured_at": "2026-09-25T13:23:39.063Z",
+    "url": "http://127.0.0.1:8765/calculators/business-credit/detailed/#business-results",
+    "definitions": [
+      {
+        "display": "block",
+        "text": "Iⱼ is interest for interval j (KES), Bⱼ its opening principal (KES), r annual nominal rate as a decimal, Δdⱼ actual whole days in that interval and Y the chosen 360/365 day basis. Fees are percentage-of-original-principal plus fixed KES fees."
+      },
+      {
+        "display": "block",
+        "text": "N is net day-zero advance and P actual original principal, both KES. Rⱼ is the KES repayment at day dⱼ after draw. y is the effective annual cash-flow yield, solved from the displayed dated repayments; a 365-day year is used for this yield."
+      },
+      {
+        "display": "block",
+        "text": "P is original principal and d the facility tenor in days. This simple principal-based comparison differs from the cash-flow yield and is not a regulatory APR."
+      }
+    ],
+    "equations": 3,
+    "inputs": [
+      {
+        "name": "draw_date",
+        "value": "2026-09-25"
+      },
+      {
+        "name": "invoice",
+        "value": "1000000"
+      },
+      {
+        "name": "deposit_rate",
+        "value": "20"
+      },
+      {
+        "name": "materials",
+        "value": "600000"
+      },
+      {
+        "name": "operating",
+        "value": "120000"
+      },
+      {
+        "name": "principal",
+        "value": "520000"
+      },
+      {
+        "name": "credit_days",
+        "value": "30"
+      },
+      {
+        "name": "day_basis",
+        "value": "365"
+      },
+      {
+        "name": "rate",
+        "value": "18"
+      },
+      {
+        "name": "fee_rate",
+        "value": "2"
+      },
+      {
+        "name": "fixed_fee",
+        "value": "0"
+      },
+      {
+        "name": "fees_when",
+        "value": "maturity"
+      },
+      {
+        "name": "interest_when",
+        "value": "periodic"
+      },
+      {
+        "name": "repayments",
+        "value": "1"
+      },
+      {
+        "name": "collection_day",
+        "value": "30"
+      },
+      {
+        "name": "collection_delay",
+        "value": "14"
+      },
+      {
+        "name": "uncertain_collection",
+        "value": "0"
+      },
+      {
+        "name": "opening",
+        "value": "0"
+      },
+      {
+        "name": "reserve",
+        "value": "0"
+      },
+      {
+        "name": "other_debt",
+        "value": "0"
+      },
+      {
+        "name": "inventory_days",
+        "value": "30"
+      },
+      {
+        "name": "receivable_days",
+        "value": "45"
+      },
+      {
+        "name": "payable_days",
+        "value": "15"
+      },
+      {
+        "name": "reviewed_receipts",
+        "value": "380000"
+      },
+      {
+        "name": "owner_funds",
+        "value": "0"
+      },
+      {
+        "name": "borrowing",
+        "value": "40000"
+      },
+      {
+        "name": "own_transfers",
+        "value": "90000"
+      },
+      {
+        "name": "refunds",
+        "value": "10000"
+      },
+      {
+        "name": "unresolved",
+        "value": "60000"
+      }
+    ],
+    "mathErrors": 0,
+    "title": "Detailed business credit and repayment planner | Sokointel",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "files": [
+      "credit-detailed-full.png",
+      "credit-detailed-results.png",
+      "credit-detailed-formulas.png"
+    ]
+  },
+  {
+    "key": "dcf-value",
+    "captured_at": "2026-09-25T13:24:28.600Z",
+    "url": "http://127.0.0.1:8765/calculators/dcf-value/",
+    "equations": 3,
+    "inputs": [
+      {
+        "name": "free_cash_flow",
+        "value": "500000000"
+      },
+      {
+        "name": "forecast_growth",
+        "value": "8"
+      },
+      {
+        "name": "required_return",
+        "value": "15"
+      },
+      {
+        "name": "terminal_growth",
+        "value": "5"
+      },
+      {
+        "name": "net_debt",
+        "value": "1000000000"
+      },
+      {
+        "name": "shares_outstanding",
+        "value": "1000000000"
+      }
+    ],
+    "mathErrors": 0,
+    "title": "DCF value explorer | Sokointel",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "files": [
+      "dcf-value-full.png",
+      "dcf-value-results.png",
+      "dcf-value-forecast.png",
+      "dcf-value-sensitivity.png"
+    ]
+  }
+]

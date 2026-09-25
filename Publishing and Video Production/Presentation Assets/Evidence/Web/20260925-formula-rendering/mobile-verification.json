@@ -1,0 +1,29 @@
+{
+  "definitions": [
+    "block",
+    "block",
+    "block"
+  ],
+  "formulaBoxes": [
+    {
+      "overflow": "auto",
+      "scrollWidth": 299,
+      "width": 295
+    },
+    {
+      "overflow": "auto",
+      "scrollWidth": 422,
+      "width": 295
+    },
+    {
+      "overflow": "auto",
+      "scrollWidth": 300,
+      "width": 295
+    }
+  ],
+  "pageWidth": 375,
+  "viewport": {
+    "height": 844,
+    "width": 390
+  }
+}
