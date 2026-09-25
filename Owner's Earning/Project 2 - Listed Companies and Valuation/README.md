@@ -12,7 +12,7 @@ Parts 6–10; five conversational research drafts, each at least 3,500 body word
 
 ## Technical appendices
 
-The [appendix index](Appendices/README.md) maps three filing, reinvestment and sector-model companions to Parts 6-10. They preserve the distinction between reported inputs, derived calculations and unavailable issuer estimates.
+The [appendix index](Appendices/README.md) maps four filing, reinvestment and sector-model companions to Parts 6–10. They preserve the distinction between reported inputs, derived calculations and unavailable issuer estimates.
 
 ## How to use this folder
 
@@ -45,6 +45,8 @@ The shared owner-earnings calculation begins with reconciled profit, adds justif
 **Decision:** How should Kenyan issuers be compared without one formula flattening their economics? **Research scope:** actual dated cases across **NSE banks, insurance, energy, agriculture, telecommunications, manufacturing and property**. The bank and insurer methods extend Part 9; non-financial cases apply the correct replacement, lease, commodity, biological-asset, spectrum, network, capacity, property and fair-value adjustments. **Article path:** a source-linked bridge and low/base/high range per selected issuer, plus a cross-sector matrix of cash claim, adjustment sensitivity, governance, currency, state influence, liquidity and evidence quality. Compare the estimate with dividends and price at a defined date; no forced ranking by a single ratio. **Workbook modules:** `NSE Casebook` records selected metrics and source IDs for seven issuers; the KenGen capital-investment-to-PAT ratio is calculated. `Profile Stress` pairs those seven NSE profiles with NVIDIA and Equinix under separate normalized downside assumptions. It is a scenario teaching tool, not seven complete sector valuations. **Evidence gate:** use NSE/CMA, issuer and sector-regulator primary records before extending the model.
 
 ## Connections to completed research
+
+The [25 September public-calculator delivery record](../../Publishing%20and%20Video%20Production/Project%202%20Calculator%20Delivery/README.md) maps seven locally implemented tools to these parts, with 76 selected workbook checks, browser evidence and the archived scanner assessment. The tools use transparent teaching assumptions; they do not turn the incomplete issuer estimates into finished company valuations. Deployment status is recorded separately. Appendix 04's Equinix display was corrected from 9.0 to the workbook's existing 8.5; the workbook itself is unchanged.
 
 - [US Markets and Portfolio Construction](../../US%20Markets%20and%20Portfolio%20Construction/Unified%20Series/Part%2001%20-%20Understanding%20the%20Market%20Before%20Choosing%20a%20Fund.md): portfolio exposure and concentration lead into issuer-level cash generation and valuation in Parts 6–8.
 - [NSE Dividend Growth](../../NSE%20Dividend%20Growth%20Project%202026/NSE_Dividend_Growth_Part_1_Core_Portfolio_and_DCA.md): Parts 6 and 10 test whether cash generation supports dividends and reinvestment.

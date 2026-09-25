@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-25",
+  "visibility": "INTERNAL ONLY",
+  "scope": "Authorised surgical corrections to imported internal reviews and index; no deletion, public catalogue import or production release.",
+  "initial_snapshot": "source_inventory.json and review_verification.json remain unchanged initial-review records.",
+  "entries": [
+    {
+      "id": "AR24",
+      "path": "C:\\Users\\Nevo\\Downloads\\business and technical website blog\\product_architecture\\review_materials\\2026-09-25_cross_project_review\\linkedin\\BEFORE_THE_RATIO_ENTITY_RESOLVED_CASHFLOW_UNDERWRITING.md",
+      "before_sha256": "e900676ecf937f4e7541a45afe42e0f8eab6cdc44458f87bd2691beef7f423aa",
+      "after_sha256": "eb7426478f5c7288dc043a09209b46671a500af50b83ee0dc7559fda7a4e49da",
+      "visibility": "INTERNAL ONLY; not a public catalogue document",
+      "change": "Reference [1] title correction plus appended provenance note; no other body changes (normalized trailing newline comparison).",
+      "original_label": "Underwrite for Collection: Rebuilding credit architecture around sustainable cash recovery",
+      "corrected_label": "Making Business Credit Work in Kenya",
+      "url_retained": "https://sokointel-platform-production.up.railway.app/read/ambc-02/",
+      "historical_access_date_retained": "Sep. 15, 2026",
+      "external_original": "C:\\Users\\Nevo\\Downloads\\insuretech & embedded finance\\publications\\linkedin\\BEFORE_THE_RATIO_ENTITY_RESOLVED_CASHFLOW_UNDERWRITING.md",
+      "external_original_recorded_sha256": "e900676ecf937f4e7541a45afe42e0f8eab6cdc44458f87bd2691beef7f423aa",
+      "external_original_current_sha256": "e900676ecf937f4e7541a45afe42e0f8eab6cdc44458f87bd2691beef7f423aa",
+      "external_original_unchanged": true,
+      "other_body_unchanged": true,
+      "evidence": "content/catalog.json identifies id AMBC-02, slug ambc-02, title Making Business Credit Work in Kenya."
+    },
+    {
+      "id": "AR43",
+      "path": "C:\\Users\\Nevo\\Downloads\\business and technical website blog\\product_architecture\\review_materials\\2026-09-25_cross_project_review\\underwrite_linkedin\\BEFORE_THE_RATIO_ENTITY_RESOLVED_CASHFLOW_UNDERWRITING.md",
+      "before_sha256": "e900676ecf937f4e7541a45afe42e0f8eab6cdc44458f87bd2691beef7f423aa",
+      "after_sha256": "eb7426478f5c7288dc043a09209b46671a500af50b83ee0dc7559fda7a4e49da",
+      "visibility": "INTERNAL ONLY; not a public catalogue document",
+      "change": "Reference [1] title correction plus appended provenance note; no other body changes (normalized trailing newline comparison).",
+      "original_label": "Underwrite for Collection: Rebuilding credit architecture around sustainable cash recovery",
+      "corrected_label": "Making Business Credit Work in Kenya",
+      "url_retained": "https://sokointel-platform-production.up.railway.app/read/ambc-02/",
+      "historical_access_date_retained": "Sep. 15, 2026",
+      "external_original": "C:\\Users\\Nevo\\Downloads\\insuretech & embedded finance\\behavioural credit scoring - underwrite to collect rct\\series\\publications\\linkedin\\BEFORE_THE_RATIO_ENTITY_RESOLVED_CASHFLOW_UNDERWRITING.md",
+      "external_original_recorded_sha256": "e900676ecf937f4e7541a45afe42e0f8eab6cdc44458f87bd2691beef7f423aa",
+      "external_original_current_sha256": "e900676ecf937f4e7541a45afe42e0f8eab6cdc44458f87bd2691beef7f423aa",
+      "external_original_unchanged": true,
+      "other_body_unchanged": true,
+      "evidence": "content/catalog.json identifies id AMBC-02, slug ambc-02, title Making Business Credit Work in Kenya."
+    },
+    {
+      "id": "AR45",
+      "path": "C:\\Users\\Nevo\\Downloads\\business and technical website blog\\product_architecture\\SOKOINTEL_CROSS_PROJECT_REVIEW_INDEX.md",
+      "before_sha256": "b464f6bb7ea2adc51a3aa4fddc4ba52d0f5b96939aea7b5903586db32307141e",
+      "after_sha256": "103cdbe837deccb4168b72fcac6acd9b9a40f6ee870be23a6f9f2d5bde617aba",
+      "visibility": "INTERNAL ONLY; not a public catalogue document",
+      "change": "Appended current-status note only: internal visibility, seven bounded tools in local code, 38 focused tests reported by implementation documentation, no production verification; source snapshots retained.",
+      "evidence": "docs/Calculator Architecture and Product Boundary.md; docs/Formula Rendering Contract.md; docs/wiki/SokoIntel-Evolution-and-Industry-Comparators.md",
+      "test_scope": "38 tests recorded by implementation agent; not rerun by this source-review agent."
+    }
+  ],
+  "original_import_manifest": {
+    "path": "C:\\Users\\Nevo\\Downloads\\business and technical website blog\\product_architecture\\review_materials\\2026-09-25_cross_project_review\\copy_manifest.json",
+    "before_sha256": "bbb5f85d66de9c906b34eb6f55168f8e1e12df880d69ca354ffcc5d6e6cc1b63",
+    "after_sha256": "bbb5f85d66de9c906b34eb6f55168f8e1e12df880d69ca354ffcc5d6e6cc1b63",
+    "unchanged": true
+  },
+  "verification": {
+    "scoped_markdown_count": 46,
+    "changed_since_initial_snapshot": [
+      "AR24",
+      "AR43",
+      "AR45"
+    ],
+    "corrected_duplicate_hashes_identical": true,
+    "external_originals_unchanged": true,
+    "only_reference_title_changed_before_added_provenance_note": true,
+    "no_write_to_public_catalogue_articles_or_workbooks_by_this_agent": true,
+    "original_index_text_preserved": "Original index text matches initial SHA after restoring its final CRLF; insertion changes trailing newline spacing only.",
+    "current_document_local_links_checked": 5,
+    "missing_local_links": []
+  }
+}

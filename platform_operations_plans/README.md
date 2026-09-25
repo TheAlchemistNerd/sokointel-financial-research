@@ -6,3 +6,5 @@
 - [Database Boundaries: Railway, DigitalOcean and Local Development](04_database_boundaries_railway_digitalocean_local.md)
 - [ChamaBanking: DigitalOcean Pilot and Frontend Debugging](05_chamabanking_digitalocean_frontend_debugging.md)
 - [Cross-product agentic operations, audit and billing](06_agentic_operations_audit_billing.md)
+- [Sokointel: Private Presentations and Staff Production Guides](07_sokointel_private_presentations_and_staff_guides.md)
+- [SokoIntel: 25 September architecture review and adoption map](2026-09-25_architecture_review/README.md) — internal-only findings, source traces and targeted calculator/research improvements.

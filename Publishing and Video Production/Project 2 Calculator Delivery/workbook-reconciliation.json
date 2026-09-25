@@ -1,0 +1,490 @@
+{
+  "status": "passed",
+  "checks_count": 76,
+  "workbook": "Owner's Earning\\Project 2 - Listed Companies and Valuation\\Project 2 - Listed Companies Owner Earnings and Valuation.xlsx",
+  "workbook_sha256": "4ad84af694e804b21c68dfc5e85ca8f5e4211a30b102d31e846890ec6a09827b",
+  "method": "Compare pure web functions with workbook inputs, cached results and recorded formulas; no XLSX modifications or live issuer retrieval.",
+  "limits": "Cached values are cross-checked for these selected cases; this is not a full workbook audit or validation of issuer estimates.",
+  "formulas": {
+    "Asset Heavy!D17": "=D14-D15-D16",
+    "Asset Heavy!D18": "=IF(D13=0,\"\",D17/D13)",
+    "Bank Insurance!D22": "=(D16+D18-D19)/(D17*(1+D20))",
+    "Bank Insurance!D23": "=(D16+D18-D19)-D21*D17*(1+D20)",
+    "Profile Stress!K7": "=IF(OR(E7=\"\",G7=\"\",I7=\"\"),\"\",E7-G7-I7)",
+    "Profile Stress!L7": "=IF(OR(E7=\"\",F7=\"\",G7=\"\",H7=\"\",I7=\"\",J7=\"\"),\"\",E7*(1+F7)-G7*(1+H7)-I7*(1+J7))",
+    "Profile Stress!K8": "=IF(OR(E8=\"\",G8=\"\",I8=\"\"),\"\",E8-G8-I8)",
+    "Profile Stress!L8": "=IF(OR(E8=\"\",F8=\"\",G8=\"\",H8=\"\",I8=\"\",J8=\"\"),\"\",E8*(1+F8)-G8*(1+H8)-I8*(1+J8))",
+    "Profile Stress!K9": "=IF(OR(E9=\"\",G9=\"\",I9=\"\"),\"\",E9-G9-I9)",
+    "Profile Stress!L9": "=IF(OR(E9=\"\",F9=\"\",G9=\"\",H9=\"\",I9=\"\",J9=\"\"),\"\",E9*(1+F9)-G9*(1+H9)-I9*(1+J9))",
+    "Profile Stress!K10": "=IF(OR(E10=\"\",G10=\"\",I10=\"\"),\"\",E10-G10-I10)",
+    "Profile Stress!L10": "=IF(OR(E10=\"\",F10=\"\",G10=\"\",H10=\"\",I10=\"\",J10=\"\"),\"\",E10*(1+F10)-G10*(1+H10)-I10*(1+J10))",
+    "Profile Stress!K11": "=IF(OR(E11=\"\",G11=\"\",I11=\"\"),\"\",E11-G11-I11)",
+    "Profile Stress!L11": "=IF(OR(E11=\"\",F11=\"\",G11=\"\",H11=\"\",I11=\"\",J11=\"\"),\"\",E11*(1+F11)-G11*(1+H11)-I11*(1+J11))",
+    "Profile Stress!K12": "=IF(OR(E12=\"\",G12=\"\",I12=\"\"),\"\",E12-G12-I12)",
+    "Profile Stress!L12": "=IF(OR(E12=\"\",F12=\"\",G12=\"\",H12=\"\",I12=\"\",J12=\"\"),\"\",E12*(1+F12)-G12*(1+H12)-I12*(1+J12))",
+    "Profile Stress!K13": "=IF(OR(E13=\"\",G13=\"\",I13=\"\"),\"\",E13-G13-I13)",
+    "Profile Stress!L13": "=IF(OR(E13=\"\",F13=\"\",G13=\"\",H13=\"\",I13=\"\",J13=\"\"),\"\",E13*(1+F13)-G13*(1+H13)-I13*(1+J13))",
+    "Profile Stress!K14": "=IF(OR(E14=\"\",G14=\"\",I14=\"\"),\"\",E14-G14-I14)",
+    "Profile Stress!L14": "=IF(OR(E14=\"\",F14=\"\",G14=\"\",H14=\"\",I14=\"\",J14=\"\"),\"\",E14*(1+F14)-G14*(1+H14)-I14*(1+J14))",
+    "Profile Stress!K15": "=IF(OR(E15=\"\",G15=\"\",I15=\"\"),\"\",E15-G15-I15)",
+    "Profile Stress!L15": "=IF(OR(E15=\"\",F15=\"\",G15=\"\",H15=\"\",I15=\"\",J15=\"\"),\"\",E15*(1+F15)-G15*(1+H15)-I15*(1+J15))"
+  },
+  "checks": [
+    {
+      "name": "Profile 1: cash",
+      "actual": 100,
+      "expected": 100,
+      "workbook_locator": "Profile Stress!E7"
+    },
+    {
+      "name": "Profile 1: cash_shock",
+      "actual": -20,
+      "expected": -20.0,
+      "workbook_locator": "Profile Stress!F7"
+    },
+    {
+      "name": "Profile 1: reinvestment",
+      "actual": 35,
+      "expected": 35,
+      "workbook_locator": "Profile Stress!G7"
+    },
+    {
+      "name": "Profile 1: reinvestment_shock",
+      "actual": 10,
+      "expected": 10.0,
+      "workbook_locator": "Profile Stress!H7"
+    },
+    {
+      "name": "Profile 1: claims",
+      "actual": 10,
+      "expected": 10,
+      "workbook_locator": "Profile Stress!I7"
+    },
+    {
+      "name": "Profile 1: claims_shock",
+      "actual": 25,
+      "expected": 25.0,
+      "workbook_locator": "Profile Stress!J7"
+    },
+    {
+      "name": "Profile 2: cash",
+      "actual": 100,
+      "expected": 100,
+      "workbook_locator": "Profile Stress!E8"
+    },
+    {
+      "name": "Profile 2: cash_shock",
+      "actual": -10,
+      "expected": -10.0,
+      "workbook_locator": "Profile Stress!F8"
+    },
+    {
+      "name": "Profile 2: reinvestment",
+      "actual": 45,
+      "expected": 45,
+      "workbook_locator": "Profile Stress!G8"
+    },
+    {
+      "name": "Profile 2: reinvestment_shock",
+      "actual": 20,
+      "expected": 20.0,
+      "workbook_locator": "Profile Stress!H8"
+    },
+    {
+      "name": "Profile 2: claims",
+      "actual": 25,
+      "expected": 25,
+      "workbook_locator": "Profile Stress!I8"
+    },
+    {
+      "name": "Profile 2: claims_shock",
+      "actual": 10,
+      "expected": 10.0,
+      "workbook_locator": "Profile Stress!J8"
+    },
+    {
+      "name": "Profile 3: cash",
+      "actual": 100,
+      "expected": 100,
+      "workbook_locator": "Profile Stress!E9"
+    },
+    {
+      "name": "Profile 3: cash_shock",
+      "actual": -15,
+      "expected": -15.0,
+      "workbook_locator": "Profile Stress!F9"
+    },
+    {
+      "name": "Profile 3: reinvestment",
+      "actual": 30,
+      "expected": 30,
+      "workbook_locator": "Profile Stress!G9"
+    },
+    {
+      "name": "Profile 3: reinvestment_shock",
+      "actual": 20,
+      "expected": 20.0,
+      "workbook_locator": "Profile Stress!H9"
+    },
+    {
+      "name": "Profile 3: claims",
+      "actual": 35,
+      "expected": 35,
+      "workbook_locator": "Profile Stress!I9"
+    },
+    {
+      "name": "Profile 3: claims_shock",
+      "actual": 25,
+      "expected": 25.0,
+      "workbook_locator": "Profile Stress!J9"
+    },
+    {
+      "name": "Profile 4: cash",
+      "actual": 100,
+      "expected": 100,
+      "workbook_locator": "Profile Stress!E10"
+    },
+    {
+      "name": "Profile 4: cash_shock",
+      "actual": -20,
+      "expected": -20.0,
+      "workbook_locator": "Profile Stress!F10"
+    },
+    {
+      "name": "Profile 4: reinvestment",
+      "actual": 20,
+      "expected": 20,
+      "workbook_locator": "Profile Stress!G10"
+    },
+    {
+      "name": "Profile 4: reinvestment_shock",
+      "actual": 15,
+      "expected": 15.0,
+      "workbook_locator": "Profile Stress!H10"
+    },
+    {
+      "name": "Profile 4: claims",
+      "actual": 45,
+      "expected": 45,
+      "workbook_locator": "Profile Stress!I10"
+    },
+    {
+      "name": "Profile 4: claims_shock",
+      "actual": 25,
+      "expected": 25.0,
+      "workbook_locator": "Profile Stress!J10"
+    },
+    {
+      "name": "Profile 5: cash",
+      "actual": 100,
+      "expected": 100,
+      "workbook_locator": "Profile Stress!E11"
+    },
+    {
+      "name": "Profile 5: cash_shock",
+      "actual": -20,
+      "expected": -20.0,
+      "workbook_locator": "Profile Stress!F11"
+    },
+    {
+      "name": "Profile 5: reinvestment",
+      "actual": 45,
+      "expected": 45,
+      "workbook_locator": "Profile Stress!G11"
+    },
+    {
+      "name": "Profile 5: reinvestment_shock",
+      "actual": 35,
+      "expected": 35.0,
+      "workbook_locator": "Profile Stress!H11"
+    },
+    {
+      "name": "Profile 5: claims",
+      "actual": 15,
+      "expected": 15,
+      "workbook_locator": "Profile Stress!I11"
+    },
+    {
+      "name": "Profile 5: claims_shock",
+      "actual": 10,
+      "expected": 10.0,
+      "workbook_locator": "Profile Stress!J11"
+    },
+    {
+      "name": "Profile 6: cash",
+      "actual": 100,
+      "expected": 100,
+      "workbook_locator": "Profile Stress!E12"
+    },
+    {
+      "name": "Profile 6: cash_shock",
+      "actual": -25,
+      "expected": -25.0,
+      "workbook_locator": "Profile Stress!F12"
+    },
+    {
+      "name": "Profile 6: reinvestment",
+      "actual": 25,
+      "expected": 25,
+      "workbook_locator": "Profile Stress!G12"
+    },
+    {
+      "name": "Profile 6: reinvestment_shock",
+      "actual": 20,
+      "expected": 20.0,
+      "workbook_locator": "Profile Stress!H12"
+    },
+    {
+      "name": "Profile 6: claims",
+      "actual": 20,
+      "expected": 20,
+      "workbook_locator": "Profile Stress!I12"
+    },
+    {
+      "name": "Profile 6: claims_shock",
+      "actual": 15,
+      "expected": 15.0,
+      "workbook_locator": "Profile Stress!J12"
+    },
+    {
+      "name": "Profile 7: cash",
+      "actual": 100,
+      "expected": 100,
+      "workbook_locator": "Profile Stress!E13"
+    },
+    {
+      "name": "Profile 7: cash_shock",
+      "actual": -15,
+      "expected": -15.0,
+      "workbook_locator": "Profile Stress!F13"
+    },
+    {
+      "name": "Profile 7: reinvestment",
+      "actual": 40,
+      "expected": 40,
+      "workbook_locator": "Profile Stress!G13"
+    },
+    {
+      "name": "Profile 7: reinvestment_shock",
+      "actual": 15,
+      "expected": 15.0,
+      "workbook_locator": "Profile Stress!H13"
+    },
+    {
+      "name": "Profile 7: claims",
+      "actual": 15,
+      "expected": 15,
+      "workbook_locator": "Profile Stress!I13"
+    },
+    {
+      "name": "Profile 7: claims_shock",
+      "actual": 10,
+      "expected": 10.0,
+      "workbook_locator": "Profile Stress!J13"
+    },
+    {
+      "name": "Profile 8: cash",
+      "actual": 100,
+      "expected": 100,
+      "workbook_locator": "Profile Stress!E14"
+    },
+    {
+      "name": "Profile 8: cash_shock",
+      "actual": -15,
+      "expected": -15.0,
+      "workbook_locator": "Profile Stress!F14"
+    },
+    {
+      "name": "Profile 8: reinvestment",
+      "actual": 20,
+      "expected": 20,
+      "workbook_locator": "Profile Stress!G14"
+    },
+    {
+      "name": "Profile 8: reinvestment_shock",
+      "actual": 10,
+      "expected": 10.0,
+      "workbook_locator": "Profile Stress!H14"
+    },
+    {
+      "name": "Profile 8: claims",
+      "actual": 35,
+      "expected": 35,
+      "workbook_locator": "Profile Stress!I14"
+    },
+    {
+      "name": "Profile 8: claims_shock",
+      "actual": 15,
+      "expected": 15.0,
+      "workbook_locator": "Profile Stress!J14"
+    },
+    {
+      "name": "Profile 9: cash",
+      "actual": 100,
+      "expected": 100,
+      "workbook_locator": "Profile Stress!E15"
+    },
+    {
+      "name": "Profile 9: cash_shock",
+      "actual": -25,
+      "expected": -25.0,
+      "workbook_locator": "Profile Stress!F15"
+    },
+    {
+      "name": "Profile 9: reinvestment",
+      "actual": 45,
+      "expected": 45,
+      "workbook_locator": "Profile Stress!G15"
+    },
+    {
+      "name": "Profile 9: reinvestment_shock",
+      "actual": 25,
+      "expected": 25.0,
+      "workbook_locator": "Profile Stress!H15"
+    },
+    {
+      "name": "Profile 9: claims",
+      "actual": 25,
+      "expected": 25,
+      "workbook_locator": "Profile Stress!I15"
+    },
+    {
+      "name": "Profile 9: claims_shock",
+      "actual": 20,
+      "expected": 20.0,
+      "workbook_locator": "Profile Stress!J15"
+    },
+    {
+      "name": "Profile row 7: base",
+      "actual": 55,
+      "expected": 55,
+      "workbook_locator": "Profile Stress!K7"
+    },
+    {
+      "name": "Profile row 7: downside",
+      "actual": 29.0,
+      "expected": 29,
+      "workbook_locator": "Profile Stress!L7"
+    },
+    {
+      "name": "Profile row 8: base",
+      "actual": 30,
+      "expected": 30,
+      "workbook_locator": "Profile Stress!K8"
+    },
+    {
+      "name": "Profile row 8: downside",
+      "actual": 8.499999999999996,
+      "expected": 8.499999999999996,
+      "workbook_locator": "Profile Stress!L8"
+    },
+    {
+      "name": "Profile row 9: base",
+      "actual": 35,
+      "expected": 35,
+      "workbook_locator": "Profile Stress!K9"
+    },
+    {
+      "name": "Profile row 9: downside",
+      "actual": 5.25,
+      "expected": 5.25,
+      "workbook_locator": "Profile Stress!L9"
+    },
+    {
+      "name": "Profile row 10: base",
+      "actual": 35,
+      "expected": 35,
+      "workbook_locator": "Profile Stress!K10"
+    },
+    {
+      "name": "Profile row 10: downside",
+      "actual": 0.75,
+      "expected": 0.75,
+      "workbook_locator": "Profile Stress!L10"
+    },
+    {
+      "name": "Profile row 11: base",
+      "actual": 40,
+      "expected": 40,
+      "workbook_locator": "Profile Stress!K11"
+    },
+    {
+      "name": "Profile row 11: downside",
+      "actual": 2.749999999999993,
+      "expected": 2.749999999999993,
+      "workbook_locator": "Profile Stress!L11"
+    },
+    {
+      "name": "Profile row 12: base",
+      "actual": 55,
+      "expected": 55,
+      "workbook_locator": "Profile Stress!K12"
+    },
+    {
+      "name": "Profile row 12: downside",
+      "actual": 22.0,
+      "expected": 22,
+      "workbook_locator": "Profile Stress!L12"
+    },
+    {
+      "name": "Profile row 13: base",
+      "actual": 45,
+      "expected": 45,
+      "workbook_locator": "Profile Stress!K13"
+    },
+    {
+      "name": "Profile row 13: downside",
+      "actual": 22.5,
+      "expected": 22.5,
+      "workbook_locator": "Profile Stress!L13"
+    },
+    {
+      "name": "Profile row 14: base",
+      "actual": 45,
+      "expected": 45,
+      "workbook_locator": "Profile Stress!K14"
+    },
+    {
+      "name": "Profile row 14: downside",
+      "actual": 22.75,
+      "expected": 22.75,
+      "workbook_locator": "Profile Stress!L14"
+    },
+    {
+      "name": "Profile row 15: base",
+      "actual": 30,
+      "expected": 30,
+      "workbook_locator": "Profile Stress!K15"
+    },
+    {
+      "name": "Profile row 15: downside",
+      "actual": -11.25,
+      "expected": -11.25,
+      "workbook_locator": "Profile Stress!L15"
+    },
+    {
+      "name": "Stabilized contribution",
+      "actual": 850.0,
+      "expected": 850,
+      "workbook_locator": "Asset Heavy!D17"
+    },
+    {
+      "name": "Stabilized yield (%)",
+      "actual": 8.5,
+      "expected": 8.5,
+      "workbook_locator": "Asset Heavy!D18"
+    },
+    {
+      "name": "Closing bank capital ratio (%)",
+      "actual": 19.642857142857142,
+      "expected": 19.642857142857142,
+      "workbook_locator": "Bank Insurance!D22"
+    },
+    {
+      "name": "Bank headroom after dividend",
+      "actual": 9.200000000000003,
+      "expected": 9.199999999999989,
+      "workbook_locator": "Bank Insurance!D23"
+    }
+  ]
+}

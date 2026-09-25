@@ -1,0 +1,172 @@
+{
+  "origin": "http://127.0.0.1:8892",
+  "scope": "Local preview; not proof of live deployment",
+  "checked_at": "2026-09-25T18:29:58.821Z",
+  "pages": [
+    {
+      "route": "/calculators/valuation/earnings-bridge/",
+      "viewport": 1365,
+      "symbols": 11,
+      "mathjax": true,
+      "overflow": false,
+      "default_form": "passed",
+      "csv": "passed"
+    },
+    {
+      "route": "/calculators/valuation/reinvestment/",
+      "viewport": 1365,
+      "symbols": 5,
+      "mathjax": true,
+      "overflow": false,
+      "default_form": "passed",
+      "csv": "passed"
+    },
+    {
+      "route": "/calculators/valuation/sbc-dilution/",
+      "viewport": 1365,
+      "symbols": 8,
+      "mathjax": true,
+      "overflow": false,
+      "default_form": "passed",
+      "csv": "passed"
+    },
+    {
+      "route": "/calculators/valuation/equity-value/",
+      "viewport": 1365,
+      "symbols": 9,
+      "mathjax": true,
+      "overflow": false,
+      "default_form": "passed",
+      "csv": "passed"
+    },
+    {
+      "route": "/calculators/valuation/bank-capital/",
+      "viewport": 1365,
+      "symbols": 8,
+      "mathjax": true,
+      "overflow": false,
+      "default_form": "passed",
+      "csv": "passed"
+    },
+    {
+      "route": "/calculators/valuation/insurer-remittances/",
+      "viewport": 1365,
+      "symbols": 8,
+      "mathjax": true,
+      "overflow": false,
+      "default_form": "passed",
+      "csv": "passed"
+    },
+    {
+      "route": "/calculators/valuation/sector-stress/",
+      "viewport": 1365,
+      "symbols": 3,
+      "mathjax": true,
+      "overflow": false,
+      "default_form": "passed",
+      "csv": "passed"
+    },
+    {
+      "route": "/calculators/dcf-value/",
+      "viewport": 1365,
+      "symbols": 8,
+      "mathjax": true,
+      "overflow": false,
+      "default_form": "not repeated",
+      "csv": "not repeated"
+    },
+    {
+      "route": "/calculators/business-credit/",
+      "viewport": 1365,
+      "symbols": 5,
+      "mathjax": true,
+      "overflow": false,
+      "default_form": "not repeated",
+      "csv": "not repeated"
+    },
+    {
+      "route": "/calculators/valuation/earnings-bridge/",
+      "viewport": 390,
+      "symbols": 11,
+      "mathjax": true,
+      "overflow": false,
+      "default_form": "passed",
+      "csv": "not repeated"
+    },
+    {
+      "route": "/calculators/valuation/reinvestment/",
+      "viewport": 390,
+      "symbols": 5,
+      "mathjax": true,
+      "overflow": false,
+      "default_form": "passed",
+      "csv": "not repeated"
+    },
+    {
+      "route": "/calculators/valuation/sbc-dilution/",
+      "viewport": 390,
+      "symbols": 8,
+      "mathjax": true,
+      "overflow": false,
+      "default_form": "passed",
+      "csv": "not repeated"
+    },
+    {
+      "route": "/calculators/valuation/equity-value/",
+      "viewport": 390,
+      "symbols": 9,
+      "mathjax": true,
+      "overflow": false,
+      "default_form": "passed",
+      "csv": "not repeated"
+    },
+    {
+      "route": "/calculators/valuation/bank-capital/",
+      "viewport": 390,
+      "symbols": 8,
+      "mathjax": true,
+      "overflow": false,
+      "default_form": "passed",
+      "csv": "not repeated"
+    },
+    {
+      "route": "/calculators/valuation/insurer-remittances/",
+      "viewport": 390,
+      "symbols": 8,
+      "mathjax": true,
+      "overflow": false,
+      "default_form": "passed",
+      "csv": "not repeated"
+    },
+    {
+      "route": "/calculators/valuation/sector-stress/",
+      "viewport": 390,
+      "symbols": 3,
+      "mathjax": true,
+      "overflow": false,
+      "default_form": "passed",
+      "csv": "not repeated"
+    },
+    {
+      "route": "/calculators/dcf-value/",
+      "viewport": 390,
+      "symbols": 8,
+      "mathjax": true,
+      "overflow": false,
+      "default_form": "not repeated",
+      "csv": "not repeated"
+    },
+    {
+      "route": "/calculators/business-credit/",
+      "viewport": 390,
+      "symbols": 5,
+      "mathjax": true,
+      "overflow": false,
+      "default_form": "not repeated",
+      "csv": "not repeated"
+    }
+  ],
+  "invalid_rate": "rejected without stale results",
+  "no_javascript": "readable symbol fallback",
+  "status": "passed"
+}

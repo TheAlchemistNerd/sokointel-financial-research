@@ -1,4 +1,4 @@
-# Project 3 — Owner Earnings, Failure Retrospectives and Warning Systems
+# Project 3 — Failure Retrospectives and Warning Systems
 
 ## Video guide
 

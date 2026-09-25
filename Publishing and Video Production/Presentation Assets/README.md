@@ -6,6 +6,8 @@ The decks are presentation deliverables, not recorded or published videos. Each 
 
 ## Source and scope
 
+The next delivery stage is documented in the [Private Presentations and Staff Production Guides plan](<../../platform_operations_plans/07_sokointel_private_presentations_and_staff_guides.md>): versioned private storage, PowerPoint/PDF pairs, document records, internal guide pages and role-checked downloads. These integrations are planned; bucket configuration alone does not publish this package. Presentation production remains separate from the reading-PDF worker.
+
 - `content/source-material.json` is a portable source snapshot derived from the 41-article catalog and the existing production storyboard CSV. It retains the catalog hash, article sections, references, exact workbook evidence and extracted values. The episode briefs are in `content/existing-episodes.json`, `msme.json`, `valuation-root.json`, `failure.json` and `startup-funding.json`.
 - `Evidence/Workbooks` contains the actual Microsoft Excel read-only PDF exports and trimmed PNG renderings. Row and column headings are retained. These are not fabricated spreadsheet pictures. Source workbooks were not saved or changed. The original capture manifest remains preserved.
 - The additional BAT capture, `OE-VALUATION-06-BAT`, shows `'NSE Casebook'!C11:F11`, the FY2025 net-revenue record. It replaces the unrelated Equity-row capture in that episode without deleting historical evidence. Its separate manifest records the unchanged source SHA-256.

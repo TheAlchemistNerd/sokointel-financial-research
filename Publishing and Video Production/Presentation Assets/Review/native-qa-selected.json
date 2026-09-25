@@ -1,0 +1,51 @@
+[
+  {
+    "rendered": true,
+    "slides": 12,
+    "issues": [],
+    "sha256": "ff409469577cf0154aac937e5437a363f616ea8c276e5a3190d94b8ab2fbb2fa",
+    "article_id": "NSE-DG-01"
+  },
+  {
+    "rendered": false,
+    "slides": 11,
+    "issues": [],
+    "sha256": "7ab166e1b48ac465b498a41c731d9a9b9761fd12fd4422cd3735cb39f049ba2a",
+    "article_id": "USMPC-03"
+  },
+  {
+    "rendered": false,
+    "slides": 11,
+    "issues": [],
+    "sha256": "92e3f26461d6be7a4a4c2317929e44cbc683c603924445dea9c5a55c28f4d93e",
+    "article_id": "USMPC-04"
+  },
+  {
+    "rendered": false,
+    "slides": 11,
+    "issues": [],
+    "sha256": "62c223059d5e39ec403e51248aae32684aa15c3aa474d8bfe47addaa8b353d78",
+    "article_id": "USMPC-05"
+  },
+  {
+    "rendered": false,
+    "slides": 11,
+    "issues": [],
+    "sha256": "d8df9e127df20b4780d1b07555bdf94bcc7c2c170d66c837c2452febe91d9380",
+    "article_id": "USMPC-06"
+  },
+  {
+    "rendered": false,
+    "slides": 11,
+    "issues": [],
+    "sha256": "5484251410d29d59bc684dc621829d17a8e0ada8e8e81b951e73c23bca79668f",
+    "article_id": "USMPC-07"
+  },
+  {
+    "rendered": false,
+    "slides": 11,
+    "issues": [],
+    "sha256": "21c5f289ad48f021864e14ca13a2f0324a734cdf25f7b545b23b389f5013219f",
+    "article_id": "USMPC-08"
+  }
+]
