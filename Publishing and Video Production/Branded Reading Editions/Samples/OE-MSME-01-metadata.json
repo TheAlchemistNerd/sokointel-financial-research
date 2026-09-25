@@ -1,0 +1,40 @@
+{
+  "identifier": "SOKOINTEL-OE-MSME-01-BDFE4B4D7150",
+  "document_reference": "SOKOINTEL-OE-MSME-01",
+  "revision": "BDFE4B4D7150",
+  "edition_fingerprint": "bdfe4b4d7150b7da0ab811bf39d9367c8d01d62964bddceb07c17407bdd6583e",
+  "source_sha256": "9301dc915c8399440dcd022f31ea3035189d42c9d4b5cfc3ffdb605208570cb4",
+  "template": "sokointel-branded-4",
+  "title": "The cash an owner can actually claim",
+  "author": "Sokointel editorial team",
+  "publisher": "Philtechent Ltd",
+  "series": "Owner earnings for MSMEs and small businesses",
+  "series_code": "OE-MSME",
+  "document_kind": "article",
+  "article_codes": [
+    "OE-MSME-01"
+  ],
+  "research_cutoff": "2026-09-24",
+  "edition_date": "2026-09-25",
+  "generated_at": "2026-09-25T11:02:23+00:00",
+  "canonical_url": "https://sokointel.com/read/oe-msme-01/",
+  "license": "CC BY-NC-SA 4.0",
+  "source_records": [
+    {
+      "code": "OE-MSME-01",
+      "source_path": "Owner's Earning/Project 1 - MSMEs and Small Businesses/Part 01 - The Cash an Owner Can Actually Claim.md",
+      "source_sha256": "4c2bdfcdca8673b7a73c5c0b0dd58c0414d5ca75d61e1422eceb594ebff44acd"
+    }
+  ],
+  "brand_assets": {
+    "mark": {
+      "url": "/static/site/sokointel-document-mark.png",
+      "sha256": "13498471c633b0c16eb113f4c3bdc2d003c0207fd9dad1400162519a73533fd2"
+    },
+    "cover": {
+      "url": "/static/site/sokointel-linkedin-card.png",
+      "sha256": "a66be139a577ec174654a21aa620e8add8ccfec727361733bc931994ef66e9d9"
+    }
+  },
+  "identity_note": "Document metadata and hashes are informational, not a digital signature."
+}

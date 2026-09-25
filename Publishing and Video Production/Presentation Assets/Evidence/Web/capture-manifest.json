@@ -1,0 +1,381 @@
+[
+  {
+    "slug": "lab",
+    "url": "https://sokointel.com/lab/",
+    "captured_at": "2026-09-25T05:01:00.765Z",
+    "inputs": [
+      {
+        "name": "opening_balance",
+        "value": "100000"
+      },
+      {
+        "name": "regular_payment",
+        "value": "10000"
+      },
+      {
+        "name": "goal_amount",
+        "value": "2000000"
+      },
+      {
+        "name": "annual_rate",
+        "value": "8"
+      },
+      {
+        "name": "payments_per_year",
+        "value": "12"
+      },
+      {
+        "name": "annual_inflation",
+        "value": "5"
+      },
+      {
+        "name": "years",
+        "value": "10"
+      },
+      {
+        "name": "perpetuity_cash_flow",
+        "value": "120000"
+      },
+      {
+        "name": "perpetuity_growth",
+        "value": "0"
+      }
+    ],
+    "screenshots": [
+      "lab-inputs.png",
+      "lab-full.png",
+      "lab-results.png",
+      "lab-summary.png"
+    ],
+    "get_status": 200,
+    "title": "Compounding and cash-flow explorer | Sokointel",
+    "post_status": 200,
+    "results_text": "120 PAYMENT PERIODS / 10 YEARS\n\nFuture value, end-of-period contributions\nKES 2,017,135\nFuture value, beginning-of-period contributions\nKES 2,028,724\nPresent value of the stated target\nKES 926,387\nRequired end-of-period sinking-fund contribution\nKES 9,905\nChoose the relationship that fits the decision.\nRelationship\tResult\tPractical use\nFuture value of a lump sum\tKES 215,892\tWhat an amount already invested could become.\nFuture value, ordinary annuity\tKES 1,801,243\tSavings paid at the end of each month, quarter or year.\nFuture value, annuity due\tKES 1,812,832\tContributions made at the beginning of each period, such as rent or a pre-funded savings instruction.\nPresent value, ordinary annuity\tKES 834,324\tToday’s value of a known stream paid at each period-end.\nPresent value, annuity due\tKES 839,692\tToday’s value when the first cash flow arrives immediately.\nRequired annuity-due sinking-fund contribution\tKES 9,842\tHow much to set aside at each period-start to meet the stated future goal.\nPerpetuity view\nLevel perpetuity value\nKES 1,500,000\nGrowing perpetuity value\nKES 1,500,000\n\nThe level value assumes the stated annual cash flow continues indefinitely without growth. Perpetuity outputs are useful for understanding long-lived income streams and terminal-value logic, but they are especially sensitive to the discount-rate and growth assumptions.\n\nFollow the calculation.\nFormulae used\n𝑖\n=\n(\n1\n+\n𝑟\n)\n1\n/\n𝑚\n−\n1\n,\n𝑛\n=\n𝑚\n×\n𝑡\n𝐹\n𝑉\nordinary\n=\n𝑃\n𝑀\n𝑇\n×\n(\n1\n+\n𝑖\n)\n𝑛\n−\n1\n𝑖\n,\n𝐹\n𝑉\ndue\n=\n𝐹\n𝑉\nordinary\n(\n1\n+\n𝑖\n)\n𝑃\n𝑉\nordinary\n=\n𝑃\n𝑀\n𝑇\n×\n1\n−\n(\n1\n+\n𝑖\n)\n−\n𝑛\n𝑖\n,\n𝑃\n𝑉\ndue\n=\n𝑃\n𝑉\nordinary\n(\n1\n+\n𝑖\n)\n𝑃\n𝑀\n𝑇\nsinking\n=\n𝐺\n−\n𝑃\n𝑉\n(\n1\n+\n𝑖\n)\n𝑛\n(\n1\n+\n𝑖\n)\n𝑛\n−\n1\n𝑖\n,\n𝑃\n𝑉\nperpetuity\n=\n𝐶\n1\n𝑟\n−\n𝑔\n\nWhen the periodic rate is zero, the annuity factors become the number of payment periods. The calculator handles that case directly rather than dividing by zero.\n\nChange the rate, not the story.\n\nOnly the effective annual return changes in these three scenarios. Regular contribution, target, inflation and time stay the same.\n\nEffective annual return\tFuture value, ordinary contributions\tIn today’s purchasing power\n6.00%\tKES 1,803,819\tKES 1,107,389\n8.00%\tKES 2,017,135\tKES 1,238,346\n10.00%\tKES 2,258,013\tKES 1,386,224\nInspect each year\nUse a schedule when the obligation is a loan.\n\nThe mortgage planner models a repayment schedule, interest split, final balance, and the effect of an extra monthly payment. Use the companion workbooks for variable rates, irregular cash flows, tax, and full scenario analysis.\n\nOpen the loan repayment planner →",
+    "alerts": []
+  },
+  {
+    "slug": "dca-dividend",
+    "url": "https://sokointel.com/calculators/dca-dividend/",
+    "captured_at": "2026-09-25T05:01:14.698Z",
+    "inputs": [
+      {
+        "name": "total_cash",
+        "value": "100000"
+      },
+      {
+        "name": "transaction_cost",
+        "value": "2.1"
+      },
+      {
+        "name": "deployment_months",
+        "value": "3"
+      },
+      {
+        "name": "target_weight",
+        "value": "20"
+      },
+      {
+        "name": "share_price",
+        "value": "36.65"
+      },
+      {
+        "name": "dividend_per_share",
+        "value": "2.0"
+      },
+      {
+        "name": "withholding_tax",
+        "value": "5"
+      }
+    ],
+    "screenshots": [
+      "dca-dividend-inputs.png",
+      "dca-dividend-full.png",
+      "dca-dividend-results.png",
+      "dca-dividend-summary.png"
+    ],
+    "get_status": 200,
+    "title": "DCA and dividend planner | Sokointel",
+    "post_status": 200,
+    "results_text": "3-MONTH DCA PLAN\n\nInvestable securities · KES\n97,943\nSteady-state net annual dividend · KES\n1,016\nNet yield on cash\n0.01%\nWhole shares per month\n178\nFollow the cash through the plan.\nMeasure\tCalculated result\nTotal cash available\tKES 100,000.00\nTransaction-cost reserve\tKES 2,056.81\nMonthly securities allocation\tKES 32,647.73\nMonthly target for this counter\tKES 6,529.55\nEstimated monthly share purchase\tKES 6,523.70\nUncommitted amount after whole shares\tKES 5.85\nGross annual dividend estimate\tKES 1,068.96\nDividend withholding estimate\tKES 53.45\nFollow the calculation\n𝐼\n=\n𝐶\n1\n+\n𝑐\n,\n𝑇\n=\n𝐼\n𝑚\n×\n𝑤\n𝑁\n=\n⌊\n𝑇\n𝑃\n⌋\n,\n𝐷\nnet\n=\n𝐼\n𝑤\n×\n𝑑\n𝑃\n(\n1\n−\n𝜏\n)\n\nThe DCA schedule is a planning structure. It makes the cash reserve, price assumption, whole-share rounding, and income estimate visible before each actual order is placed.\n\nTake the research further.\n\nRead the full NSE dividend-growth case, then use its companion formula workbook to vary allocation, price, cost, and dividend assumptions together.\n\nRead the DCA research →",
+    "alerts": []
+  },
+  {
+    "slug": "dca-portfolio",
+    "url": "https://sokointel.com/calculators/dca-portfolio/",
+    "captured_at": "2026-09-25T05:01:21.691Z",
+    "inputs": [
+      {
+        "name": "total_cash",
+        "value": "100000"
+      },
+      {
+        "name": "deployment_months",
+        "value": "6"
+      },
+      {
+        "name": "percentage_commission",
+        "value": "2.1"
+      },
+      {
+        "name": "fixed_order_fee",
+        "value": "0"
+      },
+      {
+        "name": "minimum_order_fee",
+        "value": "0"
+      },
+      {
+        "name": "cash_reserve",
+        "value": "0"
+      },
+      {
+        "name": "default_withholding_tax",
+        "value": "5"
+      },
+      {
+        "name": "purchase_mode",
+        "value": "monthly"
+      },
+      {
+        "name": "holding_label_0",
+        "value": "SCOM"
+      },
+      {
+        "name": "holding_share_price_0",
+        "value": "36.45"
+      },
+      {
+        "name": "holding_target_weight_0",
+        "value": "55"
+      },
+      {
+        "name": "holding_dividend_per_share_0",
+        "value": "2"
+      },
+      {
+        "name": "holding_withholding_tax_0",
+        "value": ""
+      },
+      {
+        "name": "holding_sector_0",
+        "value": ""
+      },
+      {
+        "name": "holding_label_1",
+        "value": "EQTY"
+      },
+      {
+        "name": "holding_share_price_1",
+        "value": "101.75"
+      },
+      {
+        "name": "holding_target_weight_1",
+        "value": "35"
+      },
+      {
+        "name": "holding_dividend_per_share_1",
+        "value": "5.75"
+      },
+      {
+        "name": "holding_withholding_tax_1",
+        "value": ""
+      },
+      {
+        "name": "holding_sector_1",
+        "value": ""
+      },
+      {
+        "name": "holding_label_2",
+        "value": "NSE"
+      },
+      {
+        "name": "holding_share_price_2",
+        "value": "27.65"
+      },
+      {
+        "name": "holding_target_weight_2",
+        "value": "10"
+      },
+      {
+        "name": "holding_dividend_per_share_2",
+        "value": "1"
+      },
+      {
+        "name": "holding_withholding_tax_2",
+        "value": ""
+      },
+      {
+        "name": "holding_sector_2",
+        "value": ""
+      }
+    ],
+    "screenshots": [
+      "dca-portfolio-inputs.png",
+      "dca-portfolio-full.png",
+      "dca-portfolio-results.png",
+      "dca-portfolio-summary.png"
+    ],
+    "get_status": 200,
+    "title": "DCA portfolio and dividend planner | Sokointel",
+    "scenario": "Illustrative historical-price teaching scenario supplied in the project discussion; not current quotes.",
+    "post_status": 200,
+    "results_text": "6-MONTH MONTHLY PLAN\n\nBuying budget after reserve\nKES 100,000\nTotal deployed, including costs\nKES 99,867\nNet annual dividend estimate\nKES 4,978\nNet yield on original cash\n4.98%\nReview before ordering.\nSCOM: target weight is above 40%; review concentration risk.\nPortfolio allocation and income\nHolding\tTarget weight\tActual deployed weight\tShares\tSecurity value\tCosts\tGross dividend\tNet dividend\nSCOM\t55.00%\t55.04%\t1,477\tKES 53,836.65\tKES 1,130.57\tKES 2,954.00\tKES 2,806.30\nEQTY\t35.00%\t34.95%\t336\tKES 34,188.00\tKES 717.95\tKES 1,932.00\tKES 1,835.40\nNSE\t10.00%\t10.01%\t354\tKES 9,788.10\tKES 205.55\tKES 354.00\tKES 336.30\nCash and dividend reconciliation\nMeasure\tCalculated result\nTotal capital\tKES 100,000.00\nCash reserve retained\tKES 0.00\nSecurities purchased\tKES 97,812.75\nTransaction costs\tKES 2,054.07\nUncommitted cash after whole-share rounding\tKES 133.18\nGross annual dividend estimate\tKES 5,240.00\nDividend withholding estimate\tKES 262.00\nNet yield on deployed capital\t4.98%\nSee the monthly purchase schedule\nFollow the calculation\n𝐵\n=\n𝐶\n−\n𝑅\n,\n𝑇\n𝑖\n,\n𝑡\n=\n𝐵\n𝑚\n×\n𝑤\n𝑖\n×\n𝑡\n𝑁\n𝑖\n,\n𝑡\n=\n⌊\n𝐴\n𝑖\n,\n𝑡\n𝑃\n𝑖\n+\ncost per share\n𝑖\n,\n𝑡\n⌋\n,\n𝐷\n𝑖\n,\nnet\n=\n𝑆\n𝑖\n𝑑\n𝑖\n(\n1\n−\n𝜏\n𝑖\n)\nTake the research further.\n\nRead the full NSE dividend-growth case, then use its companion formula workbook for changing prices, dividend growth, reinvestment, rebalancing bands, dividend cuts, sector limits, and scenarios.\n\nRead the DCA research →",
+    "alerts": []
+  },
+  {
+    "slug": "business-credit",
+    "url": "https://sokointel.com/calculators/business-credit/",
+    "captured_at": "2026-09-25T05:01:30.264Z",
+    "inputs": [
+      {
+        "name": "invoice_value",
+        "value": "500000"
+      },
+      {
+        "name": "credit_days",
+        "value": "60"
+      },
+      {
+        "name": "annual_rate",
+        "value": "20"
+      },
+      {
+        "name": "origination_fee",
+        "value": "2"
+      }
+    ],
+    "screenshots": [
+      "business-credit-inputs.png",
+      "business-credit-full.png",
+      "business-credit-results.png",
+      "business-credit-summary.png"
+    ],
+    "get_status": 200,
+    "title": "Business credit cost planner | Sokointel",
+    "post_status": 200,
+    "results_text": "YOUR WORKED SCENARIO\n\nAll-in cost for the period\nKES 26,438.36\nNet proceeds after stated costs\nKES 473,561.64\nCost over the credit period\n5.29%\nSimple annualised cost\n32.17%\nFollow the calculation.\nMeasure\tCalculated result\nQuoted interest for the period\tKES 16,438.36\nOrigination or service fee\tKES 10,000.00\nFormulae used\n𝐼\n=\n𝑃\n×\n𝑟\n×\n𝑑\n365\nAll-in cost\n=\n𝐼\n+\n𝐹\n\nThis planner puts the stated components of one facility into a comparable cash view. Add any provider-specific charges that apply to the quote you are considering.\n\nTake the research further.\n\nUse the full article and companion resources to put this calculation into its wider business, household, or portfolio context. The workbook keeps the deeper scenario modelling, data record and audit trail.\n\nRead the business-credit research →",
+    "alerts": []
+  },
+  {
+    "slug": "global-funding",
+    "url": "https://sokointel.com/calculators/global-funding/",
+    "captured_at": "2026-09-25T05:01:35.774Z",
+    "inputs": [
+      {
+        "name": "starting_amount",
+        "value": "1000"
+      },
+      {
+        "name": "transfer_fee",
+        "value": "12"
+      },
+      {
+        "name": "fx_friction",
+        "value": "0.3"
+      },
+      {
+        "name": "dealing_commission",
+        "value": "1"
+      },
+      {
+        "name": "annual_return",
+        "value": "7"
+      },
+      {
+        "name": "annual_fund_charge",
+        "value": "0.2"
+      },
+      {
+        "name": "years",
+        "value": "10"
+      }
+    ],
+    "screenshots": [
+      "global-funding-inputs.png",
+      "global-funding-full.png",
+      "global-funding-results.png",
+      "global-funding-summary.png"
+    ],
+    "get_status": 200,
+    "title": "Global funding planner | Sokointel",
+    "post_status": 200,
+    "results_text": "YOUR WORKED SCENARIO\n\nAmount invested after funding costs\n984.00\nValue after 10 years\n1,899.80\nTotal funding cost\n16.00\nNet annual return assumption\n6.80%\nFollow the calculation.\nMeasure\tCalculated result\nConversion friction\t3.00\nBank and transfer charges\t12.00\nInvestment dealing commission\t1.00\nFormulae used\n𝐴\n0\n=\n𝑆\n−\n𝑇\n−\n𝑋\n−\n𝐷\n𝐹\n𝑉\n=\n𝐴\n0\n(\n1\n+\n𝑟\nnet\n)\n𝑡\n\nUse one currency throughout the form. The result clarifies how each quoted cost changes the amount that begins compounding.\n\nTake the research further.\n\nUse the full article and companion resources to put this calculation into its wider business, household, or portfolio context. The workbook keeps the deeper scenario modelling, data record and audit trail.\n\nRead the global-funding research →",
+    "alerts": []
+  },
+  {
+    "slug": "mortgage",
+    "url": "https://sokointel.com/calculators/mortgage/",
+    "captured_at": "2026-09-25T05:01:42.656Z",
+    "inputs": [
+      {
+        "name": "principal",
+        "value": "7000000"
+      },
+      {
+        "name": "annual_rate",
+        "value": "12.5"
+      },
+      {
+        "name": "term_years",
+        "value": "20"
+      },
+      {
+        "name": "extra_payment",
+        "value": "0"
+      }
+    ],
+    "screenshots": [
+      "mortgage-inputs.png",
+      "mortgage-full.png",
+      "mortgage-results.png",
+      "mortgage-summary.png"
+    ],
+    "get_status": 200,
+    "title": "Mortgage repayment planner | Sokointel",
+    "post_status": 200,
+    "results_text": "YOUR WORKED SCENARIO\n\nMinimum monthly repayment\nKES 79,529.84\nMonthly payment with the extra amount\nKES 79,529.84\nInterest over the repayment path\nKES 12,087,161.24\nMonths to repay\n240\nMonths saved by the extra payment\n0\nInterest saved by the extra payment\nKES 0.00\nFollow the calculation.\nMeasure\tCalculated result\nMonthly rate used\t1.04%\nOriginal scheduled term\t240 monthly payments\nBalance after 60 months\tKES 6,452,609.62\nTotal repaid on this path\tKES 19,087,161.24\nFormulae used\n𝑃\n𝑀\n𝑇\n=\n𝑃\n×\n𝑖\n(\n1\n+\n𝑖\n)\n𝑛\n(\n1\n+\n𝑖\n)\n𝑛\n−\n1\n𝐵\n𝑘\n=\n𝐵\n𝑘\n−\n1\n(\n1\n+\n𝑖\n)\n−\n𝑃\n𝑀\n𝑇\n𝑘\n\nThe schedule assumes a constant nominal rate and equal monthly payments. Add insurance, valuation, legal, maintenance, tax, rate-reset and other housing costs to build the wider household budget.\n\nAnnual repayment schedule\n\nThe schedule applies the extra payment every month. The final row may be a smaller payment because it clears the remaining balance.\n\nYear\tPayments\tInterest\tPrincipal repaid\tClosing balance\n1\tKES 954358.06\tKES 870291.82\tKES 84066.25\tKES 6915933.75\n2\tKES 954358.06\tKES 859160.10\tKES 95197.97\tKES 6820735.79\n3\tKES 954358.06\tKES 846554.36\tKES 107803.70\tKES 6712932.08\n4\tKES 954358.06\tKES 832279.42\tKES 122078.64\tKES 6590853.44\n5\tKES 954358.06\tKES 816114.25\tKES 138243.82\tKES 6452609.62\n6\tKES 954358.06\tKES 797808.55\tKES 156549.52\tKES 6296060.11\n7\tKES 954358.06\tKES 777078.88\tKES 177279.18\tKES 6118780.92\n8\tKES 954358.06\tKES 753604.27\tKES 200753.79\tKES 5918027.13\n9\tKES 954358.06\tKES 727021.25\tKES 227336.82\tKES 5690690.31\n10\tKES 954358.06\tKES 696918.20\tKES 257439.86\tKES 5433250.45\n11\tKES 954358.06\tKES 662829.03\tKES 291529.03\tKES 5141721.43\n12\tKES 954358.06\tKES 624225.91\tKES 330132.15\tKES 4811589.28\n13\tKES 954358.06\tKES 580511.12\tKES 373846.94\tKES 4437742.34\n14\tKES 954358.06\tKES 531007.79\tKES 423350.28\tKES 4014392.06\n15\tKES 954358.06\tKES 474949.42\tKES 479408.65\tKES 3534983.41\n16\tKES 954358.06\tKES 411468.02\tKES 542890.04\tKES 2992093.37\n17\tKES 954358.06\tKES 339580.67\tKES 614777.40\tKES 2377315.97\n18\tKES 954358.06\tKES 258174.27\tKES 696183.79\tKES 1681132.19\n19\tKES 954358.06\tKES 165988.37\tKES 788369.69\tKES 892762.49\n20\tKES 954358.06\tKES 61595.57\tKES 892762.49\tKES 0.00\nFirst 12 monthly payments\nTake the research further.\n\nUse the full article and companion resources to put this calculation into its wider business, household, or portfolio context. The workbook keeps the deeper scenario modelling, data record and audit trail.\n\nRead the household-housing research →",
+    "alerts": []
+  },
+  {
+    "slug": "dcf-value",
+    "url": "https://sokointel.com/calculators/dcf-value/",
+    "captured_at": "2026-09-25T05:01:50.052Z",
+    "inputs": [
+      {
+        "name": "free_cash_flow",
+        "value": "500000000"
+      },
+      {
+        "name": "forecast_growth",
+        "value": "8"
+      },
+      {
+        "name": "required_return",
+        "value": "15"
+      },
+      {
+        "name": "terminal_growth",
+        "value": "5"
+      },
+      {
+        "name": "net_debt",
+        "value": "1000000000"
+      },
+      {
+        "name": "shares_outstanding",
+        "value": "1000000000"
+      }
+    ],
+    "screenshots": [
+      "dcf-value-inputs.png",
+      "dcf-value-full.png",
+      "dcf-value-results.png",
+      "dcf-value-summary.png"
+    ],
+    "get_status": 200,
+    "title": "DCF value explorer | Sokointel",
+    "post_status": 200,
+    "results_text": "YOUR WORKED SCENARIO\n\nIllustrative enterprise value\nKES 5,914,086,221.25\nIllustrative equity value\nKES 4,914,086,221.25\nIllustrative value per share\nKES 4.91\nTerminal value share of enterprise value\n64.85%\nFollow the calculation.\nMeasure\tCalculated result\nPV of years 1–5 cash flow\tKES 2,078,878,605.64\nPV of terminal value\tKES 3,835,207,615.60\nTerminal value before discounting\tKES 7,713,972,403.20\nFormulae used\n\n\n𝐸\n𝑉\n=\n∑\n𝑡\n=\n1\n5\n𝐹\n𝐶\n𝐹\n𝑡\n(\n1\n+\n𝑟\n)\n𝑡\n+\n𝑇\n𝑉\n5\n(\n1\n+\n𝑟\n)\n5\nValue per share\n=\n𝐸\n𝑉\n−\nnet debt\nshares outstanding\n\nThe model is deliberately compact. The companion workbook develops operating assumptions, reinvestment, financing, scenarios, and sensitivity analysis in greater depth.\n\nTake the research further.\n\nUse the full article and companion resources to put this calculation into its wider business, household, or portfolio context. The workbook keeps the deeper scenario modelling, data record and audit trail.\n\nRead the company-valuation research →",
+    "alerts": []
+  }
+]

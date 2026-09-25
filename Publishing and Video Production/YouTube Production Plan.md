@@ -4,7 +4,7 @@
 
 Use the canonical article page in every YouTube description, card, end screen and pinned comment: `https://sokointel.com/read/<article-slug>/`. Use `https://sokointel.com/watch/` for the episode library and `https://sokointel.com/library/` for the complete reading library. The project storyboards list each article's exact URL.
 
-The four projects will become thirteen self-contained episodes. Each episode starts with a recognisable household or business decision, shows the research questions, develops an explanation using visible evidence, and returns to those questions with clear answers. The episode plans specify the content and evidence needed for the future decks. They are production plans; PowerPoint decks and videos are the next production stage.
+The programme now covers eleven projects and forty-one article episodes: the original twenty-five articles across seven series, plus sixteen articles across the four Owner Earnings and startup-funding projects. The original thirteen-episode storyboard package remains as source material. Each article receives its own PowerPoint, linked through the presentation master index. Each episode starts with a recognisable household or business decision, shows the research questions, develops an explanation using visible evidence, and returns to those questions with clear answers. The episode plans specify the content and evidence needed for the future decks. They are production plans; PowerPoint decks and videos are the next production stage.
 
 ## Audience and voice
 
@@ -14,7 +14,7 @@ An educational framing can be stated once in the opening or description: “We�
 
 ## Visual system
 
-Use a 16:9 canvas with a 1920 by 1080 video target. Set an off-white background, near-black text, navy for primary data, teal for the comparison case and amber for the variable currently being explored. Maintain one main visual or argument per slide. Use generous whitespace, direct labels and a consistent reading order. A feature-rich episode should contain varied evidence and well-designed explanations while each individual slide stays calm.
+Use a 16:9 canvas with a 1920 by 1080 video target. Use Sokointel’s warm ivory, deep forest green, sage and restrained terracotta accent. Keep the existing visual evidence in its original form; use the publication brand for slide framing, headings and annotations. Maintain one main visual or argument per slide. Use generous whitespace, direct labels and a consistent reading order. A feature-rich episode should contain varied evidence and well-designed explanations while each individual slide stays calm.
 
 Use 40–48 point titles and 24–30 point body text as design targets. Charts and tables should remain readable in a phone-sized preview; target 20–24 point labels and keep essential evidence out of tiny footnotes. Put short source attribution and the observation date on the slide, with the full URL and IEEE reference in speaker notes and the description. Use no more than two typefaces, with a standard font such as Aptos or Arial for dependable editing. A supporting calculation may use Cambria Math.
 
@@ -47,4 +47,4 @@ Record narration in a conversational pace, leaving short pauses after a number o
 
 ## Handoff for each future episode
 
-The production folder should contain the editable deck, a PDF handout, narration script, transcript, captions, source and data ledger, thumbnail, video master and publishing description. These are the planned future deliverables. The current package contains the storyboards and the article Word/PDF reading editions.
+The production folder should contain the editable deck, a PDF handout, narration script, transcript, captions, source and data ledger, thumbnail, video master and publishing description. Track each deliverable separately in the presentation master index. The current production milestone adds editable episode decks and evidence captures to the storyboards and reading editions. Narration recordings, final videos, captions and publication remain separate production steps; a deck does not establish that a video has been recorded or uploaded.

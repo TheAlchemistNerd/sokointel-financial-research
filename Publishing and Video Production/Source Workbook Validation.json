@@ -1,0 +1,500 @@
+[
+  {
+    "file": "Owner's Earning\\Project 1 - MSMEs and Small Businesses\\Project 1 - MSME Owner Earnings and Operations.xlsx",
+    "sha256": "43f243daa5fa87c914c73ec53b55652f96b8cbd8482d45327141c2383e47494e",
+    "sheets": [
+      "Overview",
+      "Owner Earnings",
+      "Article Case",
+      "Cash13W",
+      "Maintenance",
+      "Working Capital",
+      "Receivables",
+      "Inventory",
+      "Payables",
+      "Action Log",
+      "Unit Economics",
+      "Debt and Growth",
+      "Buy Sell and Succession",
+      "Sources and Checks",
+      "Evidence Vectors"
+    ],
+    "formula_count": 236,
+    "cached_excel_errors": [],
+    "cached_blank_formula_results": [],
+    "unavailable_cached_formula_results": []
+  },
+  {
+    "file": "Owner's Earning\\Project 2 - Listed Companies and Valuation\\Project 2 - Listed Companies Owner Earnings and Valuation.xlsx",
+    "sha256": "4ad84af694e804b21c68dfc5e85ca8f5e4211a30b102d31e846890ec6a09827b",
+    "sheets": [
+      "Overview",
+      "Assumptions",
+      "Filing Inputs",
+      "NVDA Bridge",
+      "Asset Heavy",
+      "Bank Insurance",
+      "NSE Casebook",
+      "Valuation",
+      "Profile Stress",
+      "Sources and Checks",
+      "Evidence Vectors"
+    ],
+    "formula_count": 82,
+    "cached_excel_errors": [],
+    "cached_blank_formula_results": [],
+    "unavailable_cached_formula_results": [
+      {
+        "cell": "Assumptions!F7",
+        "formula": "=IF(Overview!$D$4=\"Downside\",IF(E7=\"\",\"\",E7),IF(D7=\"\",\"\",D7))",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Assumptions!F8",
+        "formula": "=IF(Overview!$D$4=\"Downside\",IF(E8=\"\",\"\",E8),IF(D8=\"\",\"\",D8))",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Assumptions!F10",
+        "formula": "=IF(Overview!$D$4=\"Downside\",IF(E10=\"\",\"\",E10),IF(D10=\"\",\"\",D10))",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "NVDA Bridge!D10",
+        "formula": "=Assumptions!F7",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "NVDA Bridge!D11",
+        "formula": "=Assumptions!F8",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "NVDA Bridge!D12",
+        "formula": "=IF(OR(D10=\"\",D11=\"\"),\"\",D6+D7+D9-D10-D11)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Valuation!D16",
+        "formula": "=IF($D$12<>\"Inputs ready for DCF\",\"\",$D$6*(1+$D$7)^C16)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Valuation!F16",
+        "formula": "=IF(D16=\"\",\"\",1/(1+$D$8)^E16)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Valuation!G16",
+        "formula": "=IF(D16=\"\",\"\",D16*F16)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Valuation!D17",
+        "formula": "=IF($D$12<>\"Inputs ready for DCF\",\"\",$D$6*(1+$D$7)^C17)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Valuation!F17",
+        "formula": "=IF(D17=\"\",\"\",1/(1+$D$8)^E17)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Valuation!G17",
+        "formula": "=IF(D17=\"\",\"\",D17*F17)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Valuation!D18",
+        "formula": "=IF($D$12<>\"Inputs ready for DCF\",\"\",$D$6*(1+$D$7)^C18)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Valuation!F18",
+        "formula": "=IF(D18=\"\",\"\",1/(1+$D$8)^E18)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Valuation!G18",
+        "formula": "=IF(D18=\"\",\"\",D18*F18)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Valuation!D19",
+        "formula": "=IF($D$12<>\"Inputs ready for DCF\",\"\",$D$6*(1+$D$7)^C19)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Valuation!F19",
+        "formula": "=IF(D19=\"\",\"\",1/(1+$D$8)^E19)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Valuation!G19",
+        "formula": "=IF(D19=\"\",\"\",D19*F19)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Valuation!D20",
+        "formula": "=IF($D$12<>\"Inputs ready for DCF\",\"\",$D$6*(1+$D$7)^C20)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Valuation!F20",
+        "formula": "=IF(D20=\"\",\"\",1/(1+$D$8)^E20)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Valuation!G20",
+        "formula": "=IF(D20=\"\",\"\",D20*F20)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Valuation!D22",
+        "formula": "=IF($D$12<>\"Inputs ready for DCF\",\"\",D20*(1+$D$9)/($D$8-$D$9))",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Valuation!D23",
+        "formula": "=IF(D22=\"\",\"\",D22/(1+$D$8)^5)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Valuation!D24",
+        "formula": "=IF(D23=\"\",\"\",SUM(G16:G20)+D23)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Valuation!D25",
+        "formula": "=IF(OR(D24=\"\",$D$10<=0),\"\",D24/$D$10)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Valuation!D26",
+        "formula": "=IF(OR(D25=\"\",$D$11<=0),\"\",D25/$D$11-1)",
+        "cached_type": "str",
+        "has_value_element": false
+      }
+    ]
+  },
+  {
+    "file": "Owner's Earning\\Project 3 - Failure Retrospectives and Warning Systems\\Project 3 - Failure Retrospectives and Warning Systems.xlsx",
+    "sha256": "056c55f6d4b882fb99469e9092f4f4d1c930676a49b676b7c0dd5ad6e068b14e",
+    "sheets": [
+      "Overview",
+      "Case Register",
+      "Timeline",
+      "Evidence Ledger",
+      "Funding",
+      "Cash and CCC",
+      "Retail Review",
+      "Warnings and Actions",
+      "Sources and Checks",
+      "Evidence Vectors"
+    ],
+    "formula_count": 69,
+    "cached_excel_errors": [],
+    "cached_blank_formula_results": [],
+    "unavailable_cached_formula_results": []
+  },
+  {
+    "file": "Owner's Earning\\What Startup Funding Figures Actually Measure\\Startup Funding Market and Outcomes Workbook.xlsx",
+    "sha256": "cd8f7689e54d34ad0ad95991f1815c26e948341f3ca001a7ec7d1ba34ae57812",
+    "sheets": [
+      "Overview",
+      "Market Metrics",
+      "Provider Comparison",
+      "Reporting Vectors",
+      "Funding Mix",
+      "Screenshot List",
+      "Deal Ledger",
+      "Instrument Guide",
+      "Debt Service",
+      "Equity Dilution",
+      "Company Outcomes",
+      "Sources and Checks"
+    ],
+    "formula_count": 371,
+    "cached_excel_errors": [],
+    "cached_blank_formula_results": [],
+    "unavailable_cached_formula_results": [
+      {
+        "cell": "Deal Ledger!M6",
+        "formula": "=IF(OR(J6=\"\",L6=\"\"),\"\",J6*L6)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!T6",
+        "formula": "=IF(OR(M6=\"\",S6=\"\"),\"\",M6*S6)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!M7",
+        "formula": "=IF(OR(J7=\"\",L7=\"\"),\"\",J7*L7)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!T7",
+        "formula": "=IF(OR(M7=\"\",S7=\"\"),\"\",M7*S7)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!M8",
+        "formula": "=IF(OR(J8=\"\",L8=\"\"),\"\",J8*L8)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!T8",
+        "formula": "=IF(OR(M8=\"\",S8=\"\"),\"\",M8*S8)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!M9",
+        "formula": "=IF(OR(J9=\"\",L9=\"\"),\"\",J9*L9)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!T9",
+        "formula": "=IF(OR(M9=\"\",S9=\"\"),\"\",M9*S9)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!M10",
+        "formula": "=IF(OR(J10=\"\",L10=\"\"),\"\",J10*L10)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!T10",
+        "formula": "=IF(OR(M10=\"\",S10=\"\"),\"\",M10*S10)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!M11",
+        "formula": "=IF(OR(J11=\"\",L11=\"\"),\"\",J11*L11)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!T11",
+        "formula": "=IF(OR(M11=\"\",S11=\"\"),\"\",M11*S11)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!M12",
+        "formula": "=IF(OR(J12=\"\",L12=\"\"),\"\",J12*L12)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!T12",
+        "formula": "=IF(OR(M12=\"\",S12=\"\"),\"\",M12*S12)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!M13",
+        "formula": "=IF(OR(J13=\"\",L13=\"\"),\"\",J13*L13)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!T13",
+        "formula": "=IF(OR(M13=\"\",S13=\"\"),\"\",M13*S13)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!M14",
+        "formula": "=IF(OR(J14=\"\",L14=\"\"),\"\",J14*L14)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!T14",
+        "formula": "=IF(OR(M14=\"\",S14=\"\"),\"\",M14*S14)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!M15",
+        "formula": "=IF(OR(J15=\"\",L15=\"\"),\"\",J15*L15)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!T15",
+        "formula": "=IF(OR(M15=\"\",S15=\"\"),\"\",M15*S15)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!M16",
+        "formula": "=IF(OR(J16=\"\",L16=\"\"),\"\",J16*L16)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!T16",
+        "formula": "=IF(OR(M16=\"\",S16=\"\"),\"\",M16*S16)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!M17",
+        "formula": "=IF(OR(J17=\"\",L17=\"\"),\"\",J17*L17)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!T17",
+        "formula": "=IF(OR(M17=\"\",S17=\"\"),\"\",M17*S17)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!M18",
+        "formula": "=IF(OR(J18=\"\",L18=\"\"),\"\",J18*L18)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!T18",
+        "formula": "=IF(OR(M18=\"\",S18=\"\"),\"\",M18*S18)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!M19",
+        "formula": "=IF(OR(J19=\"\",L19=\"\"),\"\",J19*L19)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!T19",
+        "formula": "=IF(OR(M19=\"\",S19=\"\"),\"\",M19*S19)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!M20",
+        "formula": "=IF(OR(J20=\"\",L20=\"\"),\"\",J20*L20)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!T20",
+        "formula": "=IF(OR(M20=\"\",S20=\"\"),\"\",M20*S20)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!M21",
+        "formula": "=IF(OR(J21=\"\",L21=\"\"),\"\",J21*L21)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!T21",
+        "formula": "=IF(OR(M21=\"\",S21=\"\"),\"\",M21*S21)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!M22",
+        "formula": "=IF(OR(J22=\"\",L22=\"\"),\"\",J22*L22)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!T22",
+        "formula": "=IF(OR(M22=\"\",S22=\"\"),\"\",M22*S22)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!M23",
+        "formula": "=IF(OR(J23=\"\",L23=\"\"),\"\",J23*L23)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!T23",
+        "formula": "=IF(OR(M23=\"\",S23=\"\"),\"\",M23*S23)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!M24",
+        "formula": "=IF(OR(J24=\"\",L24=\"\"),\"\",J24*L24)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!T24",
+        "formula": "=IF(OR(M24=\"\",S24=\"\"),\"\",M24*S24)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!M25",
+        "formula": "=IF(OR(J25=\"\",L25=\"\"),\"\",J25*L25)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Deal Ledger!T25",
+        "formula": "=IF(OR(M25=\"\",S25=\"\"),\"\",M25*S25)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Equity Dilution!I6",
+        "formula": "=IF(H6=\"\",\"\",G6*H6)",
+        "cached_type": "str",
+        "has_value_element": false
+      },
+      {
+        "cell": "Equity Dilution!J6",
+        "formula": "=IF(OR(I6=\"\",E6=0),\"\",I6/E6)",
+        "cached_type": "str",
+        "has_value_element": false
+      }
+    ]
+  }
+]
