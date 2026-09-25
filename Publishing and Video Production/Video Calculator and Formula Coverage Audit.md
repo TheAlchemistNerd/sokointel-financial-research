@@ -67,3 +67,9 @@ Use a readable crop of the real workbook or webpage. The source workbook, sheet,
 Do not fill unavailable workbook cells or historical company figures with invented values. Keep synthetic worked cases labelled. If a rendering engine cannot display a workbook correctly, record that limitation and use a verified alternate rendering of the actual workbook. Do not silently replace formula results.
 
 For guides that are currently shallow, add a decision question, explicit assumptions, an observed or illustrative worked case, exact evidence references, one changed-input scenario, and direct answers. A repeated generic script across articles is not a substitute for article-specific explanation.
+
+## Follow-up: implemented free tools - 25 September 2026
+
+The original audit above describes the earlier seven-page inventory. The four gaps identified there now have implemented pages: detailed business credit, MSME owner earnings/cash headroom, thirteen-week cash and cash stress/warnings. Their formulae define symbols and units locally. DCF has explicit FCFF/WACC labels, a symbol dictionary, forecast and sensitivity tables. Simple credit retains its calculation and links to detailed mode. The index now has ten cards; compatible simple DCA remains separately reachable.
+
+Use [Free Calculator Reconciliation and Recording Map](<Free Calculator Reconciliation and Recording Map.md>) for exact source cells, default results, timing differences and article-specific demonstrations. New local browser checks verified anonymous submissions and mobile containment, but are not final recording screenshots. The earlier capture manifest still describes the earlier tools and must not be relabelled as evidence for the newly added pages. Protected DCA and compounding/cash-flow pages have not been refactored. PPTX production remains a separate deferred milestone.

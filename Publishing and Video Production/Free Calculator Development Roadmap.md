@@ -63,3 +63,9 @@ Useful additive improvements: an on-page symbol dictionary; explicit FCFF/enterp
 ## Milestone handoff
 
 For each completed calculator, record source workbook/sheet/range, formula map, accepted discrepancies, tests, screenshots and route. Review `git diff`, create a detailed untracked commit-message file, commit and push both repositories at the significant coordinated milestone, as requested by the user. Keep deployment/import verification distinct from a successful Git push.
+
+## Delivery update - 25 September 2026
+
+The four specified tools are implemented and reconciled locally. DCF gains the explicit FCFF/WACC convention, forecast table, terminal formula, symbol dictionary and sensitivity grid while retaining its calculation engine. Existing simple business credit remains available. The protected DCA and compounding/cash-flow families are unchanged.
+
+See [Free Calculator Reconciliation and Recording Map](<Free Calculator Reconciliation and Recording Map.md>) for routes, source hashes, exact workbook cells, accepted timing differences, tests and article/episode demonstrations. This is the dated completion record for the specification above; implementation and local tests do not alone establish Railway deployment. The credit tool currently supports bullet/equal-principal facilities, not a revolving line; cash-cycle days are diagnostic, and repay/collection dates are explicit. CSV output contains calculated schedules. New API keys, migrations and catalog imports are not needed for the calculators.

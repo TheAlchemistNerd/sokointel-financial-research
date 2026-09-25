@@ -28,3 +28,13 @@ Configure email and the selected payment provider on the web service. Document-g
 The [Free calculator development roadmap](<Free Calculator Development Roadmap.md>) remains the accepted scope. Detailed business-credit, MSME owner-cash, thirteen-week liquidity and failure-warning tools are not claimed as delivered by this membership milestone. DCF remains available for additive improvements. Preserve the single-asset DCA, portfolio DCA and compounding/cash-flow families; their source and templates were not edited by this milestone. Each new tool must reconcile to the named workbook examples and define formula symbols beside the calculations.
 
 The bulk branded-PDF and episode-presentation rollout remains deferred following the user's pivot to membership and calculators. The previously supplied sample branded PDF is not a claim that every library edition has been regenerated.
+
+## Calculator milestone - 25 September 2026
+
+The earlier membership milestone's pending-calculator statement is superseded by this delivery: detailed credit/repayment, MSME owner earnings/cash headroom, editable thirteen-week cash and cash stress/warning tools are implemented. DCF now includes a forecast table, sensitivity grid and local symbol definitions; simple credit gains a dictionary and detailed-mode link. Companion article links and sitemap/index entries are included. The protected DCA and compounding/cash-flow functions and assets are unchanged.
+
+The 70-test combined suite passed, followed by two page acceptance tests after the scoped mobile layout adjustment. Anonymous browser submissions, desktop owner results and mobile containment were checked locally. Source workbooks remain unchanged. See [the reconciliation and recording map](<Free Calculator Reconciliation and Recording Map.md>) for evidence and boundaries. No calculator database migration, external API secret or research catalog reload is required. Deploy code and collect static files.
+
+Membership code was committed/pushed as platform `6772a56`; research handoff as `2b6e145`. The exact Google verification endpoint was observed live, returning the supplied verification text. The operator still needs to click Verify in Search Console. Membership migrations 0010/0011, email/provider credentials and real delivery/payment checks remain separate from Google verification and these calculators. The deferred bulk PDFs and one-PowerPoint-per-episode rollout remains deferred.
+
+Platform calculator implementation commit: `81099e8` (14 files). Final acceptance reran all 19 new calculator tests successfully after the presentation edits. Remote push and Railway availability must be verified separately.
