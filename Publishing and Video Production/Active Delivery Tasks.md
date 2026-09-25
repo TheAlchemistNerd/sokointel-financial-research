@@ -6,9 +6,9 @@ Updated 25 September 2026. This is the coordinated task breakdown requested by t
 
 | ID | Workstream and owner | Current state | Concrete completion check |
 | --- | --- | --- | --- |
-| PUB-01 | Publication agent: four new projects and public counts | Audit and safe import runbook complete; local bundle 11/41, live 7/25 at 13:14:54 UTC on 25 September. Deployment-console audit and import remain operator actions | Each of the four new series and its articles is published in the editorial database; live library shows all 41 articles and 11 series. If Railway access is unavailable, provide a verified audit command and exact controlled import steps rather than claiming publication |
+| PUB-01 | Publication agent: four new projects and public counts | Railway operator audit confirms deployed `52931e8` and bundle 11/41; database/public 7/25 with exactly 16 articles/four series missing. Safe import commands supplied; post-import visibility pending | Each of the four new series and its articles is published in the editorial database; live library shows all 41 articles and 11 series. If Railway access is unavailable, provide a verified audit command and exact controlled import steps rather than claiming publication |
 | MATH-01 | Formula agent: calculator and PDF equation rendering | Implemented and verified: ten MathJax equations, visible definitions and mobile containment; native-equation DOCX/PDF fixture checked. Existing published PDFs remain unchanged | New business-tool equations render through existing MathJax, definitions remain visible and fallback is readable; PDF conversion preserves mathematical structure. International Investing and Diaspora Finance remains Unicode |
-| PPT-01 | Presentation agent: episode decks and evidence | In production: first editable episode deck generated and natively rendered; glossary layout correction identified. All 41 episode briefs and decks are being assembled and reviewed | One editable PowerPoint per article/video episode, 41 total, with episode-specific narrative, actual workbook evidence, relevant calculator screenshots, source/capture notes and a master index. Generated and visually reviewed status recorded separately |
+| PPT-01 | Presentation agent: episode decks and evidence | Complete: 41 editable decks / 458 slides; structural and native PowerPoint checks passed for all 41. Representative renders reviewed; all 15 source-workbook hashes match. Videos remain unrecorded | One editable PowerPoint per article/video episode, 41 total, with episode-specific narrative, actual workbook evidence, relevant calculator screenshots, source/capture notes and a master index. Generated and visually reviewed status recorded separately |
 | MEM-01 | Coordinator: membership launch readiness | Code committed and pushed; production configuration/acceptance remains open | Confirm migrations 0010/0011, verified transactional sender and real signup/reset delivery, then selected payment provider, active pricing and entitlement/download checks |
 | PDF-01 | Coordinator: branded-edition rollout boundary | Sample accepted; full historical/new-project regeneration not complete | Retain the approved sample and worker design. Do not enqueue a full regeneration as a side effect of catalog repair. Resume batches with explicit count, result and visual-review records when this workstream is resumed |
 
@@ -45,3 +45,15 @@ Configure transactional email and a provider-verified sender privately in Railwa
 - Existing source articles, spreadsheets, rough work and source traces remain intact.
 - The coordinator reviews diffs, saves a detailed untracked commit-message file, commits and pushes both repositories at meaningful coordinated milestones. Do not include unrelated review files or deletions.
 - Report production actions separately from local tests and generated assets. Do not imply that publication, real email delivery, a payment, a PDF batch or a video occurred without direct evidence.
+
+
+## Railway operator audit received
+
+The user supplied a read-only audit from revision `52931e8`: bundle 11 series/41 articles, database/public 7 series/25 articles, all 16 new articles and four series missing, no hidden records and no existing source differences. The deployed code is current; the catalog import is missing. The operator was given the automation-disabled migration and plain import commands, followed by another audit. Completion has not yet been reported. The existing edition queue contains 42 queued/32 failed jobs; publication repair is not a retry or regeneration request.
+
+
+## Presentation package delivered
+
+[Master Index](<Presentation Assets/Master Index.md>) links all 41 PowerPoints. The package includes 458 slides, actual workbook/web captures, formula definitions, recording notes, source references and an editable scenario for each episode. All 41 pass ZIP/slide/image/notes checks and native PowerPoint opening/text-fit checks. Representative contact sheets were visually reviewed; the manifest distinguishes those decks from native-bounds-only checks. Independent verification found no differences in the 15 source-workbook hashes.
+
+The package README documents the inherited simple-DCA yield-formatting discrepancy and the unresolved BAT operating-cash source difference. Neither protected calculator code nor authored source workbooks/articles was changed to hide these issues. New web captures identify their local-preview origin; video recording and public article publication are separate states.

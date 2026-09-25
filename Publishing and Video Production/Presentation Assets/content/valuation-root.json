@@ -1,0 +1,372 @@
+[
+  {
+    "id": "OE-VALUATION-06",
+    "case": "Reconstruct a filing first; estimate sustainable owner cash only after the evidence bridge ties out.",
+    "caseLabel": "BAT Kenya FY2025 is the filing anchor; the KES-million bridge is explicitly fictional.",
+    "units": [
+      "NI - profit attributable to ordinary owners, KES million/year",
+      "D - depreciation and amortisation already expensed, KES million/year",
+      "M - maintenance investment supported by asset evidence, KES million/year",
+      "Delta W - increase in required operating working capital, KES million/year",
+      "SBC - employee stock compensation; choose one consistent dilution treatment"
+    ],
+    "beats": [
+      {
+        "title": "Keep three model layers separate",
+        "points": [
+          "As filed: preserve entity, fiscal period, currency, units and note locator.",
+          "Analyst layer: record each normalization and its evidence.",
+          "Decision layer: estimate a range, per-share claim and review trigger."
+        ],
+        "notes": "Read Part 6, Create a filing model that another analyst can reproduce, and Reconcile the model to the filed statements. Demonstrate Evidence Vectors, then Assumptions and NVDA Bridge. A changed assumption must not overwrite a reported amount. Preserve publication date separately from fiscal year-end."
+      },
+      {
+        "title": "BAT supplies facts; maintenance remains a judgment",
+        "points": [
+          "FY2025 revenue: KES 23,191.945 million; EBIT: KES 7,474.835 million.",
+          "Reported total capex: KES 301.833 million.",
+          "Total capex does not identify how much renewed existing earning capacity."
+        ],
+        "notes": "Source: Part 6, A dated Kenyan example, reference 3, BAT 2025 annual report. These are dated reported measures from the article, not live prices or an owner-earnings valuation. Exclude operating cash: Part 6 quotes KES 6,633.154 million and Part 10 quotes KES 6,642 million from different documents. Reconcile the source lines before combining them."
+      },
+      {
+        "title": "Two starting points require different bridges",
+        "points": [
+          "From net income: reconcile noncash charges and cash reinvestment explicitly.",
+          "From CFO: reported working-capital changes are already included.",
+          "SBC is compensation: retaining the expense differs from adding it back and modelling dilution."
+        ],
+        "notes": "Part 6, Move from accounting earnings to a cash estimate. A CFO-starting model cannot subtract the same recorded working-capital cash use twice. Distinguish outstanding stock awards in diluted shares from the economic treatment of future compensation. Do not count the same cost twice."
+      }
+    ],
+    "calculation": {
+      "title": "An owner-earnings bridge with SBC retained",
+      "equation": "OE = NI + D - disposal gain - M - Delta W",
+      "substitution": "KES million: 1,000 + 180 - 30 - 260 - 90 = 800",
+      "interpretation": "The fictional estimate retains SBC expense in net income. It is annual earning power, not an immediate dividend limit.",
+      "notes": "Part 6, Worked bridge: keep the reported year and the normalized year apart. The source table shows 880 when SBC of 80 is added back. This slide uses the discussed alternative of retaining SBC expense, yielding 800. If adding back 80, show 880 only with a separate dilution or replacement-cost model. Scheduled debt principal, distribution restrictions and dated liquidity still need review."
+    },
+    "scenario": {
+      "title": "Maintenance evidence changes the range",
+      "baseline": "Maintenance KES 260m -> annual owner earnings KES 800m.",
+      "changed": "Maintenance KES 340m, all other inputs fixed -> KES 720m.",
+      "consequence": "An 80m renewal revision reduces owner earnings by 80m; with 100m diluted shares the estimate falls from KES 8.00 to KES 7.20/share.",
+      "notes": "Illustrative scenario using the Part 6 maintenance range and SBC-retained method. A low maintenance estimate of 220 million gives 840 million, or KES 8.40 per share. This differs deliberately from the article table that adds back SBC. State the treatment consistently. None is a market price or fair-value estimate."
+    },
+    "answer": "A defensible estimate preserves the filed statements, exposes adjustments and reconciles cash before valuing a claim. When maintenance evidence is missing, report a supported range or an unavailable estimate instead of inventing precision.",
+    "action": "Build a source-to-adjustment ledger and ask a second reviewer to reproduce the cash, debt and share-count reconciliations.",
+    "sources": [
+      {
+        "title": "SokoIntel Part 6: Reconstructing owner earnings from public filings",
+        "url": "https://sokointel.com/read/oe-valuation-06/",
+        "date": "Research cutoff 2026-09-24"
+      },
+      {
+        "title": "BAT Kenya: Combined Annual and Sustainability Report 2025",
+        "url": "https://www.batkenya.com/content/dam/endmarkets/ke/en/download/investors-and-reporting/annual-reports/BATK_Combined_Annual_and_Sustainability_Report_2025.pdf",
+        "date": "FY2025; source retained from article"
+      },
+      {
+        "title": "Berkshire Hathaway 1986 letter",
+        "url": "https://www.berkshirehathaway.com/letters/1986.html",
+        "date": "1986"
+      }
+    ]
+  },
+  {
+    "id": "OE-VALUATION-07",
+    "case": "NVIDIA outsources fabrication, but working capital, research, dilution and supply contracts still absorb capital.",
+    "caseLabel": "NVIDIA FY2026 filing facts and a separately labelled normalized teaching scenario.",
+    "units": [
+      "USD bn - billions of US dollars; do not mix with the KES teaching models",
+      "CFO - filed cash from operating activities for the fiscal period",
+      "SBC - share-based compensation; not free owner cash",
+      "AR - accounts receivable; balance and annual cash-flow movement differ",
+      "Residual index - hypothetical capacity less reinvestment and priority claims; not issuer cash"
+    ],
+    "beats": [
+      {
+        "title": "Fabless does not mean capital-free",
+        "points": [
+          "R&D sustains product and software capability.",
+          "Receivables and inventory finance the shipment-to-collection cycle.",
+          "Supply and capacity obligations shift physical capital risk across companies."
+        ],
+        "notes": "Part 7, Asset-light describes ownership, not the whole capital system. Map order, foundry, packaging, delivery, acceptance and collection. Do not equate outsourced factories with zero reinvestment or treat all R&D as a cost-free add-back."
+      },
+      {
+        "title": "Read balances, cash movements and commitments separately",
+        "points": [
+          "FY2026 net income: USD 120.067bn; D&A: USD 2.843bn; SBC: USD 6.386bn.",
+          "Receivable and inventory cash uses: USD 15.399bn and USD 11.324bn.",
+          "USD 95.2bn purchase/capacity obligations need timing and contract terms."
+        ],
+        "notes": "Source: NVIDIA FY2026 Form 10-K and Part 7, Start with the filing. Fiscal year ended 25 January 2026; SEC filing dated 25 February 2026. The gross receivables and inventory cash uses are not complete net working capital. Commitments are dated exposures, not immediate one-year deductions. These rows do not establish owner earnings."
+      },
+      {
+        "title": "Per-share cash needs a coherent SBC policy",
+        "points": [
+          "Retain the expense, or model an explicit add-back with dilution/replacement cost.",
+          "Track gross awards and buybacks as well as net diluted shares.",
+          "Customer concentration needs its denominator: the cited percentages refer to receivables."
+        ],
+        "notes": "Part 7, Stock compensation deserves an owner lens, and Growth concentration is a risk input. Three direct customers represent 25%, 18% and 13% of receivables; do not call this revenue concentration. Workbook Assumptions leaves maintenance and normalized working capital blank because public facts alone do not establish them."
+      }
+    ],
+    "calculation": {
+      "title": "A tempting subtotal is not owner earnings",
+      "equation": "Incomplete subtotal = NI + D&A + SBC - rounded reported capex",
+      "substitution": "USD bn: 120.067 + 2.843 + 6.386 - 6.1 = 123.196",
+      "interpretation": "This arithmetic is intentionally incomplete: it is neither CFO nor owner earnings.",
+      "notes": "Part 7, Put the FY2026 figures into a coherent bridge. Rounded USD 6.1 billion capex reproduces the article pitfall. The article separately reconciles USD 6.042 billion investing cash plus USD 0.101 billion financing principal to USD 6.143 billion, rounded to USD 6.1 billion. Retain definitions when comparing these measures. Receivables, inventory, payables, other balances, maintenance and dilution treatment remain unresolved."
+    },
+    "scenario": {
+      "title": "A transparent stress index, not an NVIDIA forecast",
+      "baseline": "Capacity 100 - reinvestment 35 - priority claims 10 = residual 55.",
+      "changed": "Capacity -20%; reinvestment +10%; priority claims +25%.",
+      "consequence": "80 - 38.5 - 12.5 = 29: the hypothetical residual falls by 26 index points.",
+      "notes": "Project 2, Profile Stress, row 7, columns E:L. Every index input is normalized and fictional. The scenario illustrates demand or margin pressure with inventory and capacity commitments. It is not a forecast, valuation or issuer ranking. NVDA Bridge remains unavailable until supported maintenance and working-capital estimates are entered."
+    },
+    "answer": "Asset-light ownership can coexist with substantial capital commitments. Reproduce the filed cash flow, then evaluate repeatable reinvestment and the shareholder claim; leave owner earnings unavailable when the required estimates lack evidence.",
+    "action": "Map one customer order through acceptance and collection, then date the related inventory, supplier commitment and cash obligation.",
+    "sources": [
+      {
+        "title": "SokoIntel Part7: NVIDIA",
+        "url": "https://sokointel.com/read/oe-valuation-07/",
+        "date": "Research cutoff 2026-09-24"
+      },
+      {
+        "title": "NVIDIA FY2026 Form10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+        "date": "Year ended 2026-01-25; filed 2026-02-25"
+      },
+      {
+        "title": "Qiao and Wang: semiconductor specialization",
+        "url": "https://doi.org/10.1007/s11123-021-00616-x",
+        "date": "2021"
+      }
+    ]
+  },
+  {
+    "id": "OE-VALUATION-08",
+    "case": "A data-centre site combines assets with different renewal cycles, power constraints and customer promises.",
+    "caseLabel": "Equinix FY2025 reported measures; the KES project screen is fictional.",
+    "units": [
+      "PP&E - property, plant and equipment; a book balance, not replacement cash",
+      "Recurring capex - issuer-defined AFFO adjustment; inspect its scope",
+      "KES m - millions of Kenyan shillings in the fictional project",
+      "Stabilized cash yield - annual contribution / project cash cost; not IRR",
+      "IRR - return based on dated cash flows, including construction and ramp-up"
+    ],
+    "beats": [
+      {
+        "title": "Start with the service promise and asset register",
+        "points": [
+          "Separate structure, power, cooling, network, software and customer equipment.",
+          "Renewal dates depend on condition, redundancy and replacement lead time.",
+          "Owned, leased and contracted assets create different obligations."
+        ],
+        "notes": "Part 8, Draw the service boundary. Equinix reports broad asset useful-life ranges; depreciation cannot identify which site equipment needs replacement next year. An asset register should include in-service date, condition, vendor lead time, replacement quote and contractual service consequence."
+      },
+      {
+        "title": "Keep filed measures distinct",
+        "points": [
+          "Equinix FY2025 PP&E: USD 23.6bn; depreciation expense: USD 1.9bn.",
+          "Issuer-defined recurring capex: USD 284m.",
+          "That recurring-capex adjustment is evidence, not a complete economic-maintenance estimate."
+        ],
+        "notes": "Source: Equinix FY2025 Form 10-K, year ended 31 December 2025, filed 11 February 2026. Project 2, Asset Heavy, D6:D8. Do not present USD 284 million as all renewal spending or treat a depreciation ratio as proof. Read the AFFO reconciliation, its scope and its cash or accrual basis."
+      },
+      {
+        "title": "A good stabilized project can still create a cash trough",
+        "points": [
+          "Date construction invoices, remaining commitments and power connection.",
+          "Tie customer occupation and collection to actual commissioning.",
+          "Connect project funding, debt maturities and equity dilution to per-share cash."
+        ],
+        "notes": "Part 8, Split project capital by purpose and date, and Capacity has to earn its keep. Separate replacement, compliance, resilience, expansion, customer-specific and unclassified spending. Existing-facility cash and development risk need separate bridges. Delay stress should include overruns and later receipts, not just lower occupancy."
+      }
+    ],
+    "calculation": {
+      "title": "Reproduce the fictional project screen",
+      "equation": "Cash yield = (revenue - operating cost - renewal) / project cost",
+      "substitution": "KES m: (1,800 - 800 - 150) / 10,000 = 8.5%",
+      "interpretation": "KES 850m stabilized annual contribution is before financing and tax. The 8.5% is not a project IRR.",
+      "notes": "Project 2, Asset Heavy, C11:G18. Cached results are D17 = 850 and D18 = 0.085. All KES figures are fictional and do not describe Equinix. Timing, utilization ramp, working capital, leases, corporate costs, tax and finance are outside this simple yield."
+    },
+    "scenario": {
+      "title": "Lower occupancy tests the same fixed spending",
+      "baseline": "Revenue KES 1,800m; operating cost 800m; renewal 150m -> contribution 850m.",
+      "changed": "Illustrative extension: revenue falls 20% to KES 1,440m; other selected inputs stay fixed.",
+      "consequence": "Contribution falls to KES 490m and simple yield to 4.9%; a dated schedule is still needed to find the cash trough.",
+      "notes": "Explicit teaching extension of Asset Heavy, D13:D18: 1,440 - 800 - 150 = 490; 490 / 10,000 = 0.049. This is not an issuer forecast. Real downside power costs, working capital, financing and project timing can change together. Holding costs fixed here isolates one mechanism."
+    },
+    "answer": "Maintenance follows the assets and service promises, not one depreciation percentage. Value operating sites and developments with dated renewal, commissioning, collections and financing, then reconcile the cash available per share.",
+    "action": "Create one project sheet with cash spent, unpaid commitments, power-on date, customer move-in, renewal and funding milestones.",
+    "sources": [
+      {
+        "title": "SokoIntel Part8: asset-heavy issuers",
+        "url": "https://sokointel.com/read/oe-valuation-08/",
+        "date": "Research cutoff 2026-09-24"
+      },
+      {
+        "title": "Equinix FY2025 Form10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000032/eqix-20251231.htm",
+        "date": "Year ended 2025-12-31; filed 2026-02-11"
+      },
+      {
+        "title": "Livdan and Nezlobin: replacement cost",
+        "url": "https://doi.org/10.1016/j.jfineco.2021.05.021",
+        "date": "2021"
+      }
+    ]
+  },
+  {
+    "id": "OE-VALUATION-09",
+    "case": "For banks and insurers, the owner claim is constrained by losses, promises, regulated capital and the paying legal entity.",
+    "caseLabel": "The KES-billion bank model is fictional; regulatory and issuer context remains separately dated.",
+    "units": [
+      "Eligible capital - qualifying capital of the selected regulated entity",
+      "RWA - risk-weighted assets of that same entity, KES bn",
+      "Capital ratio - eligible capital / RWA",
+      "CSM - IFRS17 contractual service margin; unearned service profit, not free cash",
+      "Headroom - capital above a selected floor; this proxy is not a statutory payout limit"
+    ],
+    "beats": [
+      {
+        "title": "A bank needs an equity-capital bridge",
+        "points": [
+          "Deposits fund the operating business; they are not an ordinary industrial net-debt deduction.",
+          "Follow credit quality, funding cost and risk-weighted-asset growth together.",
+          "Group profit does not reveal each subsidiary's distributable capital."
+        ],
+        "notes": "Part 9, Banks: profit is not the same as distributable capital, and A bank analysis that begins with the loan book. Explain why industrial DCF is not the default bank tool. System capital and non-performing-loan data provide context, not issuer inputs. Keep Equity Group and its regulated-bank perimeters separate."
+      },
+      {
+        "title": "An insurer must fund the promises it has sold",
+        "points": [
+          "Premium receipts come with future service and claims obligations.",
+          "Separate underwriting, investment results, reserve development and reinsurance.",
+          "CSM and group earnings do not equal parent-company cash or solvency headroom."
+        ],
+        "notes": "Part 9, An insurer analysis that follows the promises. IFRS 17 contractual service margin is recognized over coverage; it is not immediately free cash. Jubilee annual net profit and half-year profit before tax describe different periods and measures. Actual solvency needs entity-specific eligible funds and requirements, not a bank proxy."
+      },
+      {
+        "title": "Stress the business before extrapolating dividends",
+        "points": [
+          "Higher credit losses can reduce earnings while capital retention rises.",
+          "Claims stress can coincide with weaker investments or slower reinsurance recovery.",
+          "Trace proposed dividends to capital, liquidity and the legal entity paying them."
+        ],
+        "notes": "Part 9, A dividend decision has two separate tests. Forecast both capital in the numerator and risk-weighted assets in the denominator. Retained profit is not the only capital movement. Insurance capital quality, duration and claim dates need their own model. Do not double Jubilee half-year profit before tax into annual owner cash."
+      }
+    ],
+    "calculation": {
+      "title": "A capital proxy makes the retention need visible",
+      "equation": "Headroom = opening capital + profit - dividend - floor x closing RWA",
+      "substitution": "KES bn: 100 + 20 - 10 - (18% x 560) = 9.2",
+      "interpretation": "Closing capital is 110bn; 110 / 560 = 19.64%. This is a simplified planning example, not a legal dividend test.",
+      "notes": "Part 9, Turn capital into an explicit distribution test, and the Project 2 Bank Insurance fictional illustration. Risk-weighted assets start at 500 and grow 12% to 560. The 18% floor is an assumed internal policy, not an asserted statutory minimum. Actual deductions, regulatory buffers, other comprehensive income, FX and other capital movements are excluded."
+    },
+    "scenario": {
+      "title": "Losses can exhaust the apparent payout buffer",
+      "baseline": "Profit 20bn, planned dividend 10bn -> headroom 9.2bn.",
+      "changed": "Illustrative extension: an additional 12bn after-tax credit-loss effect reduces profit to 8bn; RWA remains 560bn.",
+      "consequence": "Capital becomes 98bn: 17.5% ratio and a 2.8bn gap to the assumed 18% floor.",
+      "notes": "Explicit fictional extension, not Equity or Jubilee data: 100 + 8 - 10 = 98; 98 / 560 = 0.175; 98 - 0.18 × 560 = -2.8. It neither permits a dividend nor establishes a regulatory breach. The floor is illustrative; actual rules are not modeled. Review payout, growth and funding in a full entity-specific model."
+    },
+    "answer": "For regulated financial companies, sustainable owner cash depends on equity earnings after credit or claims costs and capital retention. Use an equity or distribution-capacity approach with dated entity-specific evidence rather than forcing an industrial FCFF formula onto the balance sheet.",
+    "action": "Build a capital roll-forward for the entity paying the dividend and identify the disclosure needed to validate its loss and solvency assumptions.",
+    "sources": [
+      {
+        "title": "SokoIntel Part9: banks and insurers",
+        "url": "https://sokointel.com/read/oe-valuation-09/",
+        "date": "Research cutoff 2026-09-24"
+      },
+      {
+        "title": "IFRS17 Insurance Contracts",
+        "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-17-insurance-contracts/",
+        "date": "Standard source; no current regulatory ratio inferred"
+      },
+      {
+        "title": "CBK Bank Supervision Annual Report2025",
+        "url": "https://www.centralbank.go.ke/uploads/banking_sector_annual_reports/1241268828_ANNUAL%20REPORT%202025.pdf",
+        "date": "FY2025 system context; report issued September2026"
+      }
+    ]
+  },
+  {
+    "id": "OE-VALUATION-10",
+    "case": "Seven NSE companies require seven cash or capital bridges, while sharing one evidence discipline.",
+    "caseLabel": "Reported issuer measures remain separate from the workbook's fictional normalized stress indices.",
+    "units": [
+      "PAT - profit after tax for a specified entity and fiscal period",
+      "Capital investment / PAT - descriptive ratio, not a maintenance estimate",
+      "Cost to complete - cash still required to fulfil a property project",
+      "Cash-capacity index - hypothetical normalized units, not KES or issuer forecasts",
+      "Residual index - capacity less reinvestment/retention and priority claims"
+    ],
+    "beats": [
+      {
+        "title": "Choose the model by the economic claim",
+        "points": [
+          "Equity Group: expected losses and eligible-capital retention. Jubilee: claims and solvency.",
+          "KenGen: plant renewal, off-taker collections and project obligations. Kakuzi: crop-cycle cash and orchard renewal.",
+          "Safaricom: network/market investment. BAT: volume, tax and replacement. Home Afrika: collections and cost to complete."
+        ],
+        "notes": "Part 10 sector table and seven issuer cards. This is a source-led casebook, not seven completed valuations. Banks and insurers need different models from operating-company DCF. Biological-asset gains do not prove collected harvest cash; mobile-money customer funds are not Safaricom dividend cash."
+      },
+      {
+        "title": "Freeze dates, scope and units before comparing",
+        "points": [
+          "Keep fiscal year-end, publication date and market-price date separate.",
+          "Label filed facts, calculations, assumptions and unresolved gaps.",
+          "Use each issuer's source documents; system averages are not substitute inputs."
+        ],
+        "notes": "Part 10, A reporting rule for this casebook, and the Evidence Vectors worksheet. Do not silently compare KenGen June year-end figures with December calendar-year issuers. Parent versus consolidated scope and KES millions versus billions matter. Unavailable Home Afrika project measures are blank, not zero. Reconcile differing BAT operating-cash figures in Parts 6 and 10 before combining them."
+      },
+      {
+        "title": "Compare questions and evidence, not one universal multiple",
+        "points": [
+          "Deposits, premiums and presales bring different obligations.",
+          "Plant, orchard and network renewal have different timing.",
+          "A negative scenario identifies an evidence or funding question; it does not rank the shares."
+        ],
+        "notes": "Part 10, Put the companies on one page without forcing a common formula. Connect to the four Kenyan Equities workbook roles and NSE Dividend Growth. Screening, filing models, valuation and portfolio decisions are distinct. A dividend yield needs a price date, payout status and tax assumption."
+      }
+    ],
+    "calculation": {
+      "title": "KenGen: a ratio that opens the next question",
+      "equation": "Capital investment / PAT = 17.733 / 10.481",
+      "substitution": "FY2025 reported amounts, KES bn: approximately 1.69 times.",
+      "interpretation": "Investment exceeds one year's accounting profit. The ratio does not separate renewal from expansion or prove a dividend funding gap.",
+      "notes": "Part 10 KenGen issuer card; Project 2 NSE Casebook reported-input rows and Evidence Vectors. Source: KenGen FY2025 Integrated Annual Report, year ended June 2025. Keep cash balances and project commitments separate. Cash on the balance sheet is not automatically an uncommitted owner reserve."
+    },
+    "scenario": {
+      "title": "Property: slower collections plus completion overruns",
+      "baseline": "Fictional index: 100 capacity - 45 completion/reinvestment - 25 priority claims = 30.",
+      "changed": "Collections/capacity -25%; completion/reinvestment +25%; priority claims +20%.",
+      "consequence": "75 - 56.25 - 30 = -11.25: an illustrative funding gap, not Home Afrika's reported cash position.",
+      "notes": "Project 2, Profile Stress, row 15, E:L. The index teaches a mechanism using sector-specific definitions. Do not compare it as a return or valuation with Kakuzi or Equity indices. Require project legal entity, restricted deposits, contractor claims, cost to complete and collection timing before estimating an actual issuer result."
+    },
+    "answer": "Use common evidence rules, but let the cash bridge follow the sector. The useful comparison shows where cash is earned, what must be reinvested or retained, which claims come first and what evidence still limits the conclusion.",
+    "action": "Choose one issuer and produce a dated one-page cash/capital bridge with a joined downside and a named next evidence request.",
+    "sources": [
+      {
+        "title": "SokoIntel Part10: seven NSE cash questions",
+        "url": "https://sokointel.com/read/oe-valuation-10/",
+        "date": "Research cutoff 2026-09-24"
+      },
+      {
+        "title": "KenGen FY2025 Integrated Annual Report",
+        "url": "https://www.kengen.co.ke/images/2025/KenGen_Integrated_Annual_Report__Financial_Statement_2025.pdf",
+        "date": "FY2025"
+      },
+      {
+        "title": "Home Afrika2025 annual report",
+        "url": "https://www.homeafrika.com/static/uploads/media/integrated-annual-report-financial-statements-2025-1782322991.pdf",
+        "date": "FY2025; scenarios are not issuer data"
+      }
+    ]
+  }
+]

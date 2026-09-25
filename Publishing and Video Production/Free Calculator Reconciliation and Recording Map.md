@@ -72,3 +72,12 @@ The article pages now expose these companion links without rewriting authored ar
 - Production email, live payment acceptance and simultaneous PostgreSQL payment callbacks remain the membership launch checks documented separately. No real payment or outbound account email was triggered here.
 
 The next presentation-production pass should use this map, preserve one deck per article/video episode and update the master index. No PPTX completion or new branded PDF batch is claimed by this calculator milestone.
+
+
+## Presentation and formula delivery update — 25 September 2026
+
+The earlier deferred-presentation statements describe prior milestones. The presentation package now contains 41 generated editable episode decks. Use the [master index](<Presentation Assets/Master Index.md>), manifest and package QA record for the current reviewed status and source/capture provenance. Recording and video publication remain separate steps.
+
+The formula correction and read-only catalog audit were pushed as platform `52931e8`; matching verification evidence and delivery tasks were pushed as research `649bfde`. Thirty-four combined regression tests passed. New tool equations render with MathJax and visible definitions; native DOCX/PDF equations were verified with a separate two-page fixture. International/Diaspora Unicode and the protected DCA/compounding/cash-flow engines remain unchanged. Existing reading PDFs were not regenerated.
+
+The new calculator and DCF captures in `Presentation Assets/Evidence/Web/20260925-formula-rendering/` are from an isolated local preview, with exact inputs and timestamps. They are not claims that Railway has deployed or imported the new articles. A fresh public check at 13:43:38 UTC still showed 7 series/25 articles and a 404 for the new MSME series. The Google verification file returned the expected content. Follow the platform catalog-publication runbook and membership operator guide for the remaining deployment actions.

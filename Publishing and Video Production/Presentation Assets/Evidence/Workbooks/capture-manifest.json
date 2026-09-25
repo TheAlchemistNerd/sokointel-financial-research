@@ -1,0 +1,612 @@
+[
+  {
+    "episode": "AMBC-01",
+    "asset_id": "AMBC-01-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\African Markets and Business Credit\\Workbook\\African Markets and Business Credit - Credit Readiness and Cash Cycle Workbook.xlsx",
+    "sheet": "P1 Cash Cycle",
+    "range": "A4:E10",
+    "sha256": "0daf2a874e6e7834bc8ad0342c87b1f82492ac68619bcbbb589ee742f1bf9b36",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "AMBC-01",
+    "asset_id": "AMBC-01-02",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\African Markets and Business Credit\\Workbook\\African Markets and Business Credit - Credit Readiness and Cash Cycle Workbook.xlsx",
+    "sheet": "P1 Cash Cycle",
+    "range": "A14:E17",
+    "sha256": "0daf2a874e6e7834bc8ad0342c87b1f82492ac68619bcbbb589ee742f1bf9b36",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "AMBC-02",
+    "asset_id": "AMBC-02-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\African Markets and Business Credit\\Workbook\\African Markets and Business Credit - Credit Readiness and Cash Cycle Workbook.xlsx",
+    "sheet": "Entity Review",
+    "range": "A4:C10",
+    "sha256": "0daf2a874e6e7834bc8ad0342c87b1f82492ac68619bcbbb589ee742f1bf9b36",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "AMBC-02",
+    "asset_id": "AMBC-02-02",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\African Markets and Business Credit\\Workbook\\African Markets and Business Credit - Credit Readiness and Cash Cycle Workbook.xlsx",
+    "sheet": "P2 Facility",
+    "range": "A16:H21",
+    "sha256": "0daf2a874e6e7834bc8ad0342c87b1f82492ac68619bcbbb589ee742f1bf9b36",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "NSE-DG-01",
+    "asset_id": "NSE-DG-01-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\NSE Dividend Growth Project 2026\\Publication\\Output\\NSE Dividend Growth Formula Workbook.xlsx",
+    "sheet": "DCA Plan",
+    "range": "A12:H21",
+    "sha256": "b54b185f5c120b9852cd37d3c5f730d26df9dd40f65be8141d3c0e85dc775f05",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "NSE-DG-01",
+    "asset_id": "NSE-DG-01-02",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\NSE Dividend Growth Project 2026\\Publication\\Output\\NSE Dividend Growth Formula Workbook.xlsx",
+    "sheet": "Income Scenarios",
+    "range": "A5:G9",
+    "sha256": "b54b185f5c120b9852cd37d3c5f730d26df9dd40f65be8141d3c0e85dc775f05",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "NSE-DG-02",
+    "asset_id": "NSE-DG-02-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\NSE Dividend Growth Project 2026\\Publication\\Output\\NSE Dividend Growth Formula Workbook.xlsx",
+    "sheet": "Core Portfolio",
+    "range": "A14:G22",
+    "sha256": "b54b185f5c120b9852cd37d3c5f730d26df9dd40f65be8141d3c0e85dc775f05",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": true
+  },
+  {
+    "episode": "KTHF-01",
+    "asset_id": "KTHF-01-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\outputs\\01a0789a-5035-7453-ad64-a71cc94b3211\\01-PAYE-and-Cash-Flow.xlsx",
+    "sheet": "Payroll",
+    "range": "A4:H12",
+    "sha256": "0599e21301d796204aeda078c1a600dca347284a9002b608287703edd32519a9",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "KTHF-02",
+    "asset_id": "KTHF-02-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\outputs\\01a0789a-5035-7453-ad64-a71cc94b3211\\02-Pensions-and-Retirement.xlsx",
+    "sheet": "Results",
+    "range": "A4:G15",
+    "sha256": "bdec2447c6895695839c2b1dbc2f50e743b95fba1253cd62835fb40f515543ee",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "KTHF-03",
+    "asset_id": "KTHF-03-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\outputs\\01a0789a-5035-7453-ad64-a71cc94b3211\\03-Medical-and-Emergency-Funds.xlsx",
+    "sheet": "Claims scenarios",
+    "range": "A4:H13",
+    "sha256": "d08fc32067d50b59e44683756e1462c904e50431da57f73526dafe5365fdaa74",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "KTHF-04",
+    "asset_id": "KTHF-04-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\outputs\\01a0789a-5035-7453-ad64-a71cc94b3211\\04-Mortgages-and-Housing.xlsx",
+    "sheet": "Results",
+    "range": "A4:G15",
+    "sha256": "50d2461197a00662140c92d7ecf9a535c4d033e0bfda1c4af0de6242f08fb71e",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "KECA-01",
+    "asset_id": "KECA-01-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\outputs\\01a0789a-5035-7453-ad64-a71cc94b3211\\kenyan-equities\\01-Screening-and-Income.xlsx",
+    "sheet": "Bill pricing",
+    "range": "A4:F16",
+    "sha256": "4bdbf160a0f70e353e1d2248c1ae109670f93c6f3068981e69847939e01cc654",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "KECA-02",
+    "asset_id": "KECA-02-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\outputs\\01a0789a-5035-7453-ad64-a71cc94b3211\\kenyan-equities\\02-Statements-and-Valuation.xlsx",
+    "sheet": "DCF",
+    "range": "A4:H14",
+    "sha256": "f1465694d6ee2cba0cf2f3ef2ea1f2b4179a7677de88d087a092e2301a3a4fcb",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "KECA-03",
+    "asset_id": "KECA-03-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\outputs\\01a0789a-5035-7453-ad64-a71cc94b3211\\kenyan-equities\\03-Portfolio-Construction.xlsx",
+    "sheet": "Risk contributions",
+    "range": "A4:G13",
+    "sha256": "30047b55bc9e183b32cdd1361e84eed5ed351507717704b1bc92a77396692b33",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "KECA-04",
+    "asset_id": "KECA-04-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\outputs\\01a0789a-5035-7453-ad64-a71cc94b3211\\kenyan-equities\\04-Compounding-and-Simulation.xlsx",
+    "sheet": "Simulation summary",
+    "range": "A4:G14",
+    "sha256": "ac0f13ee806be1ffe5ebcc277cdeb4a33fa6b15b02e76ea65a113131819d431d",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-MSME-01",
+    "asset_id": "OE-MSME-01-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 1 - MSMEs and Small Businesses\\Project 1 - MSME Owner Earnings and Operations.xlsx",
+    "sheet": "Article Case",
+    "range": "C5:F18",
+    "sha256": "43f243daa5fa87c914c73ec53b55652f96b8cbd8482d45327141c2383e47494e",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-MSME-01",
+    "asset_id": "OE-MSME-01-02",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 1 - MSMEs and Small Businesses\\Project 1 - MSME Owner Earnings and Operations.xlsx",
+    "sheet": "Article Case",
+    "range": "C21:F33",
+    "sha256": "43f243daa5fa87c914c73ec53b55652f96b8cbd8482d45327141c2383e47494e",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-MSME-02",
+    "asset_id": "OE-MSME-02-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 1 - MSMEs and Small Businesses\\Project 1 - MSME Owner Earnings and Operations.xlsx",
+    "sheet": "Maintenance",
+    "range": "C5:I10",
+    "sha256": "43f243daa5fa87c914c73ec53b55652f96b8cbd8482d45327141c2383e47494e",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-MSME-02",
+    "asset_id": "OE-MSME-02-02",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 1 - MSMEs and Small Businesses\\Project 1 - MSME Owner Earnings and Operations.xlsx",
+    "sheet": "Working Capital",
+    "range": "C5:N8",
+    "sha256": "43f243daa5fa87c914c73ec53b55652f96b8cbd8482d45327141c2383e47494e",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-MSME-03",
+    "asset_id": "OE-MSME-03-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 1 - MSMEs and Small Businesses\\Project 1 - MSME Owner Earnings and Operations.xlsx",
+    "sheet": "Cash13W",
+    "range": "C5:J13",
+    "sha256": "43f243daa5fa87c914c73ec53b55652f96b8cbd8482d45327141c2383e47494e",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-MSME-03",
+    "asset_id": "OE-MSME-03-02",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 1 - MSMEs and Small Businesses\\Project 1 - MSME Owner Earnings and Operations.xlsx",
+    "sheet": "Unit Economics",
+    "range": "C5:L7",
+    "sha256": "43f243daa5fa87c914c73ec53b55652f96b8cbd8482d45327141c2383e47494e",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-MSME-04",
+    "asset_id": "OE-MSME-04-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 1 - MSMEs and Small Businesses\\Project 1 - MSME Owner Earnings and Operations.xlsx",
+    "sheet": "Debt and Growth",
+    "range": "C5:J9",
+    "sha256": "43f243daa5fa87c914c73ec53b55652f96b8cbd8482d45327141c2383e47494e",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-MSME-04",
+    "asset_id": "OE-MSME-04-02",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 1 - MSMEs and Small Businesses\\Project 1 - MSME Owner Earnings and Operations.xlsx",
+    "sheet": "Debt and Growth",
+    "range": "C11:F14",
+    "sha256": "43f243daa5fa87c914c73ec53b55652f96b8cbd8482d45327141c2383e47494e",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-MSME-05",
+    "asset_id": "OE-MSME-05-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 1 - MSMEs and Small Businesses\\Project 1 - MSME Owner Earnings and Operations.xlsx",
+    "sheet": "Buy Sell and Succession",
+    "range": "C5:H9",
+    "sha256": "43f243daa5fa87c914c73ec53b55652f96b8cbd8482d45327141c2383e47494e",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-MSME-05",
+    "asset_id": "OE-MSME-05-02",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 1 - MSMEs and Small Businesses\\Project 1 - MSME Owner Earnings and Operations.xlsx",
+    "sheet": "Buy Sell and Succession",
+    "range": "C10:H13",
+    "sha256": "43f243daa5fa87c914c73ec53b55652f96b8cbd8482d45327141c2383e47494e",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "LEAD-01",
+    "asset_id": "LEAD-01-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 1 - MSMEs and Small Businesses\\Project 1 - MSME Owner Earnings and Operations.xlsx",
+    "sheet": "Buy Sell and Succession",
+    "range": "C5:H9",
+    "sha256": "43f243daa5fa87c914c73ec53b55652f96b8cbd8482d45327141c2383e47494e",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": true
+  },
+  {
+    "episode": "OE-VALUATION-06",
+    "asset_id": "OE-VALUATION-06-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 2 - Listed Companies and Valuation\\Project 2 - Listed Companies Owner Earnings and Valuation.xlsx",
+    "sheet": "NSE Casebook",
+    "range": "C5:H6",
+    "sha256": "4ad84af694e804b21c68dfc5e85ca8f5e4211a30b102d31e846890ec6a09827b",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-VALUATION-06",
+    "asset_id": "OE-VALUATION-06-02",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 2 - Listed Companies and Valuation\\Project 2 - Listed Companies Owner Earnings and Valuation.xlsx",
+    "sheet": "Valuation",
+    "range": "C5:H13",
+    "sha256": "4ad84af694e804b21c68dfc5e85ca8f5e4211a30b102d31e846890ec6a09827b",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-VALUATION-07",
+    "asset_id": "OE-VALUATION-07-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 2 - Listed Companies and Valuation\\Project 2 - Listed Companies Owner Earnings and Valuation.xlsx",
+    "sheet": "Filing Inputs",
+    "range": "C5:G15",
+    "sha256": "4ad84af694e804b21c68dfc5e85ca8f5e4211a30b102d31e846890ec6a09827b",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-VALUATION-07",
+    "asset_id": "OE-VALUATION-07-02",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 2 - Listed Companies and Valuation\\Project 2 - Listed Companies Owner Earnings and Valuation.xlsx",
+    "sheet": "NVDA Bridge",
+    "range": "C5:F15",
+    "sha256": "4ad84af694e804b21c68dfc5e85ca8f5e4211a30b102d31e846890ec6a09827b",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-VALUATION-08",
+    "asset_id": "OE-VALUATION-08-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 2 - Listed Companies and Valuation\\Project 2 - Listed Companies Owner Earnings and Valuation.xlsx",
+    "sheet": "Asset Heavy",
+    "range": "C5:G8",
+    "sha256": "4ad84af694e804b21c68dfc5e85ca8f5e4211a30b102d31e846890ec6a09827b",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-VALUATION-08",
+    "asset_id": "OE-VALUATION-08-02",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 2 - Listed Companies and Valuation\\Project 2 - Listed Companies Owner Earnings and Valuation.xlsx",
+    "sheet": "Asset Heavy",
+    "range": "C11:G18",
+    "sha256": "4ad84af694e804b21c68dfc5e85ca8f5e4211a30b102d31e846890ec6a09827b",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-VALUATION-09",
+    "asset_id": "OE-VALUATION-09-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 2 - Listed Companies and Valuation\\Project 2 - Listed Companies Owner Earnings and Valuation.xlsx",
+    "sheet": "Bank Insurance",
+    "range": "C14:F23",
+    "sha256": "4ad84af694e804b21c68dfc5e85ca8f5e4211a30b102d31e846890ec6a09827b",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-VALUATION-09",
+    "asset_id": "OE-VALUATION-09-02",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 2 - Listed Companies and Valuation\\Project 2 - Listed Companies Owner Earnings and Valuation.xlsx",
+    "sheet": "Bank Insurance",
+    "range": "C5:H11",
+    "sha256": "4ad84af694e804b21c68dfc5e85ca8f5e4211a30b102d31e846890ec6a09827b",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-VALUATION-10",
+    "asset_id": "OE-VALUATION-10-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 2 - Listed Companies and Valuation\\Project 2 - Listed Companies Owner Earnings and Valuation.xlsx",
+    "sheet": "NSE Casebook",
+    "range": "C5:H12",
+    "sha256": "4ad84af694e804b21c68dfc5e85ca8f5e4211a30b102d31e846890ec6a09827b",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-VALUATION-10",
+    "asset_id": "OE-VALUATION-10-02",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 2 - Listed Companies and Valuation\\Project 2 - Listed Companies Owner Earnings and Valuation.xlsx",
+    "sheet": "Profile Stress",
+    "range": "C5:H15",
+    "sha256": "4ad84af694e804b21c68dfc5e85ca8f5e4211a30b102d31e846890ec6a09827b",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-FAILURE-11",
+    "asset_id": "OE-FAILURE-11-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 3 - Failure Retrospectives and Warning Systems\\Project 3 - Failure Retrospectives and Warning Systems.xlsx",
+    "sheet": "Timeline",
+    "range": "C5:I9",
+    "sha256": "056c55f6d4b882fb99469e9092f4f4d1c930676a49b676b7c0dd5ad6e068b14e",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-FAILURE-11",
+    "asset_id": "OE-FAILURE-11-02",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 3 - Failure Retrospectives and Warning Systems\\Project 3 - Failure Retrospectives and Warning Systems.xlsx",
+    "sheet": "Warnings and Actions",
+    "range": "C5:I9",
+    "sha256": "056c55f6d4b882fb99469e9092f4f4d1c930676a49b676b7c0dd5ad6e068b14e",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-FAILURE-12",
+    "asset_id": "OE-FAILURE-12-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 3 - Failure Retrospectives and Warning Systems\\Project 3 - Failure Retrospectives and Warning Systems.xlsx",
+    "sheet": "Evidence Ledger",
+    "range": "C5:I12",
+    "sha256": "056c55f6d4b882fb99469e9092f4f4d1c930676a49b676b7c0dd5ad6e068b14e",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-FAILURE-12",
+    "asset_id": "OE-FAILURE-12-02",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 3 - Failure Retrospectives and Warning Systems\\Project 3 - Failure Retrospectives and Warning Systems.xlsx",
+    "sheet": "Retail Review",
+    "range": "C5:J12",
+    "sha256": "056c55f6d4b882fb99469e9092f4f4d1c930676a49b676b7c0dd5ad6e068b14e",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-FAILURE-13",
+    "asset_id": "OE-FAILURE-13-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 3 - Failure Retrospectives and Warning Systems\\Project 3 - Failure Retrospectives and Warning Systems.xlsx",
+    "sheet": "Funding",
+    "range": "C5:K8",
+    "sha256": "056c55f6d4b882fb99469e9092f4f4d1c930676a49b676b7c0dd5ad6e068b14e",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "OE-FAILURE-13",
+    "asset_id": "OE-FAILURE-13-02",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 3 - Failure Retrospectives and Warning Systems\\Project 3 - Failure Retrospectives and Warning Systems.xlsx",
+    "sheet": "Timeline",
+    "range": "C9:I13",
+    "sha256": "056c55f6d4b882fb99469e9092f4f4d1c930676a49b676b7c0dd5ad6e068b14e",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "STARTUP-FUNDING-01",
+    "asset_id": "STARTUP-FUNDING-01-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\What Startup Funding Figures Actually Measure\\Startup Funding Market and Outcomes Workbook.xlsx",
+    "sheet": "Provider Comparison",
+    "range": "C5:H13",
+    "sha256": "cd8f7689e54d34ad0ad95991f1815c26e948341f3ca001a7ec7d1ba34ae57812",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "STARTUP-FUNDING-01",
+    "asset_id": "STARTUP-FUNDING-01-02",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\What Startup Funding Figures Actually Measure\\Startup Funding Market and Outcomes Workbook.xlsx",
+    "sheet": "Market Metrics",
+    "range": "C11:G16",
+    "sha256": "cd8f7689e54d34ad0ad95991f1815c26e948341f3ca001a7ec7d1ba34ae57812",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "STARTUP-FUNDING-02",
+    "asset_id": "STARTUP-FUNDING-02-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\What Startup Funding Figures Actually Measure\\Startup Funding Market and Outcomes Workbook.xlsx",
+    "sheet": "Debt Service",
+    "range": "C5:M16",
+    "sha256": "cd8f7689e54d34ad0ad95991f1815c26e948341f3ca001a7ec7d1ba34ae57812",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "STARTUP-FUNDING-02",
+    "asset_id": "STARTUP-FUNDING-02-02",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\What Startup Funding Figures Actually Measure\\Startup Funding Market and Outcomes Workbook.xlsx",
+    "sheet": "Equity Dilution",
+    "range": "C5:K7",
+    "sha256": "cd8f7689e54d34ad0ad95991f1815c26e948341f3ca001a7ec7d1ba34ae57812",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "STARTUP-FUNDING-03",
+    "asset_id": "STARTUP-FUNDING-03-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\What Startup Funding Figures Actually Measure\\Startup Funding Market and Outcomes Workbook.xlsx",
+    "sheet": "Screenshot List",
+    "range": "C5:F19",
+    "sha256": "cd8f7689e54d34ad0ad95991f1815c26e948341f3ca001a7ec7d1ba34ae57812",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "STARTUP-FUNDING-03",
+    "asset_id": "STARTUP-FUNDING-03-02",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\What Startup Funding Figures Actually Measure\\Startup Funding Market and Outcomes Workbook.xlsx",
+    "sheet": "Company Outcomes",
+    "range": "C5:I10",
+    "sha256": "cd8f7689e54d34ad0ad95991f1815c26e948341f3ca001a7ec7d1ba34ae57812",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "IIDF-01",
+    "asset_id": "IIDF-01-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\US Markets and Portfolio Construction\\US_Markets_Portfolio_Construction_Final_Workbook.xlsx",
+    "sheet": "P03 Cross-Border Tax",
+    "range": "A3:E12",
+    "sha256": "5a040bdadf9c5682f5370a882c44aec18bb6359ea96bcd8121b634d35620ab38",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": true
+  },
+  {
+    "episode": "IIDF-02",
+    "asset_id": "IIDF-02-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\US Markets and Portfolio Construction\\US_Markets_Portfolio_Construction_Final_Workbook.xlsx",
+    "sheet": "P03 Cross-Border Tax",
+    "range": "A3:E12",
+    "sha256": "5a040bdadf9c5682f5370a882c44aec18bb6359ea96bcd8121b634d35620ab38",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": true
+  },
+  {
+    "episode": "IIDF-03",
+    "asset_id": "IIDF-03-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\US Markets and Portfolio Construction\\US_Markets_Portfolio_Construction_Final_Workbook.xlsx",
+    "sheet": "P09 DCA & Contributions",
+    "range": "A3:C4",
+    "sha256": "5a040bdadf9c5682f5370a882c44aec18bb6359ea96bcd8121b634d35620ab38",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": true
+  },
+  {
+    "episode": "USMPC-01",
+    "asset_id": "USMPC-01-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\US Markets and Portfolio Construction\\US_Markets_Portfolio_Construction_Final_Workbook.xlsx",
+    "sheet": "P01 Guide & Map",
+    "range": "A3:B12",
+    "sha256": "5a040bdadf9c5682f5370a882c44aec18bb6359ea96bcd8121b634d35620ab38",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "USMPC-02",
+    "asset_id": "USMPC-02-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\US Markets and Portfolio Construction\\US_Markets_Portfolio_Construction_Final_Workbook.xlsx",
+    "sheet": "P02 Cost & Ownership",
+    "range": "A4:G13",
+    "sha256": "5a040bdadf9c5682f5370a882c44aec18bb6359ea96bcd8121b634d35620ab38",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "USMPC-03",
+    "asset_id": "USMPC-03-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\US Markets and Portfolio Construction\\US_Markets_Portfolio_Construction_Final_Workbook.xlsx",
+    "sheet": "P03 Cross-Border Tax",
+    "range": "A3:E12",
+    "sha256": "5a040bdadf9c5682f5370a882c44aec18bb6359ea96bcd8121b634d35620ab38",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "USMPC-04",
+    "asset_id": "USMPC-04-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\US Markets and Portfolio Construction\\US_Markets_Portfolio_Construction_Final_Workbook.xlsx",
+    "sheet": "P04 Diversification",
+    "range": "A3:B12",
+    "sha256": "5a040bdadf9c5682f5370a882c44aec18bb6359ea96bcd8121b634d35620ab38",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "USMPC-05",
+    "asset_id": "USMPC-05-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\US Markets and Portfolio Construction\\US_Markets_Portfolio_Construction_Final_Workbook.xlsx",
+    "sheet": "P05 Core Concentration",
+    "range": "A33:B42",
+    "sha256": "5a040bdadf9c5682f5370a882c44aec18bb6359ea96bcd8121b634d35620ab38",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "USMPC-06",
+    "asset_id": "USMPC-06-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\US Markets and Portfolio Construction\\US_Markets_Portfolio_Construction_Final_Workbook.xlsx",
+    "sheet": "P06 Portfolio Risk",
+    "range": "A3:E16",
+    "sha256": "5a040bdadf9c5682f5370a882c44aec18bb6359ea96bcd8121b634d35620ab38",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "USMPC-07",
+    "asset_id": "USMPC-07-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\US Markets and Portfolio Construction\\US_Markets_Portfolio_Construction_Final_Workbook.xlsx",
+    "sheet": "P07 Options Sleeve",
+    "range": "A3:B13",
+    "sha256": "5a040bdadf9c5682f5370a882c44aec18bb6359ea96bcd8121b634d35620ab38",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "USMPC-07",
+    "asset_id": "USMPC-07-02",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\US Markets and Portfolio Construction\\US_Markets_Portfolio_Construction_Final_Workbook.xlsx",
+    "sheet": "P07 Options Sleeve",
+    "range": "A16:B22",
+    "sha256": "5a040bdadf9c5682f5370a882c44aec18bb6359ea96bcd8121b634d35620ab38",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "USMPC-08",
+    "asset_id": "USMPC-08-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\US Markets and Portfolio Construction\\US_Markets_Portfolio_Construction_Final_Workbook.xlsx",
+    "sheet": "P08 Rebalancing",
+    "range": "A11:F17",
+    "sha256": "5a040bdadf9c5682f5370a882c44aec18bb6359ea96bcd8121b634d35620ab38",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  },
+  {
+    "episode": "USMPC-09",
+    "asset_id": "USMPC-09-01",
+    "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\US Markets and Portfolio Construction\\US_Markets_Portfolio_Construction_Final_Workbook.xlsx",
+    "sheet": "P09 Sequence Risk",
+    "range": "A7:E18",
+    "sha256": "5a040bdadf9c5682f5370a882c44aec18bb6359ea96bcd8121b634d35620ab38",
+    "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+    "bridge": false
+  }
+]

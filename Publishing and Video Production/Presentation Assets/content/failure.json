@@ -1,0 +1,173 @@
+[
+  {
+    "id": "OE-FAILURE-11",
+    "case": "A decision-date investigation tests whether a disputed customer receipt gave a fictional distributor enough warning to act before its cash trough.",
+    "caseLabel": "Fictional Coastal Supply Ltd • evidence cutoff 24 September 2026",
+    "units": [
+      "Information date — when the assessed decision-maker could know a fact",
+      "Source date — when the supporting record was prepared or published",
+      "Evidence status — fact, attributed claim, calculation or unresolved",
+      "Unrestricted cash — money available for the entity's own obligations; KES",
+      "Action window — time available before the relevant obligation or cash trough"
+    ],
+    "beats": [
+      {
+        "title": "Freeze the information available then",
+        "points": [
+          "Choose the legal entity, decision-maker and decision date first.",
+          "Separate the event date from the date its evidence became available.",
+          "Add later court or administrator findings in a separate lane."
+        ],
+        "notes": "Part 11, Start with the decision date; Appendix 01 A1.1; Timeline C5:I9 and Evidence Vectors. A report prepared on 1 February 2021 but summarized in a judgment on 11 March 2021 cannot automatically be treated as public on the earlier date, much less known in 2017. Ask whether an internal actor had earlier access. Method source: Fischhoff, Hindsight Is Not Equal to Foresight, 1975, https://doi.org/10.1037/0096-1523.1.3.288. Source article evidence cutoff: 24 September 2026. This is a method for preserving what was knowable, not a claim that hindsight bias is eliminated."
+      },
+      {
+        "title": "Find the invoice behind the warning",
+        "points": [
+          "Coastal Supply has KES 6.0m cash and expects KES 12.0m of receipts.",
+          "One KES 4.0m customer invoice is disputed and historically late.",
+          "The separate 13-week forecast reaches KES 0.3m in week five."
+        ],
+        "notes": "Part 11, A practical example: a cash warning that was actionable; Appendix 01 A1.4. All Coastal Supply figures are fictional. The listed payroll, supplier, tax and debt obligations are KES 2.4m, 5.0m, 0.8m and 1.2m, totaling KES 9.4m. The article does not provide the complete dated schedule needed to recompute its week-five trough from these aggregate inputs; keep the trough as a stated example result, not an output of the monthly arithmetic. The workbook Cash and CCC is also fictional and must not be substituted for Coastal Supply's separate article case."
+      },
+      {
+        "title": "Make the warning earn its response",
+        "points": [
+          "Assign the credit lead to reconcile delivery evidence and collect the undisputed amount.",
+          "Record authority, response deadline and the next cash-forecast update.",
+          "Test alternative explanations and review false alarms as well as missed cases."
+        ],
+        "notes": "Warnings and Actions C5:I9; Appendix 01 A1.2–A1.3. Pausing new exposure needs an approved limit and must be weighed against lost contribution and service. Evaluate continuing and recovered businesses as well as failed ones; define the legal or payment event and forecast horizon before counting alerts. Shumway, Forecasting Bankruptcy More Accurately, 2001, https://doi.org/10.1086/209665; Campbell, Hilscher and Szilagyi, In Search of Distress Risk, 2008, https://doi.org/10.1111/j.1540-6261.2008.01416.x. These studies do not calibrate a Kenyan private-company failure probability. Do not display invented precision, recall or default rates."
+      }
+    ],
+    "calculation": {
+      "title": "Measure the disputed receipt's concentration",
+      "equation": "Receipt concentration = disputed invoice ÷ opening unrestricted cash",
+      "substitution": "KES 4.0m ÷ KES 6.0m = 0.667 = 66.7%",
+      "interpretation": "One disputed receipt equals two-thirds of opening cash. The ratio describes exposure, not a failure probability or a cash-availability guarantee.",
+      "notes": "Appendix 01 A1.4 and the fictional Coastal Supply example in Part 11. Keep both amounts in KES million and show one decimal place for the percentage. The denominator is opening unrestricted cash, not revenue, total receivables or monthly payroll. No threshold is validated by this example."
+    },
+    "scenario": {
+      "title": "Remove the disputed receipt from the aggregate bridge",
+      "baseline": "All listed receipts clear: KES 6.0m + 12.0m − 9.4m = KES 8.6m.",
+      "changed": "The KES 4.0m dispute does not clear: receipts fall to KES 8.0m.",
+      "consequence": "The same aggregate bridge leaves KES 4.6m, a KES 4.0m reduction. Positive totals still do not prove that payroll clears before receipts arrive.",
+      "notes": "Appendix 01 A1.4. Hold the listed opening cash and uses fixed. Both results are undiscounted arithmetic over summarized receipts and obligations, not weekly closing cash or runway. The article's KES 0.3m week-five minimum depends on dates and other outflows not shown in these totals. Do not subtract KES 4.0m from that minimum without identifying the scheduled receipt week and the revised weekly flows. Refresh the dated plan and assign an action before the actual trough."
+    },
+    "answer": "A useful warning is evidence available early enough for a specific person to act. Coastal Supply's disputed invoice identifies a collection and timing problem; it does not establish inevitable failure or the cause of any real company's distress.",
+    "action": "Write one dated warning record: entity, available evidence, alternative explanation, action owner, authority, deadline and the document that would change the decision."
+  },
+  {
+    "id": "OE-FAILURE-12",
+    "case": "Two separate retail court records establish dated legal events and attributed claims; a fictional store then demonstrates the operating review that historical company records would need to support.",
+    "caseLabel": "Dated Nakumatt/Tuskys evidence • store calculations are fictional",
+    "units": [
+      "Claim — a creditor's stated amount; admission and recovery remain separate",
+      "KES m — millions of Kenyan shillings; keep original claim precision in the ledger",
+      "Gross margin — gross profit ÷ net sales; a percentage of sales",
+      "Percentage point — the difference between two percentage levels",
+      "Store contribution — gross profit less the listed direct costs; KES/month"
+    ],
+    "beats": [
+      {
+        "title": "Two entities, two legal timelines",
+        "points": [
+          "Nakumatt Holdings Limited: administration order on 22 January 2018.",
+          "Tusker Mattresses Limited: interim liquidation order on 31 May 2023.",
+          "Keep each later report and order attached to its entity and date."
+        ],
+        "notes": "Case Register C6:I7; Timeline C6:I10; Appendix 02 A2.1. The 11 March 2021 Nakumatt ruling records the 22 January 2018 administration order: https://new.kenyalaw.org/akn/ke/judgment/kehc/2021/8603/eng@2021-03-11. The 31 May 2023 Tusker Mattresses judgment issued an interim liquidation order and appointed a provisional liquidator: https://new.kenyalaw.org/akn/ke/judgment/kehc/2023/18107/eng@2023-05-31. Do not collapse these into one failure date or assert that administration itself was liquidation. The 16 October 2025 ruling records a request for time for forensic work and a statement of affairs, not the completed forensic findings: https://new.kenyalaw.org/akn/ke/judgment/kehc/2025/14728/eng@2025-10-16. Evidence cutoff: 24 September 2026; later status requires a new record check."
+      },
+      {
+        "title": "Keep every amount's evidence label",
+        "points": [
+          "Nakumatt's administrator reported KES 5,218.737m raised.",
+          "More than KES 3,500m in creditor payments included KES 766.641m to landlords.",
+          "Three Tuskys petition claims sum to KES 290.397m; this is not total admitted debt."
+        ],
+        "notes": "Evidence Ledger C5:I12 and Evidence Vectors; Appendix 02 A2.2. Nakumatt's update was dated 1 February 2021 and summarized publicly in the 11 March 2021 ruling; the covered cash-flow period and transaction dates are not fully stated. Preserve the exact reported KES 5,218,737,409 raised and KES 766,641,309 landlord payments in the ledger. More than KES 3.5bn is a lower bound, and landlord payments are included, so adding them double counts. These reported receipts are not sales or a current bank balance. Tuskys arithmetic: KES 248,220,797.38 + 11,284,096.50 + 30,892,518.92 = KES 290,397,412.80. Label this analyst sum of three petitioners' claims, not all liabilities or investor loss. Sources: Nakumatt ruling, 11 March 2021, https://new.kenyalaw.org/akn/ke/judgment/kehc/2021/8603/eng@2021-03-11; Tusker Mattresses judgment, 31 May 2023, https://new.kenyalaw.org/akn/ke/judgment/kehc/2023/18107/eng@2023-05-31."
+      },
+      {
+        "title": "Build the retailer's operating evidence",
+        "points": [
+          "Review store sales, product margin, payroll, rent and service costs together.",
+          "Reconcile stock age and supplier due dates; arrears are not agreed credit.",
+          "Connect each cash trough to a named collection, purchasing or supplier action."
+        ],
+        "notes": "Retail Review C5:J12; Cash and CCC C5:N23; Warnings and Actions C5:I14. The fictional store has KES 10m monthly sales, 28% gross margin, KES 1.8m direct payroll and KES 1.2m rent/utilities. Its KES 2.5m average stock less KES 2.2m trade payables leaves KES 0.3m of modeled stock funding; this narrow balance is not all working capital or cash due today. Store-level and dated records would be needed before attributing either named retailer's distress to this mechanism. Working-capital references motivate measurement, not causation for these cases: Deloof, 2003, https://doi.org/10.1111/1468-5957.00008; García-Teruel and Martínez-Solano, 2007, https://doi.org/10.1108/17439130710738718."
+      }
+    ],
+    "calculation": {
+      "title": "A positive gross margin can leave a store short",
+      "equation": "Store contribution = sales × gross margin − direct payroll − rent/utilities",
+      "substitution": "KES 10.0m × 28% − KES 1.8m − KES 1.2m = KES −0.2m/month",
+      "interpretation": "The fictional store's KES 2.8m gross profit does not cover KES 3.0m of listed direct costs. Other costs remain to be funded.",
+      "notes": "Part 12 workbook map; Retail Review row 6. Cost of goods is KES 7.2m and is already captured in gross margin; do not deduct it again. The result is before other costs, financing, tax, maintenance and working-capital timing. It is neither Nakumatt's nor Tuskys's historical contribution, profit or owner earnings."
+    },
+    "scenario": {
+      "title": "Reduce gross margin by two percentage points",
+      "baseline": "At 28% gross margin, KES 10m sales leaves KES −200,000 monthly contribution.",
+      "changed": "Gross margin falls to 26%; hold sales, payroll and rent/utilities fixed.",
+      "consequence": "KES 2.6m − 1.8m − 1.2m = KES −400,000/month: a further KES 200,000 shortfall before other costs.",
+      "notes": "Controlled fictional sensitivity based on Part 12's two-percentage-point margin example and Retail Review's 28% baseline. A fall from 28% to 26% is two percentage points, not a 2% relative margin reduction. Hold all other modeled inputs fixed; do not infer a new cash balance without receipt and payment dates. Check discounts, category mix, landed cost, waste and pricing before proposing stock cuts or repricing. No causal claim about either named chain follows from this example."
+    },
+    "answer": "The court records support specific entity-level orders and attributed amounts. A retailer can use them to ask better operating questions, but explaining historical cash failure requires the missing store, stock, supplier, bank and insolvency records.",
+    "action": "Create separate entity evidence files and one weekly retail review. Assign owners to stock ageing, supplier confirmations, store contribution and the next cash-trough response."
+  },
+  {
+    "id": "OE-FAILURE-13",
+    "case": "Twiga-related entities and Copia Kenya are kept on separate legal timelines while a fictional delivery route shows why announced funding cannot substitute for contribution and dated cash.",
+    "caseLabel": "Evidence cutoff 24 September 2026 • route figures are fictional",
+    "units": [
+      "Legal recipient — the specific company receiving or owing the financing",
+      "Funding status — announced, signed, closed, drawn and received are distinct",
+      "USD m — millions of US dollars; no unstated conversion to KES",
+      "Route contribution — sales less the listed route costs; KES/week",
+      "Administration date — a named entity's legal milestone, not a group-wide loss estimate"
+    ],
+    "beats": [
+      {
+        "title": "Attach each event to the right company",
+        "points": [
+          "GT Flow: 17 August 2026 effective date is reported from a Gazette notice.",
+          "Templar Field: September 2026 appointment is reported; exact effective day remains unverified.",
+          "Copia Kenya: appointment effective 23 May 2024; a later extension is a separate event."
+        ],
+        "notes": "Case Register C8:I10; Timeline C9:I13; Evidence Vectors; Appendix 02. GT Flow Limited was formerly Twiga Foods One Limited; Templar Field Limited was formerly Twiga Foods Limited. Tech-ish's 14 September 2026 report reproduces GT Flow Gazette Notice 14595 and describes publication on 11 September; the source article did not directly verify the official scan: https://tech-ish.com/2026/09/14/twiga-foods-is-in-administration-16-months-after-the-leaked-plan-we-published/. The Templar Field appointment is attributed to a 15 September 2026 report about a company release; 15 September is the report date, not a verified appointment day: https://tech-ish.com/2026/09/15/twiga-foods-templar-field-administration/. Copia Kenya Limited's official Gazette was published 31 May 2024, with appointment effective 23 May: https://new.kenyalaw.org/akn/ke/officialGazette/gazette/2024-05-31/76/eng@2024-05-31/source. The source's 23 April 2026 six-month extension is linked through a secondary judgment reproduction: https://sheriahub.com/cases/ke/caselaw/in-re-copia-kenya-limited-under-administrstion-2026-kehc-5926-klr. Obtain the official court version and latest administration record before describing current status. No group-wide order or final liquidation/recovery is established by these entries."
+      },
+      {
+        "title": "Keep reported funding out of the cash balance",
+        "points": [
+          "USD 185.4m is an attributed Twiga funding aggregate in a secondary report.",
+          "The legal recipients are unresolved and cash received is unreconciled.",
+          "Build one record per instrument, entity and announcement-to-receipt sequence."
+        ],
+        "notes": "Funding C5:K8 and C12:K18; Evidence Ledger C13:I14. Source: Tech-ish, 15 September 2026, https://tech-ish.com/2026/09/15/twiga-foods-templar-field-administration/. Preserve the workbook labels reported aggregate, multi-entity/unclear, and unknown/not reconciled. This figure is not GT Flow's bank balance, Templar Field's proceeds, operating revenue, runway, valuation or investor loss. Do not fill Copia's blank funding lead with a guessed total. Reconcile investor/lender, instrument, original currency, announced/signed/closed/drawn/received dates, fees, restrictions, legal recipient and bank receipt. Funding instruments and staged investment are discussed in Gompers and Lerner, 2001, https://doi.org/10.1257/jep.15.2.145; that literature does not validate this reported aggregate."
+      },
+      {
+        "title": "Join route economics to the cash calendar",
+        "points": [
+          "Measure contribution after stock, delivery, handling and transaction/support costs.",
+          "Keep central overhead, replacement assets, financing and tax visible after that contribution.",
+          "Use dated entity cash and response lead times to decide when to narrow the plan."
+        ],
+        "notes": "Part 13, What would be needed to explain the economics; Test the route economics; Build the cash runway. The fictional weekly route's KES 100,000 sales, 66,000 stock cost, 14,000 delivery/handling and 8,000 transaction/support costs are a teaching bridge, not either company's results. They are distinct from the workbook's separate fictional Cash and CCC schedule C5:N23. Obtain route/cohort records, collection dates, supplier terms, cash restrictions and intercompany reconciliations before calculating a named entity's contribution or runway. García-Teruel and Martínez-Solano, 2007, https://doi.org/10.1108/17439130710738718; Shumway, 2001, https://doi.org/10.1086/209665. Neither provides a causal verdict or calibrated private-company failure probability."
+      }
+    ],
+    "calculation": {
+      "title": "Compute contribution before the remaining claims",
+      "equation": "Route contribution = sales − stock − delivery/handling − transaction/support",
+      "substitution": "KES 100,000 − 66,000 − 14,000 − 8,000 = KES 12,000/week",
+      "interpretation": "The fictional route retains 12% of sales before central overhead, replacement assets, financing, taxes and growth. This is not owner earnings or collected cash.",
+      "notes": "Part 13's fictional weekly route. All costs and sales cover the same route-week in KES. Show contribution margin separately as KES 12,000 ÷ KES 100,000 = 12%. Receipt and payment dates are not supplied, so a positive contribution does not prove positive weekly bank cash. Never attribute the margin to GT Flow, Templar Field, Twiga or Copia."
+    },
+    "scenario": {
+      "title": "Stress one route cost before financing more volume",
+      "baseline": "Fictional route: KES 14,000 delivery/handling cost leaves KES 12,000 contribution.",
+      "changed": "Illustrative stress: delivery/handling rises by KES 5,000 to KES 19,000; all other inputs stay fixed.",
+      "consequence": "KES 100,000 − 66,000 − 19,000 − 8,000 = KES 7,000/week, or 7% of sales, before the remaining costs.",
+      "notes": "Presenter-created one-input sensitivity extending the article's explicitly fictional route example; the extra KES 5,000 is an assumed stress, not a reported cost change or named-company estimate. Label it fictional on screen. Funding could pay a temporary cash gap, but it does not improve this contribution calculation. Separately test payment dates and actual bank receipts; do not divide the USD 185.4m reported aggregate by this route cost to invent runway."
+    },
+    "answer": "A financing headline describes an attributed transaction history, not the trading entity's cash or earning power. Separate legal records, financing receipts, route contribution and dated obligations before making a runway or recovery claim.",
+    "action": "Request the primary notices, current administrator records and an entity-level funding-to-bank reconciliation; pair them with route contribution and a dated cash plan before drawing conclusions."
+  }
+]

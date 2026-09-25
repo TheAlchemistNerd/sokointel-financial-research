@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-09-25T14:06:20.577734+00:00",
+  "episodes": 41,
+  "series": 11,
+  "slides": 458,
+  "zip_file_hash_manifest_and_evidence_links": "passed",
+  "source_workbooks_checked": 15,
+  "source_workbook_hash_mismatches": [],
+  "root_visually_reviewed_final_contact_sheets": [
+    "NSE-DG-01",
+    "OE-MSME-01",
+    "OE-FAILURE-12",
+    "STARTUP-FUNDING-02"
+  ],
+  "native_all_deck_results": "native-qa.json",
+  "scope": "Artifact integrity and representative visual review; not a fresh external fact audit or production deployment."
+}

@@ -1,0 +1,11 @@
+{
+  "sheet": "NSE Casebook",
+  "workbook": "C:\\Users\\Nevo\\Downloads\\financial material\\Owner's Earning\\Project 2 - Listed Companies and Valuation\\Project 2 - Listed Companies Owner Earnings and Valuation.xlsx",
+  "method": "Microsoft Excel read-only PDF range export. Print headings retained. Source not saved.",
+  "bridge": false,
+  "sha256": "4ad84af694e804b21c68dfc5e85ca8f5e4211a30b102d31e846890ec6a09827b",
+  "range": "C11:F11",
+  "scope": "BAT Kenya FY2025 net revenue rounded to KES 23.192bn. OCF deliberately outside this crop because the article/workbook source-line reconciliation is unresolved.",
+  "asset_id": "OE-VALUATION-06-BAT",
+  "episode": "OE-VALUATION-06"
+}

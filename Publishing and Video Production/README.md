@@ -4,6 +4,8 @@ This production library began with thirteen article editions and now coordinates
 
 ## Start here
 
+- [Presentation master index](<Presentation Assets/Master Index.md>) links one editable PowerPoint per article/video episode across all 41 episodes; its manifest and QA report distinguish generation, review and recording.
+- [Active delivery tasks](<Active Delivery Tasks.md>) separates publication, formulas, presentations, membership and controlled branded-PDF rollout.
 - [All files and their destinations](<All Files.md>) lists every publication and research file by folder, with its intended use.
 - [Sortable file inventory](<All Files.csv>) provides the same catalogue as CSV.
 - [Publishing destinations](<Publishing Destinations.md>) assigns LinkedIn, Substack, Medium and the African markets Facebook adaptations.
@@ -33,7 +35,7 @@ These series have their own production or research folders and use the same cano
 
 Each project folder contains `Project Index.md`, `YouTube Storyboards.md`, a `Word` folder and a `PDF` folder. The African markets folder contains two Facebook drafts, and Leadership and Governance contains its own Facebook post and publication guide. The shared planning documents and inventories sit in this folder. The full file inventory links to the retained article, appendix, figure, source and workbook locations outside this package.
 
-The presentation assets are being built from the article-specific guides, real workbook ranges and calculator captures. The Presentation Assets master index records actual deliverables. Narration recordings, final videos, captions and thumbnails remain separate production outputs. The storyboards include visible question and answer content, chart and table specifications, a worked-example sequence, evidence routes and narration guidance. Publication assignments describe intended destinations; no articles or social posts have been sent to those platforms.
+The presentation package contains 41 generated editable decks built from article-specific guides, real workbook ranges and calculator captures. Native PowerPoint QA and representative visual checks are recorded with the package. The Presentation Assets master index records actual deliverables. Narration recordings, final videos, captions and thumbnails remain separate production outputs. The storyboards include visible question and answer content, chart and table specifications, a worked-example sequence, evidence routes and narration guidance. Publication assignments describe intended destinations; no articles or social posts have been sent to those platforms.
 
 The Word editions are editable. The PDFs retain the corresponding article and appendix in one reading document, with source hyperlinks. Local workstation navigation links were removed from the reading editions. Public companion URLs can be inserted into platform drafts when the articles and downloads are hosted. The research observations retain their original 7 September 2026 cutoff; the platform workflow was checked on 8 September 2026.
 
